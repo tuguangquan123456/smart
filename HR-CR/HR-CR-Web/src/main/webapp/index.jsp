@@ -5,9 +5,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Smart_管理系统</title>
 <link rel="stylesheet" type="text/css" href="Css/menu.css" />
-<script type="text/javascript" src="Js/jquery/jquery-1.10.2.js" language="javascript"></script>
+<script type="text/javascript" src="Js/jquery/jquery-1.10.2.js" ></script>
 <script src="Js/jquery/jquery.json-2.4.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="Js/menu.js"></script>
+<script type="text/javascript" src="Js/jquery.corners.js.js"></script>
 <base target="_self" />
 <style type="text/css">
     *{margin:0px;padding:0px;}
@@ -82,6 +83,10 @@
         background-color:#990000;
         color:#FFFFFF;
     }
+    .selected{
+        background-color:#990000;
+        color:#FFFFFF;
+    }
     #header_navigation ul li.selected a{
         background-color:#990000;
         color:#FFFFFF;
@@ -140,14 +145,10 @@
 
 <script type="text/javascript" language="javascript">
     $(function () {
-        $("#header_navigation ul li.selected").corner();
         $("#header_navigation ul li").click(function () {
-            alert("123");
             $("#header_navigation ul li").removeClass("selected");
             $(this).addClass("selected");
-            $("#header_navigation ul li.selected").corner();
         });
-
     });
 
     function changeTab(id) {
@@ -226,12 +227,8 @@
             <div id="header_navigation">
                 <ul>
                     <li class="selected" id="lilink1" onclick="changeTab('slink1');displayHideUI();" >系统用户管理</li>
-
                     <li id="lilink2" onclick="changeTab('slink2');displayHideUI();">人员信息管理</li>
-
-                    <li id="lilink4"  onclick="changeTab('slink4');displayHideUI();">企业沟通</li><!--离职信息-->
-
-
+                    <li id="lilink4" onclick="changeTab('slink4');displayHideUI();">企业沟通</li><!--离职信息-->
                     <li id="lilink5" onclick="changeTab('slink5');displayHideUI();">导入数据</li>
                     <li id="lilink8" onclick="changeTab('slink8');displayHideUI();">OEC管理</li>
                     <li id="lilink7" onclick="changeTab('slink7');">办公文具管理</li>
