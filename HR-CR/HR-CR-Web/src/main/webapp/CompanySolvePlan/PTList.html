@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>压力测试统计</title>
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+    <script type="text/javascript" src="../Js/My97DatePicker/WdatePicker.js"></script>
+</head>
+<body style="clear: both; display: block; height:auto;" >
+<form id="form1" runat="server">
+    <div class="c_name">
+        <h2>
+            压力测试统计
+        </h2>
+    </div>
+    <table border="1" class="table_top_search" bordercolor="#D7D7D7" align="center" style="display: block; overflow: auto">
+        <tr>
+            <td class="td_style" style="text-align: left; width:1800px">
+                    <span style="text-align: left" >
+                      &nbsp;&nbsp;
+                     1. 日期区间：<asp:TextBox ID="TBX_Time1" runat="server" onfocus="WdatePicker();"></asp:TextBox>
+                     <img alt="点击选择日期" src="../Images/datePicker.gif" /></a>
+                        <asp:TextBox ID="TBX_Time2" runat="server" onfocus="WdatePicker();"></asp:TextBox>
+                      <span style="color: Red"><a>
+                          <img alt="点击选择日期" src="../Images/datePicker.gif" /></a> </span><%--<span style="color: Gray">
+                            点击文本框后选择日期; </span>--%>
+                       
+                        
+                           <asp:Button ID="Button6" runat="server" Text="统计"
+                                       OnClick="btnT1_Click" Height="22px"
+                                       Width="66px"/>
+                         &nbsp;&nbsp;
+                       2. <asp:DropDownList ID="TitleList2"    runat="server" AutoPostBack="true">
+                        <asp:ListItem>一级部门</asp:ListItem>
+                        <asp:ListItem>二级部门</asp:ListItem>
+                        <asp:ListItem>三级部门</asp:ListItem>
+                        <asp:ListItem>四级部门</asp:ListItem>
+                        <asp:ListItem>五级部门</asp:ListItem>
+                        <asp:ListItem>六级部门</asp:ListItem>
+                        <asp:ListItem>最小部门</asp:ListItem>
+                    </asp:DropDownList>
+                  
+                           
+                           <asp:Button ID="Button2" runat="server" Text="统计"
+                                       OnClick="btnT2_Click" Height="22px"
+                                       Width="66px"/>
+
+
+                    
+                       &nbsp;&nbsp;
+                       <asp:Button ID="Button5" runat="server" Text="3.按年份统计"
+                                   OnClick="btnY_Click" Height="22px"
+                                   Width="100px"/>
+                       &nbsp;&nbsp;<asp:Button ID="Button1" runat="server" Text="4.按年限统计"
+                                               OnClick="btnYear_Click" Height="22px"
+                                               Width="100px"/>&nbsp;&nbsp;
+                        <asp:Button ID="Button3" runat="server" Text="5.按年龄统计"
+                                    OnClick="btnAge_Click" Height="22px"
+                                    Width="100px"/>
+                        &nbsp;&nbsp;
+                        <asp:Button ID="Button4" runat="server" Text="6.按婚姻统计"
+                                    OnClick="btnM_Click" Height="22px"
+                                    Width="100px"/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button
+                            ID="btnDraw" runat="server" Text="绘图" Height="22px"
+                            OnClick="btnDraw_Click" Width="66px" />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:Button ID="btnExport" runat="server"
+                                                                                       Text="导出"  OnClick="btnExport_Click" Height="20px" Width="66px"/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<%-- Text="导入"  PostBackUrl="~/HrResource/AddHumanAllReport.aspx" Height="22px" Width="66px"/>--%></td>
+
+        </tr>
+
+
+    </table>
+
+    <table id="tblist" border="1" bordercolor="#D7D7D7" class="table_search_98"
+           align="center" style="display: block; overflow: auto;" dir="ltr">
+        <asp:GridView ID="GridView1" runat="server"
+
+                      HorizontalAlign="Center"  Width="1400px" AutoGenerateColumns="False">
+            <AlternatingRowStyle Wrap="False" />
+            <Columns>
+                <%--<asp:TemplateField>
+                <HeaderTemplate>
+                    选择
+                </HeaderTemplate>
+                <ItemTemplate>
+                    <input type="checkbox" name="GVchk" value='<%#Eval("id") %>' />
+                </ItemTemplate>
+            </asp:TemplateField>--%>
+                <%--<asp:CommandField HeaderText="编辑" ShowEditButton="True" ButtonType="Image" CancelImageUrl="../Images/back.jpg" EditImageUrl="../Images/edit.gif" UpdateImageUrl="../Images/ok.jpg" />--%>
+                <%--<asp:TemplateField HeaderText="删除" ShowHeader="False" Visible="false">
+                <ItemTemplate>
+                    <asp:ImageButton ID="ImageButton1" runat="server" CausesValidation="False"
+                                     CommandName="Delete" ImageUrl="../Images/del.gif" Text="删除"  OnClientClick="return confirm('确定要删除该记录吗！')" />
+                </ItemTemplate>
+            </asp:TemplateField>--%>
+                <asp:BoundField DataField="Type" HeaderText="分类区间" />
+                <asp:BoundField DataField="A" HeaderText="个人行为习惯平均分" />
+                <asp:BoundField DataField="B" HeaderText="关系平均分" />
+                <asp:BoundField DataField="C" HeaderText="工作平均分" />
+                <asp:BoundField DataField="D" HeaderText="身体现状平均分" />
+                <asp:BoundField DataField="E" HeaderText="心智及心理能量平均分" />
+                <asp:BoundField DataField="F" HeaderText="原生家庭平均分" />
+                <asp:BoundField DataField="T" HeaderText="整体平均分" />
+            </Columns>
+
+            <%--<EditRowStyle BackColor="#33CCFF" HorizontalAlign="Center" Wrap="False"></EditRowStyle>
+            <EmptyDataRowStyle Wrap="False" />
+            <FooterStyle Wrap="False" />
+            <HeaderStyle HorizontalAlign="Center" Wrap="False" />
+            <RowStyle HorizontalAlign="Center" Wrap="False" />
+            <SelectedRowStyle Wrap="False" />--%>
+        </asp:GridView>
+    </table>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>借书管理</title>
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+    <script type="text/javascript" src="../Js/jquery-1.2.6.pack.js"></script>
+    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="gb2312"></script>
+    <script type="text/javascript" src="../Js/jquery.cluetip.js"></script>
+    <script type="text/javascript" src="../Js/resource_admin.js"></script>
+
+</head>
+<body style="clear: both; display: block; height:auto;" >
+<form id="form1" runat="server">
+    <div class="c_name">
+        <h2>
+            借书信息管理
+        </h2>
+    </div>
+
+    <table border="1" class="table_top_search" bordercolor="#D7D7D7" align="center" style="display: block; overflow: auto">
+        <tr>
+            <td class="td_style" style="text-align: left; width:1800px">
+                    <span style="text-align: left" >
+                     &nbsp;&nbsp;&nbsp;图书编号：<asp:TextBox ID="ResumeID" runat="server" Width="150px" MaxLength="20"></asp:TextBox>
+                    &nbsp;&nbsp;
+                    
+                    出库仓库：</span><asp:DropDownList ID="TitleList"
+                                                  runat="server"></asp:DropDownList>
+                <%--
+                借书人工号：<span style="color: Red">*</span><asp:TextBox ID="UserID" runat="server"  Width="100"></asp:TextBox>&nbsp;&nbsp;--%>
+
+
+                &nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btn_chuku" runat="server" Text="出库" Height="21px" OnClientClick="return checkTitle()"
+                                                    OnClick="btn_chuku_Click" />
+
+            </td>
+
+        </tr>
+
+
+
+
+
+
+        <%--存储每页显示的记录数，例如每页显示5条记录--%>
+        <asp:HiddenField ID="hidden_pageSize" runat="server" Value="20" />
+        <asp:HiddenField ID="currentPage" runat="server" />
+        <asp:HiddenField ID="totalPage" runat="server" />
+        <asp:HiddenField ID="SearchCondition" runat="server" />
+        <asp:HiddenField ID="DelPersonID" runat="server" />
+</form>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#tblist").hoverOut();
+        $("a.tip").cluetip({ 'activation': 'click', 'sticky': true, 'closePosition': 'title', 'closeText': "关闭" });
+    });
+    function checkTitle() {
+        //var temp = document.getElementById("ResumeStatus");
+        //alert(temp.selectedIndex);
+        var Mobilephone = $("#Mobilephone").val();
+        var Name = $("#Name").val();
+        var ResumeStatus = $("#ResumeStatus").val();
+        var IDCard = $("#IDCard").val();
+        if (Mobilephone == "" && Name == "" && ResumeStatus == "-1" && IDCard == "") {
+            jAlert("请输入查询条件！", "系统提示");
+            return false;
+        }
+        return true;
+    }
+    function showResume(rid, type) {
+        //      alert(rid + "" + type);
+        var url = '';
+        if (type == '校园招聘') {
+            url = "ShowCampusResumeInfo.aspx?ID=" + rid;
+        }
+        if (type == '社会招聘') {
+            url = "ShowResumeInfo.aspx?ID=" + rid;
+        }
+        var weight = 0.9;
+        var strFeatureInfo = "scroll:yes;dialogWidth=" + screen.width * weight + "px;dialogHeight=" + screen.height * weight + "px;center=yes;help:No;resizable:No;scroll:Yes;status:No;minimize:yes;maximize:yes; ";
+        window.showModalDialog(url, null, strFeatureInfo);
+    }
+
+    function GetDelItem() {
+
+        var chks = document.getElementsByName("GVchk");
+        //var Ids = document.getElementById('DelPersonID');
+        var flag = false;
+        for (var i = 0; i < chks.length; i++) {
+            if (chks[i].checked == true) {
+                //Ids.value += chks[i].value + ",";
+                flag = true;
+                break;
+            }
+
+        }
+        if (!flag) {
+            jAlert("请选择要删去的数据！", "系统提示");
+            return false;
+        }
+        else if (confirm("确定要删除吗？")) {
+            var chks = document.getElementsByName("GVchk");
+            var Ids = document.getElementById('DelPersonID');
+            //var flag = false;
+            for (var i = 0; i < chks.length; i++) {
+                if (chks[i].checked == true) {
+                    Ids.value += chks[i].value + ",";
+                    // flag = true;
+                }
+
+            }
+
+            return flag;
+        } else
+            return false;
+    }
+
+</script>

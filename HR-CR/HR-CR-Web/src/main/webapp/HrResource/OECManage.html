@@ -1,0 +1,267 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>OEC学习</title>
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+
+    <script type="text/javascript" src="../Js/jquery.js"></script>
+
+    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="../Js/jquery.cluetip.js"></script>
+    <script type="text/javascript" src="../Js/resource_admin.js"></script>
+
+    <script type="text/javascript" src="../Js/My97DatePicker/WdatePicker.js"></script>
+    <style type="text/css">
+        ul{list-style:none;}
+        #tab{margin:20px auto;padding:10px;width:60%;border:1px solid #ccc; text-align:center}
+        #tab ul{overflow:hidden;zoom:1;}
+        #tab li{float:left;margin-right:8px;width:200px;height:18px;line-height:20px;border:1px solid red;cursor:pointer;text-align:center;}
+        #tab li.on{background:#fc0; color:#000;}
+    </style>
+</head>
+<body style="clear: both; display: block; height:auto; ">
+<form id="form1" runat="server">
+    <div class="c_name">
+        <h2> OEC 学习</h2>
+    </div>
+    <%--<div class="ptitle">激励列表</div>--%>
+    <%--<div id="tab">
+    <ul id="menus-tab">
+        <li  class="on"><a href="PhysicalExamine.aspx">体检结果</a></li>
+        <li><a href="PhysicalExamineImport.aspx">导入</a></li>
+        <li><a href="PhysicalExamineAnalysis.aspx">分析</a></li>
+
+    </ul>
+</div>--%>
+    <table border="1" bordercolor="#D7D7D7" class="table_top_search" align="center">
+        <tr>
+            <%--                <td style="width: 73px; background-color: #FFF; border-right-width: 0px">
+            <asp:Button ID="btnAdd" runat="server" Text="新 增" Height="21px" PostBackUrl="~/CompanySolvePlan/AwardAdd2.aspx"
+                        Width="58px"  />
+        </td>--%>
+
+            <td style="width: 73px; background-color: #FFF; border-right-width: 0px">
+                <asp:Button ID="btnAdd" runat="server" Text="新增会议通知" Height="21px" PostBackUrl="OECAdd.aspx"
+                            Width="108px"  />
+            </td>
+            <td class="td_style"style="text-align: left; width:1780px">
+                &nbsp
+                会议名称：<asp:TextBox ID="txt_MeetingName" runat="server" Width="100px" MaxLength="18"></asp:TextBox>
+                与会人员：<asp:TextBox ID="txt_MeetingMember" runat="server" Width="100px" MaxLength="20"></asp:TextBox>
+                学习日期从：<asp:TextBox ID="BeginDate" runat="server" Width="100px" MaxLength="18" onClick="WdatePicker({dateFmt:'yyyy年MM月d日'})"></asp:TextBox>
+                学习日期至：<asp:TextBox ID="EndDate" runat="server" Width="100px" MaxLength="18" onClick="WdatePicker({dateFmt:'yyyy年MM月d日'})"></asp:TextBox>
+                <%--                        日期差大于： <asp:TextBox ID="DateDif" runat="server" Width="100px" MaxLength="20"></asp:TextBox><asp:RegularExpressionValidator
+                    ID="RegularExpressionValidator1" runat="server" ErrorMessage="!" ControlToValidate="DateDif" ValidationExpression="^\d{1,10}$"></asp:RegularExpressionValidator>--%>
+                <asp:Button ID="btnSearch" runat="server" Text="立即查找" Height="21px"  OnClientClick="return checkTitle();" OnClick="btnSub_Click" />
+                <%--  <asp:Button ID="expoert" runat="server" Text="导出" Height="21px"
+                                  onclick="expoert_Click"  />--%>
+                <%--     <asp:Button ID="Button1" runat="server" Text="发送邮件提醒" Height="21px"  />
+                <asp:Button ID="Button2" runat="server" Text="发送材料至未与会人" Height="21px"
+                        /> --%>
+                <%-- <asp:Button ID="btn_huizong" runat="server" Text="分析统计" Height="21px" PostBackUrl="~/CompanySolvePlan/PhysicalExamineAnalysis2.aspx"  />--%>
+                <%-- <asp:Button ID="Button1" runat="server" Text="体检预测" Height="21px" PostBackUrl="~/CompanySolvePlan/PhysicalExamineAnalysis.aspx"  />--%>
+                <!--<input type="button" id="btnAllocate" value="秘书轮岗" style="width: 66px; height: 22px" onclick="javascript:ShowUserInfo()"/>-->
+
+            </td>
+        </tr>
+    </table>
+    <table id="tblist" border="1" bordercolor="#D7D7D7" class="table_search_98" align="center">
+        <tr>
+            <%--                <th style="width: 5%;">
+            序 号
+        </th>--%>
+            <th style="width:13%;">
+                会议名称
+            </th>
+            <th style="width:7%;">
+                会议时间
+            </th>
+            <th style="width:5%;">
+                会议地点
+            </th>
+            <th style="width:8%;">
+                会议召集人
+            </th>
+            <th style="width:15%;">
+                会议与会人
+            </th>
+            <th style="width:10%;">
+                实际与会人
+            </th>
+            <th style="width:15%;">
+                会议主题
+            </th>
+            <th style="width:10%;">
+                会议纪要
+            </th>
+            <th style="width:8%;">
+                下载
+            </th>
+            <th style="width:7%">
+                操作
+            </th>
+
+        </tr>
+        <asp:Repeater ID="rpt1" runat="server">
+            <ItemTemplate>
+                <tr id="tr_<%#Eval("MeetingID") %>" style="line-height: 28px">
+                <td class="head">
+                    <%# Eval("MeetingName")%>
+                </td>
+                <td class="head">
+                    <%# String.IsNullOrEmpty(Eval("MeetingTime").ToString()) ? "" : Convert.ToDateTime(Eval("MeetingTime")).ToString("yyyy/MM/dd hh:mm")%>
+                </td>
+                <td class="head">
+                    <%#Eval("MeetingAdd")%>
+                </td>
+                <td class="head">
+                    <%# Eval("UserName")%>
+                </td>
+                <td class="head">
+                    <%# GetGroupNamesByIds(Eval("MeetingMemberGroupID").ToString()).Length < 10 ? GetGroupNamesByIds(Eval("MeetingMemberGroupID").ToString()) + GetUserNamesByIds(Eval("MeetingMember").ToString()) : GetGroupNamesByIds(Eval("MeetingMemberGroupID").ToString()).Substring(0, 10) + "..." %>
+                </td>
+                <td class="head">
+                    <%# GetUserNamesByIds(Eval("MeetingFactMember").ToString()).Length < 10 ? GetUserNamesByIds(Eval("MeetingFactMember").ToString()) : GetUserNamesByIds(Eval("MeetingFactMember").ToString()).Substring(0, 10) + "..."%>
+                </td>
+                <td class="head">
+                    <%# Eval("ThemeID") == "" ? Eval("ThemeNote").ToString().Length < 10 ? Eval("ThemeNote") : Eval("ThemeNote").ToString().Substring(0, 10) + "..." : Eval("ThemeID").ToString().Length < 10 ? Eval("ThemeID") : Eval("ThemeID").ToString().Substring(0, 10) + "..."%>
+                </td>
+
+                <td class="head">
+                    <%#Eval("MeetingRecord").ToString().Length < 10 ? Eval("MeetingRecord") : Eval("MeetingRecord").ToString().Substring(0,10)+"..."%>
+                </td>
+                <td class="head">
+                    <a href="DownLoad1.ashx?ID=<%#Eval("MeetingID") %>&FType=2"   target="_blank">会议材料</a>
+                    <a href="DownLoad1.ashx?ID=<%#Eval("MeetingID") %>&FType=1"   target="_blank">会议纪要</a>
+                </td>
+                <td class="head">
+                    <a href="javascript:editItem('<%#Eval("MeetingID") %>')">
+                    <img alt="编辑" src="../Images/edit.gif" /></a>
+                    &nbsp;
+
+                    <%--       <a href="javascript:sendMail('<%#Eval("MeetingID") %>')">
+                    <img alt="邮件" src="../Images/receBox.png" /></a>--%>
+
+                    &nbsp; <a href="javascript:deleteItem('<%#Eval("MeetingID")%>')">
+                    <img alt="删除" src="../Images/del.gif" /></a>
+
+                </td>
+                </tr>
+            </ItemTemplate>
+        </asp:Repeater>
+    </table>
+    <div runat="server" id="tipbar" class="tipbar0" visible="false">
+        提示：没有符合条件的记录</div>
+    <div id="pagebar" visible="false" runat="server" style="float: right">
+        <span>共<asp:Label ID="lb_count" runat="server"></asp:Label>条记录,</span> <span>当前第<asp:Label
+            ID="labcurrentpage" runat="server" ForeColor="Blue" Text="1"></asp:Label>页,</span>
+        <span>共<asp:Label ID="labsumpage" runat="server" ForeColor="Blue"></asp:Label>页</span>
+        <asp:ImageButton ID="First" runat="server" ImageUrl="~/Images/main_54.gif" ToolTip="首页"
+                         OnClick="First_Click" />
+        <asp:ImageButton ID="Pre" runat="server" ImageUrl="~/Images/main_56.gif" ToolTip="上一页"
+                         OnClick="Pre_Click" Style="height: 15px" />
+        <asp:ImageButton ID="Next" runat="server" ImageUrl="~/Images/main_58.gif" ToolTip="下一页"
+                         OnClick="Next_Click" />
+        <asp:ImageButton ID="Last" runat="server" ImageUrl="~/Images/main_60.gif" ToolTip="尾页"
+                         OnClick="Last_Click" />
+    </div>
+    <asp:HiddenField ID="hidden_pageSize" runat="server" Value="20" />
+</form>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+
+
+        //$("#tblist").hoverOut();
+        $("a.tip").cluetip({ 'activation': 'click', 'sticky': true, 'closePosition': 'title', 'closeText': "关闭" });
+
+        $(".ReceiveState").each(function () {
+            if ($(this).val() == "1") {
+                $(this).siblings('img').attr("src", "../Images/flag_success.png");
+            }
+        })
+
+        $("img.ReceiveStateImg").click(function () {
+            var MeetingID = $(this).siblings(".MeetingID").val();
+            //var ReceiveState = $(this).siblings(".ReceiveState").val();
+            var src = $(this).attr("src");
+
+            if ($(this).attr("src").indexOf("flag_success") > 0) {
+                $(this).attr("src", "../Images/flag_fail.png")
+            }
+            else {
+                $(this).attr("src", "../Images/flag_success.png")
+            }
+
+            $.post("../Ajax.aspx", { type: "updateReceiveState", seq: "2", AwardItemID: AwardItemID }, function (data) {
+                if (data == "success") {
+                    //                    if ($(this).attr("src").indexOf("flag_success") > 0) {
+                    //                        $(this).attr("src", "../Images/flag_fail.png")
+                    //                    }
+                    //                    else {
+                    //                        $(this).attr("src", "../Images/flag_success.png")
+                    //                    }
+                }
+                else {
+                    alert('状态更新失败')
+                }
+            })//end post
+        })// end click
+
+    });   //end $
+
+    function checkTitle() {
+        var type = $("#ddlUserType").val();
+        var status = $("#UserStatusList").val();
+        var title = $("#txtUserAccount").val();
+        var name = $("#txtUserName").val();
+        if ((type == "请选择角色") && (status == "请选择身份") && (title == "") && (name == "")) {
+            jAlert("请输入查询条件！", "提示");
+            return false;
+        }
+    }
+
+    function editItem(o1) {
+        location.href = 'OECModify.aspx?ID=' + o1;
+    }
+
+
+
+    function sendMail(o1) {
+        location.href = 'OECMailManage.aspx?ID=' + o1;
+    }
+
+
+    function deleteItem(o) {
+
+        jConfirm('确定执行操作?', '系统提示', function (r) {
+            if (r) {
+                $.post("../Ajax.aspx", { type: "deleteMeeting", MeetingID: o, seq: "2", rdom: Math.random() }, function (data) {
+                    //alert(data);
+                    //window.location.href = window.location.href;
+
+                    if (data == "删除成功") {
+                        jAlert("删除成功", "删除成功");
+                        $("#tr_" + o).remove();
+                    }
+
+                });
+            }
+        });
+
+    }
+    function ShowUserInfo() {
+        var result = false;
+
+        result = window.showModalDialog('HrResource/secretaryChange.aspx?rdom=' + Math.random(), callBack, "resizable:no;scroll:no;status:no;dialogWidth=15cm;dialogHeight=10cm;center=yes;help=no;");
+
+    }
+</script>
+

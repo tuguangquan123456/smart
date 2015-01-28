@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>用户信息管理</title>
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+
+    <script type="text/javascript" src="../Js/jquery.js"></script>
+
+    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="../Js/jquery.cluetip.js"></script>
+    <script type="text/javascript" src="../Js/resource_admin.js"></script>
+
+    <script type="text/javascript" src="../Js/My97DatePicker/WdatePicker.js"></script>
+    <style type="text/css">
+        ul{list-style:none;}
+        #tab{margin:20px auto;padding:10px;width:80%;border:1px solid #ccc; text-align:center}
+        #tab ul{overflow:hidden;zoom:1;}
+        #tab li{float:left;margin-right:8px;width:200px;height:18px;line-height:20px;border:1px solid red;cursor:pointer;text-align:center;}
+        #tab li.on{background:#fc0; color:#000;}
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $("#tblist :checkbox").css("display", "none");
+
+            $("#sendRemindEmail").click(function () {
+                $("#div_mail").css("display", "block");
+                $("#tblist :checkbox").css("display", "block");
+                $(this).css("display", "none");
+            })
+
+            $("#selAll").click(function () { //":checked"匹配所有的复选框
+                if ($("#selAll").is(":checked")) {
+                    $("#tblist :checkbox").attr("checked", true);
+                }
+                else {
+                    $("#tblist :checkbox").attr("checked", false);
+                }
+                //"#div1 :checked"之间必须有空格checked是设置选中状态。如果为true则是选中fo否则false为不选中
+            });
+            //理解用迭代原理each（function(){}）
+            $("#reverse").click(function () {
+                $("#tblist :checkbox").each(function () {
+                    $(this).attr("checked", !$(this).attr("checked")); //!$(this).attr("checked")判断复选框的状态：如果选中则取反
+                });
+            });
+        });
+
+        function checkSel() {
+            if ($("#tblist :checkbox:checked").length < 1) {
+                jAlert("必须选中一项要发送提醒的项", "系统提示");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body style="clear: both; display: block; height:auto; ">
+<form id="form1" runat="server">
+    <div class="c_name">
+        <h2> 激励管理</h2>
+    </div>
+    <%--<div class="ptitle">激励列表</div>--%>
+    <div id="tab">
+        <ul id="menus-tab">
+            <li class="on"><a href="AwardMain.aspx">桃李券</a></li>
+            <li><a href="AwardMain2.aspx">金网络</a></li>
+            <li><a href="AwardMain3.aspx">中研之星（个人）</a></li>
+            <li><a href="AwardMain4.aspx">中研之星（团队）</a></li>
+        </ul>
+    </div>
+    <table border="1" bordercolor="#D7D7D7" class="table_top_search" align="center">
+        <tr>
+            <td style="width: 73px; background-color: #FFF; border-right-width: 0px">
+                <asp:Button ID="btnAdd" runat="server" Text="新 增" Height="21px" PostBackUrl="~/CompanySolvePlan/AwardAdd.aspx"
+                            Width="58px"  />
+            </td>
+            <td class="td_style"style="text-align: left; width:1780px">
+
+
+                用 户&nbsp; 工 号：<asp:TextBox ID="txtUserAccount" runat="server" Width="100px" MaxLength="20"></asp:TextBox>
+                用 户&nbsp; 姓 名：<asp:TextBox ID="txtUserName" runat="server" Width="100px" MaxLength="18"></asp:TextBox>
+                激励编号：<asp:TextBox ID="AwardID" runat="server" Width="100px" MaxLength="18"></asp:TextBox>
+                兑奖日期从：<asp:TextBox ID="BeginDate" runat="server" Width="100px" MaxLength="18" onClick="WdatePicker()"></asp:TextBox>
+                兑奖日期至：<asp:TextBox ID="EndDate" runat="server" Width="100px" MaxLength="18" onClick="WdatePicker()"></asp:TextBox>
+                <br />截止日期从：<asp:TextBox ID="DeadLineFrom" runat="server" Width="100px" MaxLength="18" onClick="WdatePicker()"></asp:TextBox>
+                截止日期至：<asp:TextBox ID="DeadLineTo" runat="server" Width="100px" MaxLength="18" onClick="WdatePicker()"></asp:TextBox>
+                领取状态： <asp:DropDownList ID="ReceiveState" runat="server" Width="100px">
+                <asp:ListItem Value="">请选择..</asp:ListItem>
+                <asp:ListItem Value="0">未领取</asp:ListItem>
+                <asp:ListItem Value="1">已领取</asp:ListItem>
+            </asp:DropDownList>
+                <asp:Button ID="btnSearch" runat="server" Text="立即查找" Height="21px"  OnClientClick="return checkTitle();" OnClick="btnSub_Click" />
+                <asp:Button ID="expertResult" runat="server" Text="导出结果" Height="21px"
+                            onclick="expertResult_Click"  />
+                <!--<input type="button" id="btnAllocate" value="秘书轮岗" style="width: 66px; height: 22px" onclick="javascript:ShowUserInfo()"/>-->
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+                <%--                    <asp:Button ID="SendOneKey" runat="server" Text="一键发送" Visible="false" />
+                <asp:CheckBox ID="selectAll" runat="server" Text="全选" Visible="false"
+                              AutoPostBack="True" oncheckedchanged="selectAll_CheckedChanged" />
+                <asp:CheckBox ID="selectAllOther" runat="server" Text="反选" Visible="false"
+                              AutoPostBack="True" oncheckedchanged="selectAllOther_CheckedChanged" />
+                <asp:Button ID="sendRemindEmail" runat="server" Text="发送领取提醒" Height="21px"
+                            onclick="sendRemindEmail_Click"  />--%>
+                <div id="div_mail" style="float:left; display:none" >
+                    <input id="selAll" type="checkbox"  /><label id="lbl_selAll">全部选定</label>&nbsp;
+                    <input id="reverse" type="checkbox" /><label id="lbl_unSelAll">反选</label>
+                    <asp:Button ID="SendOneKey" runat="server" Text="一键发送"
+                                OnClientClick="return checkSel();" onclick="SendOneKey_Click" />
+                </div>
+
+                <input id="sendRemindEmail" type="button" value="发送领取提醒" />
+            </td>
+        </tr>
+    </table>
+    <table id="tblist" border="1" bordercolor="#D7D7D7" class="table_search_98" align="center">
+        <tr>
+            <th style="width: 5%;">
+                序 号
+            </th>
+            <th style="width: 5%;">
+                工 号
+            </th>
+            <th style="width: 5%;">
+                姓 名
+            </th>
+            <th style="width: 5%;">
+                工 作 地
+            </th>
+            <th style="width: 5%;">
+                三级部门
+            </th>
+            <th style="width: 5%;">
+                四级部门
+            </th>
+            <th style="width: 5%;">
+                入职日期
+            </th>
+            <th style="width: 5%;">
+                兑卷截止日期
+            </th>
+            <th style="width: 5%;">
+                兑卷日期
+            </th>
+            <th style="width: 5%;">
+                桃李卷编号
+            </th>
+            <th style="width: 5%;">
+                兑取人工号
+            </th>
+            <th style="width: 5%;">
+                兑取人姓名
+            </th>
+            <th style="width: 5%;">
+                领取状态
+            </th>
+            <th style="width: 10%;">
+                操 作
+            </th>
+        </tr>
+        <asp:Repeater ID="Repeater_UserList" runat="server">
+            <ItemTemplate>
+                <tr id="tr_<%#Eval("AwardItemID") %>" style="line-height: 28px">
+                <td class="head">
+                    <%# (Container.ItemIndex + 1 + (curpage - 1) * (Convert.ToInt32(hidden_pageSize.Value)))%><asp:CheckBox ID="Item1" runat="server" class="item1" Height="14" Width="14" />
+                </td>
+                <td class="head">
+                    <%# Eval("UserID")%>
+                </td>
+                <td class="head">
+                    <%# Eval("UserName")%>
+                </td>
+                <td class="head">
+                    <%# Eval("InstitutePlace")%>
+                </td>
+                <td class="head">
+                    <%# Eval("ThirdDepName")%>
+                </td>
+                <td class="head">
+                    <%# Eval("FourthDepName")%>
+                </td>
+                <td class="head">
+                    <%#Eval("EnterDate").ToString()==""?"":Convert.ToDateTime(Eval("EnterDate").ToString()).CompareTo(Convert.ToDateTime("1990-01-01")) == 0 ? "" : Convert.ToDateTime(Eval("EnterDate").ToString()).ToShortDateString()%>
+                </td>
+                <td class="head">
+                    <%#Convert.ToDateTime(Eval("AwardDeadLine").ToString()).CompareTo(Convert.ToDateTime("1990-01-01")) == 0 ? "" : Convert.ToDateTime(Eval("AwardDeadLine").ToString()).ToShortDateString()%>
+                </td>
+                <td class="head">
+                    <%#Convert.ToDateTime(Eval("GetAwardDate").ToString()).CompareTo(Convert.ToDateTime("1990-01-01")) == 0 ? "" : Convert.ToDateTime(Eval("GetAwardDate").ToString()).ToShortDateString()%>
+                </td>
+                <td class="head">
+                    <%# Eval("AwardID")%>
+                </td>
+                <td class="head">
+                    <%# Eval("ReceiveUserID")%>
+                </td>
+                <td class="head">
+                    <%# Eval("ReceiveUserName")%>
+                </td>
+                <%--                        <td class="head">
+                <%#Convert.ToDateTime(Eval("GetAwardDate").ToString()).CompareTo(Convert.ToDateTime("1990-01-01")) == 0 ? "" : Convert.ToDateTime(Eval("GetAwardDate").ToString()).ToShortDateString()%>
+            </td>--%>
+                <td class="head">
+                    <img class="ReceiveStateImg" src="../Images/flag_fail.png" alt="点击切换领取状态" />
+                    <input type="hidden" value="<%# Eval("ReceiveState")%>"  class="ReceiveState" />
+                    <input type="hidden" value="<%# Eval("AwardItemID")%>"  class="AwardItemID" />
+                </td>
+                <td class="head">
+                    <a href="javascript:editItem('<%#Eval("AwardItemID") %>')">
+                    <img alt="编辑" src="../Images/edit.gif" /></a> &nbsp; <a href="javascript:deleteItem('<%#Eval("AwardItemID")%>')">
+                    <img alt="删除" src="../Images/del.gif" /></a>
+
+                </td>
+                </tr>
+            </ItemTemplate>
+        </asp:Repeater>
+    </table>
+    <div runat="server" id="tipbar" class="tipbar0" visible="false">
+        提示：没有符合条件的记录</div>
+    <div id="pagebar" visible="false" runat="server" style="float: right">
+        <span>共<asp:Label ID="lb_count" runat="server"></asp:Label>条记录,</span> <span>当前第<asp:Label
+            ID="labcurrentpage" runat="server" ForeColor="Blue" Text="1"></asp:Label>页,</span>
+        <span>共<asp:Label ID="labsumpage" runat="server" ForeColor="Blue"></asp:Label>页</span>
+        <asp:ImageButton ID="First" runat="server" ImageUrl="~/Images/main_54.gif" ToolTip="首页"
+                         OnClick="First_Click" style="height: 15px" />
+        <asp:ImageButton ID="Pre" runat="server" ImageUrl="~/Images/main_56.gif" ToolTip="上一页"
+                         OnClick="Pre_Click" Style="height: 15px" />
+        <asp:ImageButton ID="Next" runat="server" ImageUrl="~/Images/main_58.gif" ToolTip="下一页"
+                         OnClick="Next_Click" />
+        <asp:ImageButton ID="Last" runat="server" ImageUrl="~/Images/main_60.gif" ToolTip="尾页"
+                         OnClick="Last_Click" Height="16px" />
+    </div>
+    <asp:HiddenField ID="hidden_pageSize" runat="server" Value="10" />
+</form>
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //$("#tblist").hoverOut();
+        $("a.tip").cluetip({ 'activation': 'click', 'sticky': true, 'closePosition': 'title', 'closeText': "关闭" });
+
+        $(".ReceiveState").each(function () {
+            if ($(this).val() == "1") {
+                $(this).siblings('img').attr("src", "../Images/flag_success.png");
+            }
+        })
+
+        $("img.ReceiveStateImg").click(function () {
+            var AwardItemID = $(this).siblings(".AwardItemID").val();
+            //var ReceiveState = $(this).siblings(".ReceiveState").val();
+            var src = $(this).attr("src");
+
+            if ($(this).attr("src").indexOf("flag_success") > 0) {
+                $(this).attr("src", "../Images/flag_fail.png")
+            }
+            else {
+                $(this).attr("src", "../Images/flag_success.png")
+            }
+
+            $.post("../Ajax.aspx", { type: "updateReceiveState", seq:"1",AwardItemID: AwardItemID }, function (data) {
+                if (data = "success") {
+//                    if ($(this).attr("src").indexOf("flag_success") > 0) {
+//                        $(this).attr("src", "../Images/flag_fail.png")
+//                    }
+//                    else {
+//                        $(this).attr("src", "../Images/flag_success.png")
+//                    }
+                }
+                else {
+                    alert('状态更新失败')
+                }
+            })//end post
+        })// end click
+
+    });   //end $
+
+    function checkTitle() {
+        var type = $("#ddlUserType").val();
+        var status = $("#UserStatusList").val();
+        var title = $("#txtUserAccount").val();
+        var name = $("#txtUserName").val();
+        if ((type == "请选择角色") && (status == "请选择身份") && (title == "") && (name == "")) {
+            jAlert("请输入查询条件！", "提示");
+            return false;
+        }
+    }
+
+    function editItem(o1) {
+        location.href = 'AwardModify.aspx?AwardItemID=' + o1;
+    }
+
+    function deleteItem(o) {
+
+        jConfirm('确定执行操作?', '系统提示', function (r) {
+            if (r) {
+                $.post("../Ajax.aspx", { type: "deleteAwardItem", AwardItemID: o,seq:"1", rdom: Math.random() }, function (data) {
+                    alert(data);
+                    //window.location.href = window.location.href;
+
+                    if (data == "删除成功") {
+                        // jAlert("删除成功", "删除成功");
+                        $("#tr_" + o).remove();
+                    }
+
+                });
+            }
+        });
+
+    }
+    function ShowUserInfo() {
+        var result = false;
+
+        result = window.showModalDialog('HrResource/secretaryChange.aspx?rdom=' + Math.random(), callBack, "resizable:no;scroll:no;status:no;dialogWidth=15cm;dialogHeight=10cm;center=yes;help=no;");
+
+    }
+</script>

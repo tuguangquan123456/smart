@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>OEC邮件提醒</title>
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+
+    <script type="text/javascript" src="../Js/jquery-1.2.6.pack.js"></script>
+
+    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="gb2312"></script>
+
+    <script type="text/javascript" src="../Js/SystemAdmin_SelectDept.js"></script>
+    <script type="text/javascript" src="../Js/My97DatePicker/WdatePicker.js"></script>
+
+    <script type="text/javascript" src="../Js/dhtmlXCommon.js"></script>
+
+    <script type="text/javascript" src="../Js/dhtmlXTree.js"></script>
+
+</head>
+<body style="clear: both; display: block; height:auto; ">
+<form id="form1" runat="server">
+    <div class="c_name">
+        <h2>
+            OEC邮件提醒</h2>
+    </div>
+    <div class="ptitle">
+        OEC邮件提醒</div>
+
+    <table border="1" bordercolor="#D7D7D7" class="table_password" align="center">
+
+        <tr>
+            <th colspan="4">
+                &nbsp;
+            </th>
+        </tr>
+
+        <tr>
+            <td class="td_style">
+                会议名称
+            </td>
+            <td>
+                <asp:TextBox ID="txt_MeetingName" MaxLength="16" Width="300px" runat="server"  ReadOnly ="true"></asp:TextBox><span
+                    style="color: Red">*</span>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td class="td_style">
+                会议时间
+            </td>
+            <td>
+                <asp:TextBox ID="txt_MeetingTime" runat="server" MaxLength="16" Width="300px"  ReadOnly ="true" ></asp:TextBox><span
+                    style="color: Red">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                会议地点
+            </td>
+            <td>
+                <asp:TextBox ID="txt_MeetingAdd" MaxLength="16" Width="300px" ReadOnly ="true" runat="server"></asp:TextBox><span
+                    style="color: Red">*</span>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td class="td_style">
+                与会人
+            </td>
+            <td>
+
+                <asp:TextBox ID="txt_MeetingMember" runat="server" TextMode="MultiLine"  Width="300px"
+                             AutoSize="False" Height="150px"  ReadOnly ="true"></asp:TextBox>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td class="td_style">
+                实际与会人
+            </td>
+            <td>
+
+                <asp:TextBox ID="txt_MeetingFactMember" runat="server" TextMode="MultiLine"  Width="300px"
+                             AutoSize="False" Height="150px"  ReadOnly ="true"></asp:TextBox>
+
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td class="td_style">
+                未与会人
+            </td>
+            <td>
+                <asp:TextBox ID="txt_MeetingMemberNotIn" runat="server" TextMode="MultiLine"  Width="300px"
+                             AutoSize="False" Height="150px"  ReadOnly ="true"></asp:TextBox>
+            </td>
+
+        </tr>
+
+        <tr>
+            <th colspan="4" style="height: 25px">
+                <asp:Button ID="SendMail1" runat="server" Text="发送邮件提醒" Width="100px" Height="22px"
+                            OnClientClick="if(confirm( '确定发送邮件提醒到所有与会人！ ')==false) return   false; " onclick="SendMailToMM"/>
+
+                <asp:Button ID="SendMail2" runat="server" Text="发送会议材料至未与会人" Width="160px" Height="22px"
+                            OnClientClick="if(confirm( '确定发送会议材料到所有未与会人！ ')==false) return   false;" onclick="SendMailToMMNotIn"/>
+
+
+                <asp:Label ID="info" runat="server"></asp:Label>
+            </th>
+        </tr>
+    </table>
+
+
+    <asp:HiddenField ID="hdf_OecGroupIDs"  runat="server"   value="0" />
+    <asp:HiddenField ID="hfd_ID" runat="server" />
+    <asp:HiddenField ID="lbDep1Id" runat="server" />
+    <asp:HiddenField ID="lbDep1Name" runat="server" />
+    <asp:HiddenField ID="lbDep2Id" runat="server" />
+    <asp:HiddenField ID="lbDep2Name" runat="server" />
+    <asp:HiddenField ID="lbDep3Id" runat="server" />
+    <asp:HiddenField ID="lbDep3Name" runat="server" />
+    <asp:HiddenField ID="lbDep4Id" runat="server" />
+    <asp:HiddenField ID="lbDep4Name" runat="server" />
+</form>
+</body>
+
+<script type="text/javascript">
+    //    tree2 = new dhtmlXTreeObject("tree", "100%", "100%", 0);
+    //    tree2.setImagePath("../Images/tree/imgs/");
+    //    tree2.enableCheckBoxes(1);
+    //    tree2.enableThreeStateCheckboxes(true);
+    //    MeetingId = document.getElementById("hfd_ID").value;
+    //    tree2.loadXML('OECXML.aspx?MeetingId='+ MeetingId +'&rodomId=' + Math.random());
+    //    function checkAll() {
+    //        tree.setCheck(0, true);
+    //    }
+
+
+    current_max_OEC_3 = 0;
+    function addRow() {
+        var max = $("#form1 .OEC_3").length;
+        if (current_max_OEC_3 == max) {
+            return false;
+        }
+        current_max_OEC_3++;
+        $("#form1 #OECDL" + current_max_OEC_3).show();
+    }
+    function deleteRow() {
+        if (current_max_OEC_3 == 0) {
+            return false;
+        }
+        $("#form1 #OECDL" + current_max_OEC_3).hide();
+        current_max_OEC_3--;
+    }
+
+
+
+
+    function save() {
+//        MeetingName = document.getElementById("txt_MeetingName").value;
+//        MeetingTime = document.getElementById("txt_MeetingTime").value;
+//        MeetingAdd = document.getElementById("txt_MeetingAdd").value;
+//        MeetingCaller = document.getElementById("txt_MeetingCaller").value;
+//        MeetingMember = document.getElementById("ddlOecGroupList1").value == "请选择" ? "" : document.getElementById("ddlOecGroupList1").value;
+//        MeetingMember2 = document.getElementById("txt_MeetingMember").value;
+//        MeetingMember = MeetingMember + MeetingMember2;
+//        if (MeetingName == "" || MeetingTime == "" || MeetingAdd == "" || MeetingCaller == "" || MeetingMember == "") {
+//            jAlert("信息填写不全，请重新填写！", "系统提示");
+//            return false;
+//        }
+
+//        //        var newStr = tree2.getAllChecked();
+//        //        if (newStr) {
+//        //            document.getElementById("hdf_OecGroupIDs").value = newStr
+//        //            hdf_OecGroupIDs = document.getElementById("hdf_OecGroupIDs").value;
+//        //            //            alert(hdf_OecGroupIDs);
+//        //        }
+
+
+
+    }
+
+    function checkExistUser(p_userID, p_controlID) {
+        var ExistUser = false;
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "../Ajax.aspx",
+            data: { type: "CheckUserExist", UserID: p_userID },
+            success: function (data) {
+                if (data == 0) {
+                    $("#" + p_controlID).val("");
+                    document.getElementById(p_controlID).focus();
+                    ExistUser = false;
+                }
+                else {
+                    ExistUser = true;
+                }
+
+            } //end success
+        })//end ajax
+        if (!ExistUser) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+</script>
+
+</html>

@@ -5,15 +5,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Smart_管理系统</title>
 <link rel="stylesheet" type="text/css" href="Css/menu.css" />
-<script type="text/javascript" src="Js/jquery.js" language="javascript"></script>
-
-<script type="text/javascript" src="Js/jquery-1.2.6.pack.js" language="javascript"></script>
-<script type="text/javascript" src="Js/jquery.corners.js" language="javascript"></script>
-
+<script type="text/javascript" src="Js/jquery-1.10.2.js" language="javascript"></script>
+<script src="Js/jquery.json-2.4.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="Js/menu.js"></script>
-
-<script type="text/javascript" src="Js/jquery.accordion.js" language="javascript"></script>
-
 <base target="_self" />
 <style type="text/css">
     *{margin:0px;padding:0px;}
@@ -34,14 +28,6 @@
     #left {
 
         width: 195px;
-        /*
-        position:absolute;
-        left:0px;
-        bottom:0px;
-        top:78px;
-        height:100%;
-        */
-
         overflow:hidden;
     }
 
@@ -50,9 +36,6 @@
     {
 
     }
-
-
-
     #iframe_left{
         width: 100%; height: 100%;
     }
@@ -159,6 +142,7 @@
     $(function () {
         $("#header_navigation ul li.selected").corner();
         $("#header_navigation ul li").click(function () {
+            alert("123");
             $("#header_navigation ul li").removeClass("selected");
             $(this).addClass("selected");
             $("#header_navigation ul li.selected").corner();
@@ -265,7 +249,7 @@
                   </span>                                                                                                                                              <!--ID="lStatusName"></asp:Label>-->
                     &nbsp;&nbsp;
                     <a target="iframe_main" style="cursor:pointer;" onclick="ShowUserInfo()">用户信息&nbsp; </a>
-                    <a target="iframe_main" href="AdminSystem/Help.aspx">技术支持&nbsp; </a>
+                    <a target="iframe_main" href="AdminSystem/Help.html">技术支持&nbsp; </a>
                     <a style="cursor:pointer;"  onclick="Logout()" >退出系统 &nbsp;</a>
                 </div>
             </div>
@@ -277,90 +261,90 @@
      style="margin-left:19px;">
     <div id="slink1" class="second_links" >
         <span><a target="iframe_main" href="AdminSystem/roleManage.html">权限管理</a></span>
-        <span><a target="iframe_main" href="AdminSystem/OperatorManage.aspx">用户管理</a></span>
-        <span><a target="iframe_main" href="AdminSystem/DepartmentManage.aspx">属性管理</a></span>
-        <span><a target="iframe_main" href="HrResource/secretaryChange.aspx">秘书轮岗</a></span>
-        <span><a target="iframe_main" href="HrResource/UsernumberChange.aspx">员工切工号</a></span>
-        <span><a target="iframe_main" href="HrResource/EmailManage.aspx">系统邮箱设置</a></span>
-        <span><a target="iframe_main" href="HrResource/LeaveConfirmList.aspx">离职（待确认）</a></span>
-        <span><a target="iframe_main" href="HrResource/DeleteConfirmList.aspx">删除（待确认）</a></span>
-        <span><a target="iframe_main" href="AdminSystem/PersonExportComfirm.aspx">转移（待确认）</a></span>
-        <span><a target="iframe_main" href="AdminSystem/HistoryList.aspx">最近使用记录</a></span>
+        <span><a target="iframe_main" href="AdminSystem/OperatorManage.html">用户管理</a></span>
+        <span><a target="iframe_main" href="AdminSystem/DepartmentManage.html">属性管理</a></span>
+        <span><a target="iframe_main" href="HrResource/secretaryChange.html">秘书轮岗</a></span>
+        <span><a target="iframe_main" href="HrResource/UsernumberChange.html">员工切工号</a></span>
+        <span><a target="iframe_main" href="HrResource/EmailManage.html">系统邮箱设置</a></span>
+        <span><a target="iframe_main" href="HrResource/LeaveConfirmList.html">离职（待确认）</a></span>
+        <span><a target="iframe_main" href="HrResource/DeleteConfirmList.html">删除（待确认）</a></span>
+        <span><a target="iframe_main" href="AdminSystem/PersonExportComfirm.html">转移（待确认）</a></span>
+        <span><a target="iframe_main" href="AdminSystem/HistoryList.html">最近使用记录</a></span>
 
     </div>
 
     <div id="slink2" class="second_links" style="display:none;">
-        <span><a target="iframe_main" href="HrResource/GeneralList.aspx">人员信息管理</a></span>
-        <span><a target="iframe_main" href="HrResource/BasicList.aspx">基础名单管理</a></span>
-        <span><a target="iframe_main" href="HrResource/FamilyList.aspx">家庭信息管理</a></span>
-        <span><a target="iframe_main" href="HrResource/PerformanceList.aspx">绩效信息查询</a></span>
-        <span><a target="iframe_main" href="HrResource/OfficeList.aspx">任职信息查询</a></span>
-        <span><a target="iframe_main" href="HrResource/PostList.aspx">职位信息查询</a></span>
-        <span><a target="iframe_main" href="HrResource/OtherList.aspx">其他信息</a></span>
-        <span><a target="iframe_main" href="HrResource/OffsiteClockOut.aspx">异地打卡信息</a></span>
+        <span><a target="iframe_main" href="HrResource/GeneralList.html">人员信息管理</a></span>
+        <span><a target="iframe_main" href="HrResource/BasicList.html">基础名单管理</a></span>
+        <span><a target="iframe_main" href="HrResource/FamilyList.html">家庭信息管理</a></span>
+        <span><a target="iframe_main" href="HrResource/PerformanceList.html">绩效信息查询</a></span>
+        <span><a target="iframe_main" href="HrResource/OfficeList.html">任职信息查询</a></span>
+        <span><a target="iframe_main" href="HrResource/PostList.html">职位信息查询</a></span>
+        <span><a target="iframe_main" href="HrResource/OtherList.html">其他信息</a></span>
+        <span><a target="iframe_main" href="HrResource/OffsiteClockOut.html">异地打卡信息</a></span>
     </div>
 
 
 
     <div id="slink4" class="second_links" style="display:none; ">
 
-        <span><a target="iframe_main" onclick="ClearThirdMenu('CompanySolvePlan/AwardMain_All.aspx')" >荣誉激励</a></span>
+        <span><a target="iframe_main" onclick="ClearThirdMenu('CompanySolvePlan/AwardMain_All.html')" >荣誉激励</a></span>
 
         <span><a target="iframe_main" onclick="changeTab1('Div10');displayShowUI();">压力测试管理</a></span>
 
         <span><a target="iframe_main" onclick="changeTab1('Div6');displayShowUI();">离职信息</a></span>
 
-        <span><a target="iframe_main" onclick="ClearThirdMenu('CompanySolvePlan/PhysicalExamine.aspx')" >体检数据管理</a></span>
+        <span><a target="iframe_main" onclick="ClearThirdMenu('CompanySolvePlan/PhysicalExamine.html')" >体检数据管理</a></span>
 
     </div>
     <div id="slink5" class="second_links" style="display:none;">
 
-        <span><a target="iframe_main" href="HrImport/GeneralInfoImport.aspx">导入常用信息表</a></span>
-        <span><a target="iframe_main" href="HrImport/GeneralInfoUpdate.aspx">更新常用信息表</a></span>
-        <span><a target="iframe_main" href="HrImport/LeaveInfoImport.aspx">导入离职信息表</a></span>
-        <span><a target="iframe_main" href="HrImport/FamilyInfoImport.aspx">导入家庭信息表</a></span>
+        <span><a target="iframe_main" href="HrImport/GeneralInfoImport.html">导入常用信息表</a></span>
+        <span><a target="iframe_main" href="HrImport/GeneralInfoUpdate.html">更新常用信息表</a></span>
+        <span><a target="iframe_main" href="HrImport/LeaveInfoImport.html">导入离职信息表</a></span>
+        <span><a target="iframe_main" href="HrImport/FamilyInfoImport.html">导入家庭信息表</a></span>
 
-        <span><a target="iframe_main" href="HrImport/PressureTestInfoImport.aspx">导入压力测试表</a></span>
-        <span><a target="iframe_main" href="CompanySolvePlan/PhysicalExamineImport.aspx">导入体检数据表</a></span>
-        <span><a target="iframe_main" href="HrImport/OffsiteClockOutImport.aspx">导入异地打卡信息表</a></span>
+        <span><a target="iframe_main" href="HrImport/PressureTestInfoImport.html">导入压力测试表</a></span>
+        <span><a target="iframe_main" href="CompanySolvePlan/PhysicalExamineImport.html">导入体检数据表</a></span>
+        <span><a target="iframe_main" href="HrImport/OffsiteClockOutImport.html">导入异地打卡信息表</a></span>
 
     </div>
 
 
 
     <div id="slink8" class="second_links" style="display:none;">
-        <span><a target="iframe_main" href="HrResource/OECManage.aspx">OEC学习</a></span>
-        <span><a target="iframe_main" href="HrResource/MeetingTheme.aspx">学习主题</a></span>
-        <span><a target="iframe_main" href="HrResource/OECReviewManage.aspx">OEC心得</a></span>
-        <span><a target="iframe_main" href="AdminSystem/OecManage.aspx">OEC管理</a></span>
-        <span><a target="iframe_main" href="HrResource/OECGeneralList.aspx">OEC人员分配</a></span>
+        <span><a target="iframe_main" href="HrResource/OECManage.html">OEC学习</a></span>
+        <span><a target="iframe_main" href="HrResource/MeetingTheme.html">学习主题</a></span>
+        <span><a target="iframe_main" href="HrResource/OECReviewManage.html">OEC心得</a></span>
+        <span><a target="iframe_main" href="AdminSystem/OecManage.html">OEC管理</a></span>
+        <span><a target="iframe_main" href="HrResource/OECGeneralList.html">OEC人员分配</a></span>
     </div>
     <div id="slink7" class="second_links" style="display:none;">
-        <span><a target="iframe_main" href="HrStorge/ResourceList.aspx">库存信息</a></span>
-        <span><a target="iframe_main" href="HrStorge/GoodOut.aspx">出库管理</a></span>
-        <span><a target="iframe_main" href="HrStorge/GoodImport.aspx">入库管理</a></span>
+        <span><a target="iframe_main" href="HrStorge/ResourceList.html">库存信息</a></span>
+        <span><a target="iframe_main" href="HrStorge/GoodOut.html">出库管理</a></span>
+        <span><a target="iframe_main" href="HrStorge/GoodImport.html">入库管理</a></span>
 
-        <span><a target="iframe_main" href="HrStorge/HistoryList.aspx">入库历史记录</a></span>
-        <span><a target="iframe_main" href="HrStorge/HistoryOutList.aspx">出库历史记录</a></span>
-        <span><a target="iframe_main" href="HrStorge/cangku.aspx">仓库管理</a></span>
-        <span><a target="iframe_main" href="HrImport/ProductImport.aspx">导入物品信息表</a></span>
-        <span><a target="iframe_main" href="HrStorge/StorgeEmailList.aspx">仓库邮箱管理</a></span>
+        <span><a target="iframe_main" href="HrStorge/HistoryList.html">入库历史记录</a></span>
+        <span><a target="iframe_main" href="HrStorge/HistoryOutList.html">出库历史记录</a></span>
+        <span><a target="iframe_main" href="HrStorge/cangku.html">仓库管理</a></span>
+        <span><a target="iframe_main" href="HrImport/ProductImport.html">导入物品信息表</a></span>
+        <span><a target="iframe_main" href="HrStorge/StorgeEmailList.html">仓库邮箱管理</a></span>
     </div>
 
     <div id="slink9" class="second_links" style="display:none;">
         <%-- <span><a target="iframe_main" href="Hrbook/BookList.aspx">图书信息</a></span>--%>
-        <span><a target="iframe_main" href="Hrbook/BookList.aspx">书籍查询</a></span>
-        <span><a target="iframe_main" href="Hrbook/LoanBook.aspx">外借图书信息</a></span>
-        <span><a target="iframe_main" href="Hrbook/Bookdonator.aspx">图书捐赠者名单</a></span>
-        <span><a target="iframe_main" href="Hrbook/DonatorBillboard.aspx">图书捐赠排行</a></span>
-        <span><a target="iframe_main" href="Hrbook/BookOut.aspx">借书</a></span>
-        <span><a target="iframe_main" href="Hrbook/BookImport.aspx">还书</a></span>
-        <span><a target="iframe_main" href="Hrbook/HistoryOutBook.aspx">借书历史记录</a></span>
-        <span><a target="iframe_main" href="Hrbook/HistoryInBook.aspx">还书历史记录</a></span>
-        <span><a target="iframe_main" href="Hrbook/Bookcangku.aspx">仓库管理</a></span>
-        <span><a target="iframe_main" href="HrImport/BookInfoImport.aspx">导入书籍信息表</a></span>
-        <span><a target="iframe_main" href="Hrbook/FeedBack.aspx">问题反馈</a></span>
-        <span><a target="iframe_main" href="Hrbook/MyLoanBook.aspx">我的借书</a></span>
+        <span><a target="iframe_main" href="Hrbook/BookList.html">书籍查询</a></span>
+        <span><a target="iframe_main" href="Hrbook/LoanBook.html">外借图书信息</a></span>
+        <span><a target="iframe_main" href="Hrbook/Bookdonator.html">图书捐赠者名单</a></span>
+        <span><a target="iframe_main" href="Hrbook/DonatorBillboard.html">图书捐赠排行</a></span>
+        <span><a target="iframe_main" href="Hrbook/BookOut.html">借书</a></span>
+        <span><a target="iframe_main" href="Hrbook/BookImport.html">还书</a></span>
+        <span><a target="iframe_main" href="Hrbook/HistoryOutBook.html">借书历史记录</a></span>
+        <span><a target="iframe_main" href="Hrbook/HistoryInBook.html">还书历史记录</a></span>
+        <span><a target="iframe_main" href="Hrbook/Bookcangku.html">仓库管理</a></span>
+        <span><a target="iframe_main" href="HrImport/BookInfoImport.html">导入书籍信息表</a></span>
+        <span><a target="iframe_main" href="Hrbook/FeedBack.html">问题反馈</a></span>
+        <span><a target="iframe_main" href="Hrbook/MyLoanBook.html">我的借书</a></span>
     </div>
 
 
@@ -369,10 +353,10 @@
 </div>
 <div id="Div1" style="position:relative; padding:10px 0 10px 80px;" style="margin-left:19px;">
     <div id="Div6" class="second_links" style="display:none;">
-        <span><a target="iframe_main" href="HrResource/LeaveList.aspx">离职信息</a></span>
-        <span><a target="iframe_main" href="HrResource/HumanTotalLeaveRateList.aspx">整体离职率</a></span>
-        <span><a target="iframe_main" href="HrResource/HumanKey_empLeaveRateList.aspx">关键员工离职率</a></span>
-        <span><a target="iframe_main" href="HrResource/HumanLeaveRateList.aspx">离职率</a></span>
+        <span><a target="iframe_main" href="HrResource/LeaveList.html">离职信息</a></span>
+        <span><a target="iframe_main" href="HrResource/HumanTotalLeaveRateList.html">整体离职率</a></span>
+        <span><a target="iframe_main" href="HrResource/HumanKey_empLeaveRateList.html">关键员工离职率</a></span>
+        <span><a target="iframe_main" href="HrResource/HumanLeaveRateList.html">离职率</a></span>
     </div>
 
 
@@ -386,10 +370,10 @@
 
 
     <div id="Div10" class="second_links" style="display:none;">
-        <span><a target="iframe_main" href="CompanySolvePlan/PressureTestList.aspx">压力测试信息表</a></span>
-        <span><a target="iframe_main" href="CompanySolvePlan/PTList.aspx">压力测试统计</a></span>
-        <span><a target="iframe_main" href="CompanySolvePlan/PTListYujing.aspx">压力测试预警</a></span>
-        <span><a target="iframe_main" href="CompanySolvePlan/PTList_NoPT.aspx">未测试名单</a></span>
+        <span><a target="iframe_main" href="CompanySolvePlan/PressureTestList.html">压力测试信息表</a></span>
+        <span><a target="iframe_main" href="CompanySolvePlan/PTList.html">压力测试统计</a></span>
+        <span><a target="iframe_main" href="CompanySolvePlan/PTListYujing.html">压力测试预警</a></span>
+        <span><a target="iframe_main" href="CompanySolvePlan/PTList_NoPT.html">未测试名单</a></span>
     </div>
 
 
@@ -461,13 +445,13 @@
     function ShowUserInfo() {
         var result = false;
 
-        result = window.showModalDialog('AdminSystem/OperatorDetail.aspx?rdom=' + Math.random(), callBack, "resizable:no;scroll:no;status:no;dialogWidth=15cm;dialogHeight=10cm;center=yes;help=no;");
+        result = window.showModalDialog('AdminSystem/OperatorDetail.html?rdom=' + Math.random(), callBack, "resizable:no;scroll:no;status:no;dialogWidth=15cm;dialogHeight=10cm;center=yes;help=no;");
 
     }
     function Help() {
         var result = false;
 
-        result = window.showModalDialog('AdminSystem/Help.aspx?rdom=' + Math.random(), callBack, "resizable:no;scroll:no;status:no;dialogWidth=15cm;dialogHeight=10cm;center=yes;help=no;");
+        result = window.showModalDialog('AdminSystem/Help.html?rdom=' + Math.random(), callBack, "resizable:no;scroll:no;status:no;dialogWidth=15cm;dialogHeight=10cm;center=yes;help=no;");
 
     }
 

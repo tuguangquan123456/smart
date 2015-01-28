@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script runat="server">
+
+</script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>资源列表</title>
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+    <script type="text/javascript">
+        function checkPath() {
+            var filePath = $("#fileUpload").val();
+            if (filePath == "") {
+                jAlert("请选择导入的文件！", "系统提示");
+                return false;
+            }
+            else {
+                if (filePath.lastIndexOf(".") != -1) {
+                    var ext = new String(filePath.substring(filePath.lastIndexOf(".") + 1, filePath.length)); //文件扩展名
+                    ext = ext.toLowerCase();
+                    if (ext == "xls") {
+                        return true;
+                    }
+                    jAlert("只支持xls文件格式！", "系统提示");
+                    return false;
+                }
+                else {
+                    jAlert("只支持xls文件格式！", "系统提示");
+                    return false;
+                }
+            }
+        }
+    </script>
+    <script type="text/javascript" src="../Js/jquery-1.2.6.pack.js"></script>
+
+    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="gb2312"></script>
+
+    <script type="text/javascript" src="../Js/jquery.cluetip.js"></script>
+
+    <script type="text/javascript" src="../Js/resource_admin.js"></script>
+
+    <script type="text/javascript" src="../Js/My97DatePicker/WdatePicker.js"></script>
+</head>
+<body style="clear: both; display: block; height:auto; ">
+<form id="form1" runat="server">
+    <div class="c_name">
+        <h2>
+            家庭信息导入管理
+        </h2>
+    </div>
+    <div class="ptitle">
+        家庭信息导入管理</div>
+    <table border="1"  class="table_top_search" align="center">
+        <tr>
+            <td class="td_style" style="text-align: center" colspan="2">
+
+            </td>
+        </tr>
+        <tr>
+            <td class="td_style" style="text-align: center; width: 177px;">
+                请选中要导入的Excel文件<span style="color: Red; text-align: left;">*</span></td>
+            <td class="td_1">
+                <asp:FileUpload ID="fileUpload" runat="server" Width="310px" /><a href="../HrImport/UpLoadMode/家庭信息表模板.xls"
+                                                                                  target="_blank">(请下载模版，您可以按照提供的模版进行批量导入)</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(注：若使用导出文件直接导入，请另存为之后再进行导入)
+                <%--<a href="../upload/dictionary.xls    OnClientClick="return checkPath()" "
+                target="_blank" class="style1">模版下载</a>&nbsp;&nbsp;&nbsp; (您可以按照提供的模版进行导入)&nbsp;&nbsp;&nbsp;&nbsp;--%>
+
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <asp:Button ID="btnImport" runat="server"
+                            Text="执行导入" Width="111px"
+                            OnClick="btnImport_Click" />
+                <asp:Label ID="label" runat="server" ForeColor="Red"></asp:Label>
+            </th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <asp:TextBox ID="ImportResultInfo" runat="server" TextMode="MultiLine" Rows="20"
+                             Width="99.5%" ReadOnly="true"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <asp:Label ID="lCount" runat="server" ForeColor="red" Font-Size="14px"></asp:Label>
+            </td>
+        </tr>
+    </table>
+
+
+
+</form>
+</body>
+</html>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#tblist").hoverOut();
+        $("a.tip").cluetip({ 'activation': 'click', 'sticky': true, 'closePosition': 'title', 'closeText': "关闭" });
+    });
+
+</script>

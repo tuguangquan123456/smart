@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>用户信息管理</title>
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+
+    <script type="text/javascript" src="../Js/jquery-1.2.6.pack.js"></script>
+
+    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="gb2312"></script>
+
+    <script type="text/javascript" src="../Js/jquery.cluetip.js"></script>
+    <script type="text/javascript" src="../Js/resource_admin.js"></script>
+
+</head>
+<body style="clear: both; display: block; height:auto; ">
+<form id="form1" runat="server">
+    <div class="c_name">
+        <h2>
+            用户管理</h2>
+    </div>
+    <div class="ptitle">
+        用户列表</div>
+    <table border="1" bordercolor="#D7D7D7" class="table_top_search" align="center">
+        <tr>
+            <td style="width: 73px; background-color: #FFF; border-right-width: 0px">
+                <button ID="btnAdd" runat="server" Text="新 增" Height="21px" PostBackUrl="~/AdminSystem/OperatorAdd.aspx"
+                            Width="58px"  />
+            </td>
+            <td class="td_style"style="text-align: left; width:1780px">
+                    <span style="text-align: left">用户类型：<asp:DropDownList ID="ddlUserType" runat="server">
+                    </asp:DropDownList> &nbsp;&nbsp;
+                    用户身份：<asp:DropDownList ID="UserStatusList" runat="server">
+                        </asp:DropDownList>
+                    研究所：<asp:DropDownList ID="DepList" runat="server">
+                        </asp:DropDownList>
+                        &nbsp;&nbsp;&nbsp;&nbsp;用户工号：<asp:TextBox ID="txtUserAccount" runat="server" Width="160px" MaxLength="20"></asp:TextBox>
+                        &nbsp;&nbsp;&nbsp;&nbsp;用户姓名：<asp:TextBox ID="txtUserName" runat="server" Width="160px" MaxLength="18"></asp:TextBox>
+                        &nbsp;&nbsp;<asp:Button ID="btnSearch" runat="server" Text="立即查找" Height="21px"  OnClientClick="return checkTitle();" OnClick="btnSub_Click" />
+                        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+                      <!--<input type="button" id="btnAllocate" value="秘书轮岗" style="width: 66px; height: 22px" onclick="javascript:ShowUserInfo()"/>-->
+                            
+                        </span>
+            </td>
+        </tr>
+    </table>
+    <table id="tblist" border="1" bordercolor="#D7D7D7" class="table_search_98" align="center">
+        <tr>
+            <th style="width: 5%;">
+                序 号
+            </th>
+            <th style="width: 8%;">
+                用 户 域 账 号
+            </th>
+            <th style="width: 8%;">
+                用 户 工 号
+            </th>
+            <th style="width: 10%;">
+                用 户 类 型
+            </th>
+            <th style="width: 10%;">
+                用 户 身 份
+            </th>
+            <th style="width: 10%;">
+                用 户 姓 名
+            </th>
+            <th style="width: 20%;">
+                所在部门
+            </th>
+            <th style="width: 5%;">
+                工作地
+            </th>
+            <th style="width: 15%;">
+                联系邮箱
+            </th>
+            <th style="width: 10%;">
+                操 作
+            </th>
+        </tr>
+        <asp:Repeater ID="Repeater_UserList" runat="server">
+            <ItemTemplate>
+                <tr id="tr_<%#Eval("UserID") %>" style="line-height: 28px">
+                <td class="head">
+                    <%# (Container.ItemIndex + 1 + (curpage - 1) * (Convert.ToInt32(hidden_pageSize.Value)))%>
+                </td>
+                <td class="head">
+                    <%# Eval("YuID")%>
+                </td>
+                <td class="head">
+                    <%# Eval("UserID")%>
+                </td>
+
+
+                <td class="head">
+                    <%# Eval("RoleName")%>
+                </td>
+                <td class="head">
+                    <%# Eval("StatusName")%>
+                </td>
+                <td class="head">
+                    <%# Eval("UserName")%>
+                </td>
+                <td class="head">
+                    <%# (((Eval("FirstDepID").ToString() == "") ||((Eval("FirstDepID").ToString() == "0"))) ?  "" : Eval("FirstDepName"))   %>
+                    <%#  (((Eval("SecondDepID").ToString() == "") || ((Eval("SecondDepID").ToString() == "0"))) ? "" : "->" + Eval("SecondDepName"))%>
+                    <%#  (((Eval("ThirdDepID").ToString() == "") || ((Eval("ThirdDepID").ToString() == "0"))) ? "" : "->" + Eval("ThirdDepName"))%>
+                    <%# (((Eval("FourthDepID").ToString() == "") || ((Eval("FourthDepID").ToString() == "0"))) ? "" : "->" + Eval("FourthDepName"))%>
+                </td>
+                <td class="head">
+                    <%# Eval("workpalce")%>
+                </td>
+
+                <td class="head">
+                    <%# Eval("UserContactPhone")%>
+                </td>
+
+
+                <td class="head">
+                    <a href="javascript:editItem('<%#Eval("UserID") %>')">
+                    <img alt="编辑" src="../Images/edit.gif" /></a> &nbsp; <a href="javascript:deleteItem('<%#Eval("UserID") %>')">
+                    <img alt="删除" src="../Images/del.gif" /></a>
+                </td>
+                </tr>
+            </ItemTemplate>
+        </asp:Repeater>
+    </table>
+    <div runat="server" id="tipbar" class="tipbar0" visible="false">
+        提示：没有符合条件的记录</div>
+    <div id="pagebar" visible="false" runat="server" style="float: right">
+        <span>共<asp:Label ID="lb_count" runat="server"></asp:Label>条记录,</span> <span>当前第<asp:Label
+            ID="labcurrentpage" runat="server" ForeColor="Blue" Text="1"></asp:Label>页,</span>
+        <span>共<asp:Label ID="labsumpage" runat="server" ForeColor="Blue"></asp:Label>页</span>
+        <asp:ImageButton ID="First" runat="server" ImageUrl="~/Images/main_54.gif" ToolTip="首页"
+                         OnClick="First_Click" />
+        <asp:ImageButton ID="Pre" runat="server" ImageUrl="~/Images/main_56.gif" ToolTip="上一页"
+                         OnClick="Pre_Click" Style="height: 15px" />
+        <asp:ImageButton ID="Next" runat="server" ImageUrl="~/Images/main_58.gif" ToolTip="下一页"
+                         OnClick="Next_Click" />
+        <asp:ImageButton ID="Last" runat="server" ImageUrl="~/Images/main_60.gif" ToolTip="尾页"
+                         OnClick="Last_Click" />
+    </div>
+    <asp:HiddenField ID="hidden_pageSize" runat="server" Value="20" />
+</form>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#tblist").hoverOut();
+        $("a.tip").cluetip({ 'activation': 'click', 'sticky': true, 'closePosition': 'title', 'closeText': "关闭" });
+    });
+
+    function checkTitle() {
+        var type = $("#ddlUserType").val();
+        var status = $("#UserStatusList").val();
+        var firstdep = $("#DepList").val();
+        var title = $("#txtUserAccount").val();
+        var name = $("#txtUserName").val();
+        if ((type == "请选择角色") && (status == "请选择身份") && (title == "") && (name == "") && (firstdep == "请选择研究所")) {
+            jAlert("请输入查询条件！","有好提示");
+            return false;
+        }
+    }
+
+    function editItem(o1)
+    {
+        location.href='OperatorModify.aspx?UserID='+o1;
+    }
+
+    function deleteItem(o) {
+        jConfirm('确定执行操作?', '系统提示', function(r) {
+            if (r) {
+                $.post("../Ajax.aspx", { type: "deleteUser", UserID: o, rdom: Math.random() }, function(data) {
+                    alert(data);
+                    //window.location.href = window.location.href;
+
+                    if (data == "删除成功") {
+                        // jAlert("删除成功", "删除成功");
+                        $("#tr_" + o).remove();
+                    }
+
+                });
+            }
+        });
+    }
+    function ShowUserInfo() {
+        var result = false;
+
+        result = window.showModalDialog('HrResource/secretaryChange.aspx?rdom=' + Math.random(), callBack, "resizable:no;scroll:no;status:no;dialogWidth=15cm;dialogHeight=10cm;center=yes;help=no;");
+
+    }
+</script>
+

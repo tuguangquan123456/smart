@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>员工切工号</title>
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+
+    <script type="text/javascript" src="../Js/My97DatePicker/WdatePicker.js"></script>
+
+    <script type="text/javascript">
+
+        function selectA() {
+            if (document.form1["ForeignLanguage"].value == "-1") {
+                document.form1["ForeignLanguageLevel"].options.length = 0;
+                document.form1["ForeignLanguageLevel"].options[0] = new Option('请选择...', '-1');
+                document.form1["ForeignLanguageLevel"].value = -1;
+            }
+        }
+
+        function selectJobName() {
+            if (document.form1["JobName"].value == "-1") {
+                document.form1["JobNameSecondLevel"].options.length = 0;
+                document.form1["JobNameSecondLevel"].options[0] = new Option('请选择...', '-1');
+                document.form1["JobNameSecondLevel"].value = -1;
+            }
+        }
+        function checkParam() {
+            /* var date = document.getElementById("InvitationTime").value;
+             var hour = document.getElementById("Hour").value;
+             var min = document.getElementById("Minute").value;
+             var degree = document.getElementById("Degree").value;
+             var school = document.getElementById("School").value;
+             var req_id = document.getElementById("ReqID").value;
+             var type = document.getElementById("type").value;
+             var container = document.getElementById("Gender"); // Gender: RadioButtonList 的 ID
+             */
+
+
+
+
+
+            return true;
+        }
+    </script>
+
+    <script type="text/javascript" src="../Js/jquery-1.2.6.pack.js"></script>
+
+    <script type="text/javascript" src="../Js/My97DatePicker/WdatePicker.js"></script>
+
+    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="gb2312"></script>
+
+    <script type="text/javascript" src="../Js/jquery.validate.min.js"></script>
+
+    <script type="text/javascript" src="../Js/messages_cn.js"></script>
+
+    <script type="text/javascript" src="../Js/resource_admin.js"></script>
+</head>
+<body>
+<form id="form1" runat="server" method="post">
+    <div class="c_name">
+        <h2>
+            系统邮箱设置
+        </h2>
+    </div>
+
+
+    <table border="0" bordercolor="#D7D7D7" class="table_PrjApply" align="center" style="font-size: large">
+        <tr>
+            <td class="td_style">
+
+            </td>
+            <td  >
+
+            </td>
+        </tr>
+        <tr height="50">
+            <td class="td_style" >
+                &nbsp;系统公共邮箱&nbsp;</td>
+            <td  >
+                <asp:TextBox ID="Emailname" runat="server" Width="250" Height="30"></asp:TextBox> </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+
+            </td>
+            <td  >
+
+            </td>
+        </tr>
+        <tr height="50">
+            <td class="td_style" >
+                &nbsp;系统邮箱账号&nbsp;</td>
+            <td  >
+                <asp:TextBox ID="EmailID" runat="server" Width="250" Height="30"></asp:TextBox> </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+
+            </td>
+            <td  >
+
+            </td>
+        </tr>
+        <tr height="50">
+            <td class="td_style" >
+                &nbsp;系统邮箱密码&nbsp;</td>
+            <td  >
+                <asp:TextBox ID="EmailPassword" runat="server" Width="250" Height="30"></asp:TextBox> </td>
+        </tr>
+
+
+        <tr Height="50">
+            <td class="td_style" >
+
+            </td>
+            <td  >
+
+            </td>
+        </tr>
+
+
+
+
+        <tr>
+            <th align="center" colspan="2">
+                <asp:Button ID="btnSubmit"  Text="保存修改" runat="server" Height="21px"
+                            OnClick="btnSubmit_Click" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <%-- <asp:Button ID="sendBirthday"  Text="发送生日提醒" runat="server" Height="21px" onclick="sendBirthday_Click"
+                    />&nbsp;--%>
+                <%--  <asp:Button ID="sendCangku"  Text="发送仓库提醒" runat="server" Height="21px" onclick="sendCangku_Click"
+                    />&nbsp;--%>
+                <asp:Button ID="Button1"  Text="test" runat="server" Height="21px"
+                            onclick="Button1_Click" Visible="False"
+                        />
+            </th>
+
+        </tr>
+
+    </table>
+</form>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("form:first").validate();
+
+        //保存
+        $("#btnNext").click(function () {
+
+            var query = { type: "addMember", f1_1: "", f2_1: "", rdom: Math.random() };
+            query.f2_1 = $("#tblist tr:gt(0)").map(function () {
+                return $(this).find(":text").map(function () {
+                    return $(this).val();
+                }).get().join("<=>");
+            }).get().join('<|>');
+            document.getElementById('f2_1').value = query.f2_1;
+
+        });
+    });
+</script>

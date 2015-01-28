@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>员工切工号</title>
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+
+    <script type="text/javascript" src="../Js/My97DatePicker/WdatePicker.js"></script>
+
+
+    <script type="text/javascript" src="../Js/jquery-1.2.6.pack.js"></script>
+
+    <script type="text/javascript" src="../Js/My97DatePicker/WdatePicker.js"></script>
+
+    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="gb2312"></script>
+
+    <script type="text/javascript" src="../Js/jquery.validate.min.js"></script>
+
+    <script type="text/javascript" src="../Js/messages_cn.js"></script>
+
+    <script type="text/javascript" src="../Js/resource_admin.js"></script>
+</head>
+<body>
+<form id="form1" runat="server" method="post">
+    <div class="c_name">
+        <h2>
+            员工切工号
+        </h2>
+    </div>
+
+
+    <table border="1" bordercolor="#D7D7D7" class="table_PrjApply" align="center">
+        <tr>
+            <td class="td_style">
+                序号
+            </td>
+            <td  >
+                <asp:Label ID="Label1" runat="server" Text="     原工号" Width="180px" ></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text="新工号"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                1
+            </td>
+            <td  >
+                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>&nbsp;&nbsp;-->&nbsp;&nbsp;
+                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox> </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                2
+            </td>
+            <td  >
+                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>&nbsp;&nbsp;-->&nbsp;&nbsp;
+                <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox> </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                3
+            </td>
+            <td  >
+                <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>&nbsp;&nbsp;-->&nbsp;&nbsp;
+                <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox> </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                4
+            </td>
+            <td  >
+                <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>&nbsp;&nbsp;-->&nbsp;&nbsp;
+                <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox> </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                5
+            </td>
+            <td  >
+                <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>&nbsp;&nbsp;-->&nbsp;&nbsp;
+                <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox> </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                6
+            </td>
+            <td  >
+                <asp:TextBox ID="TextBox11" runat="server"></asp:TextBox>&nbsp;&nbsp;-->&nbsp;&nbsp;
+                <asp:TextBox ID="TextBox12" runat="server"></asp:TextBox> </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                7
+            </td>
+            <td  >
+                <asp:TextBox ID="TextBox13" runat="server"></asp:TextBox>&nbsp;&nbsp;-->&nbsp;&nbsp;
+                <asp:TextBox ID="TextBox14" runat="server"></asp:TextBox> </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                8
+            </td>
+            <td  >
+                <asp:TextBox ID="TextBox15" runat="server"></asp:TextBox>&nbsp;&nbsp;-->&nbsp;&nbsp;
+                <asp:TextBox ID="TextBox16" runat="server"></asp:TextBox> </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                9
+            </td>
+            <td  >
+                <asp:TextBox ID="TextBox17" runat="server"></asp:TextBox>&nbsp;&nbsp;-->&nbsp;&nbsp;
+                <asp:TextBox ID="TextBox18" runat="server"></asp:TextBox> </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                10
+            </td>
+            <td  >
+                <asp:TextBox ID="TextBox19" runat="server"></asp:TextBox>&nbsp;&nbsp;-->&nbsp;&nbsp;
+                <asp:TextBox ID="TextBox20" runat="server"></asp:TextBox> </td>
+        </tr>
+
+
+
+
+
+
+
+        <tr>
+            <th align="center" colspan="2">
+                <asp:Button ID="btnSubmit"  Text="提 交" runat="server" Height="21px" Width="58px"  OnClientClick="return save();"  OnClick="btnSubmit_Click" />
+            </th>
+        </tr>
+
+    </table>
+</form>
+</body>
+</html>
+
+<script type="text/javascript">
+    function save() {
+        UserNumber1 = document.getElementById("TextBox1").value;
+        if ((!checkExistUser(UserNumber1, "TextBox1"))&&(UserNumber1!="")) {
+            jAlert("第一行原工号不存在", "系统提示");
+            return false;
+        }
+        txtU2 = document.getElementById("TextBox2").value;
+        if ((txtU2.length != 8 || isNaN(txtU2)) && (txtU2 != "")) {
+            jAlert("第一行输入8位切换后数字工号", "系统提示");
+            return false;
+        }
+
+//           if (checkExistUser(txtU2, "TextBox2")) {
+//                jAlert("第一行新工号已存在，请重新输入", "系统提示");
+//                return false;
+//            } 
+
+        UserNumber3 = document.getElementById("TextBox3").value;
+        if ((!checkExistUser(UserNumber3, "TextBox3"))&&(UserNumber3!="")) {
+            jAlert("第二行原工号不存在", "系统提示");
+            return false;
+        }
+        txtU4 = document.getElementById("TextBox4").value;
+        if ((txtU4.length != 8 || isNaN(txtU4))&&(txtU4!="")) {
+            jAlert("第二行请您输入8位切换后数字工号", "系统提示");
+            return false;
+        }
+        if (checkExistUser(txtU4, "TextBox4")) {
+            jAlert("第二行新工号已存在，请重新输入", "系统提示");
+            return false;
+        }
+        UserNumber5 = document.getElementById("TextBox5").value;
+        if ((!checkExistUser(UserNumber5, "TextBox5"))&&(UserNumber5!="")) {
+            jAlert("第三行原工号不存在", "系统提示");
+            return false;
+        }
+        txtU6 = document.getElementById("TextBox6").value;
+        if ((txtU6.length != 8 || isNaN(txtU6))&&(txtU6!="")) {
+            jAlert("第三行请您输入8位切换后数字工号", "系统提示");
+            return false;
+        }
+        if (checkExistUser(txtU6, "TextBox6")) {
+            jAlert("第三行新工号已存在，请重新输入", "系统提示");
+            return false;
+        }
+        UserNumber7 = document.getElementById("TextBox7").value;
+        if ((!checkExistUser(UserNumber7, "TextBox7"))&&(UserNumber7!="")) {
+            jAlert("第四行原工号不存在", "系统提示");
+            return false;
+        }
+        txtU8 = document.getElementById("TextBox8").value;
+        if ((txtU8.length != 8 || isNaN(txtU8))&&(txtU8!="")) {
+            jAlert("第四行请您输入8位切换后数字工号", "系统提示");
+            return false;
+        }
+        if (checkExistUser(txtU8, "TextBox8")) {
+            jAlert("第四行新工号已存在，请重新输入", "系统提示");
+            return false;
+        }
+        UserNumber9 = document.getElementById("TextBox9").value;
+        if ((!checkExistUser(UserNumber9, "TextBox9"))&&(UserNumber9!="")) {
+            jAlert("第五行原工号不存在", "系统提示")
+            return false;
+        }
+        txtU10 = document.getElementById("TextBox10").value;
+        if ((txtU10.length != 8 || isNaN(txtU10))&&(txtU10!="")) {
+            jAlert("第五行请您输入8位切换后数字工号", "系统提示");
+            return false;
+        }
+        if (checkExistUser(txtU10, "TextBox10")) {
+            jAlert("第五行新工号已存在，请重新输入", "系统提示");
+            return false;
+        }
+        UserNumber11 = document.getElementById("TextBox11").value;
+        if ((!checkExistUser(UserNumber11, "TextBox11"))&&(UserNumber11!="")) {
+            jAlert("第六行原工号不存在", "系统提示")
+            return false;
+        }
+
+        txtU12 = document.getElementById("TextBox12").value;
+        if ((txtU12.length != 8 || isNaN(txtU12))&&(txtU12!="")) {
+            jAlert("第六行请您输入8位切换后数字工号", "系统提示");
+            return false;
+        }
+        if (checkExistUser(txtU12, "TextBox12")) {
+            jAlert("第六行新工号已存在，请重新输入", "系统提示");
+            return false;
+        }
+        UserNumber13 = document.getElementById("TextBox13").value;
+        if ((!checkExistUser(UserNumber13, "TextBox13"))&&(UserNumber13!="")) {
+            jAlert("第七行原工号不存在", "系统提示")
+            return false;
+        }
+        txtU14 = document.getElementById("TextBox14").value;
+        if ((txtU14.length != 8 || isNaN(txtU14))&&(txtU14)) {
+            jAlert("第七行请您输入8位切换后数字工号", "系统提示");
+            return false;
+        }
+        if (checkExistUser(txtU14, "TextBox14")) {
+            jAlert("第七行新工号已存在，请重新输入", "系统提示");
+            return false;
+        }
+        UserNumber15 = document.getElementById("TextBox15").value;
+        if ((!checkExistUser(UserNumber15, "TextBox15"))&&(UserNumber15!="")) {
+            jAlert("第八行原工号不存在", "系统提示")
+            return false;
+        }
+        txtU16 = document.getElementById("TextBox16").value;
+        if ((txtU16.length != 8 || isNaN(txtU16))&&(txtU16!="")) {
+            jAlert("第八行请您输入8位切换后数字工号", "系统提示");
+            return false;
+        }
+        if (checkExistUser(txtU16, "TextBox16")) {
+            jAlert("第八行新工号已存在，请重新输入", "系统提示");
+            return false;
+        }
+        UserNumber17 = document.getElementById("TextBox17").value;
+        if ((!checkExistUser(UserNumber17, "TextBox17"))&&(UserNumber17!="")) {
+            jAlert("第九行原工号不存在", "系统提示")
+            return false;
+        }
+        txtU18 = document.getElementById("TextBox18").value;
+        if ((txtU18.length != 8 || isNaN(txtU18))&&(txtU18!="")) {
+            jAlert("第九行请您输入8位切换后数字工号", "系统提示");
+            return false;
+        }
+        if (checkExistUser(txtU18, "TextBox18")) {
+            jAlert("第九行新工号已存在，请重新输入", "系统提示");
+            return false;
+        }
+        UserNumber19 = document.getElementById("TextBox19").value;
+        if ((!checkExistUser(UserNumber19, "TextBox19"))&&(UserNumber19!="")) {
+            jAlert("第十行原工号不存在", "系统提示")
+            return false;
+        }
+        txtU20 = document.getElementById("TextBox20").value;
+        if ((txtU20.length != 8 || isNaN(txtU20))&&(txtU20!="")) {
+            jAlert("第十行请您输入8位切换后数字工号", "系统提示");
+            return false;
+        }
+        if (checkExistUser(txtU20, "TextBox20")) {
+            jAlert("第十行新工号已存在，请重新输入", "系统提示");
+            return false;
+        }
+
+    }
+    //检测id为p_userID的用户是否存在
+    function checkExistUser(p_userID, p_controlID) {
+        var ExistUser = false;
+        $.ajax({
+            type: "POST",
+            async: false,
+            url: "../Ajax.aspx",
+            data: { type: "CheckUserExist", UserID: p_userID },
+            success: function (data) {
+                if (data == 0) {
+                    $("#" + p_controlID).val("");
+                    document.getElementById(p_controlID).focus();
+                    ExistUser = false;
+                }
+                else {
+                    ExistUser = true;
+                }
+
+            } //end success
+        })//end ajax
+        if (!ExistUser) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    //剪切
+    $(document).ready(function () {
+        $("form:first").validate();
+
+        //保存
+        $("#btnNext").click(function () {
+
+            var query = { type: "addMember", f1_1: "", f2_1: "", rdom: Math.random() };
+            query.f2_1 = $("#tblist tr:gt(0)").map(function () {
+                return $(this).find(":text").map(function () {
+                    return $(this).val();
+                }).get().join("<=>");
+            }).get().join('<|>');
+            document.getElementById('f2_1').value = query.f2_1;
+
+        });
+    });
+
+</script>

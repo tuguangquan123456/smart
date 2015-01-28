@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>压力测试基础信息表</title>
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+
+    <script type="text/javascript" src="../Js/jquery-1.2.6.pack.js"></script>
+
+    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="gb2312"></script>
+
+    <script type="text/javascript" src="../Js/jquery.cluetip.js"></script>
+
+    <script type="text/javascript" src="../Js/resource_admin.js"></script>
+
+
+
+    <style type="text/css">
+        .altRow { /*background-color: #ddddff;*/ }
+    </style>
+    <link href="../Css/superTables.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../Js/jquery-1.3.1.js"></script>
+    <script type="text/javascript" src="../Js/superTables.js"></script>
+    <script type="text/javascript" src="../Js/jquery.superTable.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#GridView1").toSuperTable({ width: "1400px", height: "650px", fixedCols: 6 })
+                    .find("tr:even").addClass("altRow");
+        });
+    </script>
+
+
+</head>
+<body style="clear: both; display: block; height:auto;" >
+<form id="form1" runat="server">
+    <div class="c_name">
+        <h2>
+            压力测试基础信息表
+        </h2>
+    </div>
+
+    <table border="1" class="table_top_search" bordercolor="#D7D7D7" align="center" style="display: block; overflow: auto">
+        <tr>
+            <td class="td_style" style="text-align: left; width:1800px">
+                    <span style="text-align: left" >
+                         &nbsp;&nbsp;部门名称：</span><asp:DropDownList ID="TitleList"
+                                                                   runat="server"></asp:DropDownList>
+                &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;工号：<asp:TextBox ID="ResumeID" runat="server" Width="250px" MaxLength="1000"></asp:TextBox>
+                &nbsp;&nbsp;&nbsp;姓名：<asp:TextBox ID="Name" runat="server" Width="250px" MaxLength="1000"></asp:TextBox>
+                &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnSearch" runat="server" Text="立即查找" Height="21px" OnClientClick="return checkTitle()"
+                                                    OnClick="btnSearch_Click" />
+                &nbsp;&nbsp;&nbsp;&nbsp<asp:Button ID="btnExport" runat="server" Text="导出" Height="21px" OnClick="btnExport_Click"/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp</td>
+
+        </tr>
+
+
+    </table>
+    <table border="1" class="table_top_search" align="center" style="display: block; overflow: auto;">
+        <tr>
+            <th style="background-color: #EEEEEE;">
+                <input type="button" id="btnAll" value="全 选" onclick="chooseAll()" style="width: 54px;
+                        height: 22px" />
+                <input type="button" id="btnReverse" value="反 选" onclick="reverseSelect()" style="width: 54px;
+                        height: 22px" />
+                <!-- <asp:Button ID="DelAll" runat="server" Text="一键清空" Height="22px"    Width="66px" OnClick="DelAll_Click" />-->
+                &nbsp;&nbsp;
+                <asp:Button ID="btnDelete" runat="server" Text="批量删除" Height="22px"
+                            Width="66px"  OnClientClick="return GetDelItem();" OnClick="DelSome_Click" />
+                &nbsp;
+
+                <asp:Button ID="btnEdit" runat="server" Text="批量编辑" Height="22px"
+                            Width="66px"  OnClientClick="return GetEditItem();" OnClick="EditSome_Click" />
+
+                &nbsp;
+
+            </th>
+
+        </tr>
+    </table>
+
+    <div id="grid" runat="server"   >
+        <table id="tblist" border="1" bordercolor="#D7D7D7" class="table_search_98"
+               align="center" style="display: block; overflow: auto;" dir="ltr">
+            <asp:GridView ID="GridView1" Width="4600px" runat="server"  CellPadding="4" DataKeyNames="id"
+                          OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing"
+                          OnRowUpdating="GridView1_RowUpdating"
+                          OnRowCancelingEdit="GridView1_RowCancelingEdit"
+                          AutoGenerateColumns="False" AllowSorting="True"  SortExpression="Num" SortDirection="ASC"
+                          onsorting="GridView1_Sorting" OnRowDataBound="GridView1_RowDataBound">
+                <Columns>
+                    <asp:TemplateField>
+                        <HeaderTemplate>
+                            选择
+                        </HeaderTemplate>
+                        <ItemTemplate>
+                            <input type="checkbox" name="GVchk" value='<%#Eval("id") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:CommandField HeaderText="编辑" ShowEditButton="True" ButtonType="Image" CancelImageUrl="../Images/back.jpg" EditImageUrl="../Images/edit.gif" UpdateImageUrl="../Images/ok.jpg" />
+                    <asp:TemplateField HeaderText="删除" ShowHeader="False">
+                        <ItemTemplate>
+                            <asp:ImageButton ID="ImageButton1" runat="server" CausesValidation="False"
+                                             CommandName="Delete" ImageUrl="../Images/del.gif" Text="删除"  OnClientClick="return confirm('确定要删除该记录吗！')" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+                <EditRowStyle BackColor="#33CCFF" HorizontalAlign="Center" Wrap="False"></EditRowStyle>
+                <HeaderStyle HorizontalAlign="Center" Wrap="False" />
+                <RowStyle HorizontalAlign="Center" Wrap="False" />
+            </asp:GridView>
+            <asp:GridView ID="GridView2" runat="server" Visible="False">
+            </asp:GridView>
+        </table>
+    </div>
+
+    <div id="tipbar0" class="tipbar0" runat="server" visible="false" >
+        提示：没有符合条件的记录</div>
+    <div id="tipbar1" class="tipbar1" runat="server" >
+        <span>共<%=count %>条记录，</span>
+        <span>当前第<%=ps.currentPage %>页，</span>
+        <span>共<%=ps.totalPageSize %>页</span>
+        <asp:ImageButton ID="First" runat="server" ImageUrl="~/Images/main_54.gif" ToolTip="首页"
+                         OnClick="First_Click" />
+        <asp:ImageButton ID="Pre" runat="server" ImageUrl="~/Images/main_56.gif" ToolTip="上一页"
+                         OnClick="Pre_Click" />
+        <asp:ImageButton ID="Next" runat="server" ImageUrl="~/Images/main_58.gif" ToolTip="下一页"
+                         OnClick="Next_Click" />
+        <asp:ImageButton ID="Last" runat="server" ImageUrl="~/Images/main_60.gif" ToolTip="尾页"
+                         OnClick="Last_Click" />
+    </div>
+    <%--存储每页显示的记录数，例如每页显示5条记录--%>
+    <asp:HiddenField ID="hidden_pageSize" runat="server" Value="20" />
+    <asp:HiddenField ID="currentPage" runat="server" />
+    <asp:HiddenField ID="totalPage" runat="server" />
+    <asp:HiddenField ID="SearchCondition" runat="server" />
+    <asp:HiddenField ID="DelPersonID" runat="server" />
+    <asp:TextBox ID="temp1" Visible="False"  runat="server"></asp:TextBox>
+    <asp:TextBox ID="temp2" Visible="False" Text="false" runat="server"></asp:TextBox>
+</form>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        // $("#tblist").hoverOut();
+        //  $("a.tip").cluetip({ 'activation': 'click', 'sticky': true, 'closePosition': 'title', 'closeText': "关闭" });
+    });
+    function checkTitle() {
+        //var temp = document.getElementById("ResumeStatus");
+        //alert(temp.selectedIndex);
+        var Mobilephone = $("#Mobilephone").val();
+        var Name = $("#Name").val();
+        var ResumeStatus = $("#ResumeStatus").val();
+        var IDCard = $("#IDCard").val();
+        if (Mobilephone == "" && Name == "" && ResumeStatus == "-1" && IDCard == "") {
+            jAlert("请输入查询条件！", "系统提示");
+            return false;
+        }
+        return true;
+    }
+    function showResume(rid, type) {
+        //      alert(rid + "" + type);
+        var url = '';
+        if (type == '校园招聘') {
+            url = "ShowCampusResumeInfo.aspx?ID=" + rid;
+        }
+        if (type == '社会招聘') {
+            url = "ShowResumeInfo.aspx?ID=" + rid;
+        }
+        var weight = 0.9;
+        var strFeatureInfo = "scroll:yes;dialogWidth=" + screen.width * weight + "px;dialogHeight=" + screen.height * weight + "px;center=yes;help:No;resizable:No;scroll:Yes;status:No;minimize:yes;maximize:yes; ";
+        window.showModalDialog(url, null, strFeatureInfo);
+    }
+
+    function GetDelItem() {
+
+        var chks = document.getElementsByName("GVchk");
+        //var Ids = document.getElementById('DelPersonID');
+        var flag = false;
+        for (var i = 0; i < chks.length; i++) {
+            if (chks[i].checked == true) {
+                //Ids.value += chks[i].value + ",";
+                flag = true;
+                break;
+            }
+
+        }
+        if (!flag) {
+            jAlert("请选择要删去的数据！", "系统提示");
+            return false;
+        }
+        else if (confirm("确定要删除吗？")) {
+            var chks = document.getElementsByName("GVchk");
+            var Ids = document.getElementById('DelPersonID');
+            //var flag = false;
+            for (var i = 0; i < chks.length; i++) {
+                if (chks[i].checked == true) {
+                    Ids.value += chks[i].value + ",";
+                    // flag = true;
+                }
+
+            }
+
+            return flag;
+        } else
+            return false;
+    }
+
+    function GetEditItem() {
+        var chks = document.getElementsByName("GVchk");
+        var Ids = document.getElementById('DelPersonID');
+        var flag = false;
+        for (var i = 0; i < chks.length; i++) {
+            if (chks[i].checked == true) {
+                Ids.value += chks[i].value + ",";
+                flag = true;
+            }
+
+        }
+        if (!flag) {
+            jAlert("请选择要编辑的数据！", "系统提示");
+        }
+        return flag;
+    }
+
+</script>
+

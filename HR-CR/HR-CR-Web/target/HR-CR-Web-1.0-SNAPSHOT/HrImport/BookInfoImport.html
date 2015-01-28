@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>资源列表</title>
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+    <script type="text/javascript">
+
+        function selectJobName() {
+            if (document.form1["JobName"].value == "-1") {
+                document.form1["JobNameSecondLevel"].options.length = 0;
+                document.form1["JobNameSecondLevel"].options[0] = new Option('请选择...', '-1');
+                document.form1["JobNameSecondLevel"].value = -1;
+            }
+        }
+
+    </script>
+    <script type="text/javascript" src="../Js/jquery-1.2.6.pack.js"></script>
+
+    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="gb2312"></script>
+
+    <script type="text/javascript" src="../Js/jquery.cluetip.js"></script>
+
+    <script type="text/javascript" src="../Js/resource_admin.js"></script>
+
+    <script type="text/javascript" src="../Js/My97DatePicker/WdatePicker.js"></script>
+</head>
+<body style="clear: both; display: block; height:auto; ">
+<form id="form1" runat="server">
+    <div class="c_name">
+        <h2>
+            图书导入管理
+        </h2>
+    </div>
+    <div class="ptitle">
+        图书导入管理
+    </div>
+    <table border="1" bordercolor="#D7D7D7" class="table_top_search" align="center">
+        <tr>
+            <th colspan="2" style="font-weight: bold">
+                &nbsp; 批量导入
+            </th>
+        </tr>
+        <tr>
+            <td class="td_style">
+                请选择一份Excel文件<span style="color: Red">*</span></td>
+            <td>
+                <asp:FileUpload ID="fileUpload" runat="server" Width="310px" /><a href="../HrImport/UpLoadMode/图书信息导入表.xlsx"
+                                                                                  target="_blank">(请下载模版，您可以按照提供的模版进行批量导入) </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                (<span style="color: Red">*</span>注：请将导入的excel文件设置为“文本”格式)</td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <asp:Button ID="btnImport" runat="server" Text="从excel文件导入" Width="111px" OnClientClick="return checkFilePath()"
+                            OnClick="btnImport_Click" />
+                <asp:Label ID="label" runat="server" ForeColor="Red"></asp:Label>
+            </th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <asp:TextBox ID="ImportResultInfo" runat="server" TextMode="MultiLine" Rows="20"
+                             Width="99.5%" ReadOnly="true"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <asp:Label ID="lCount" runat="server" ForeColor="red" Font-Size="14px"></asp:Label>
+            </td>
+        </tr>
+    </table>
+
+
+
+</form>
+</body>
+</html>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#tblist").hoverOut();
+        $("a.tip").cluetip({ 'activation': 'click', 'sticky': true, 'closePosition': 'title', 'closeText': "关闭" });
+    });
+
+</script>

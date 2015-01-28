@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>OEC管理</title>
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+
+    <script type="text/javascript" src="../Js/jquery-1.2.6.pack.js"></script>
+
+    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="gb2312"></script>
+
+    <script type="text/javascript" src="../Js/jquery.validate.min.js"></script>
+
+    <script type="text/javascript" src="../Js/messages_cn.js"></script>
+
+</head>
+<body style="clear: both; display: block; height:auto; ">
+<form id="form1" runat="server">
+    <div class="c_name">
+        <h2>
+            OEC管理</h2>
+    </div>
+    <div class="ptitle">
+        OEC列表</div>
+    <table border="1" bordercolor="#D7D7D7" class="table_top_search" align="center">
+        <tr>
+            <td style="width: 73px; background-color: #FFF; border-right-width: 0px">
+                <asp:Button ID="btnAdd" runat="server" Text="新增" PostBackUrl="~/AdminSystem/OecAdd.aspx"
+                            Height="22px" Width="56px" /></td>
+        </tr>
+    </table>
+    <table id="tblist" border="1" bordercolor="#D7D7D7" align="center" class="table_search_98">
+        <tr>
+            <th>
+                OEC级别
+            </th>
+            <th>
+                OEC名称
+            </th>
+            <th>
+                负责人工号
+            </th>
+            <th>
+                负责人
+            </th>
+            <th>
+                操作
+            </th>
+        </tr>
+        <!-- 开始第一级 repeater -->
+        <asp:Repeater ID="rptFirst" runat="server" OnItemDataBound="RepeaterFirst_Oec_ItemDataBound">
+            <ItemTemplate>
+                <tr align="center">
+                    <td class="head">
+                        一级<!--<%#Eval("OecName").ToString() == "" ? "无" : Eval("OecName")%>-->
+                    </td>
+                    <td class="head" align="left" style="text-align: left">
+                        <%#Eval("OecName").ToString() == "" ? "无" : "|----->" + Eval("OecName")%>
+                    </td>
+                    <td class="head" align="left" style="text-align: center">
+                        <%#Eval("UserNumber").ToString() == "" ? "无" :  Eval("UserNumber")%>
+                    </td>
+                    <td class="head" align="left" style="text-align: center">
+                        <%#Eval("UserName").ToString() == "" ? "无" :  Eval("UserName")%>
+                    </td>
+                    <td class="head">
+                        <a href="javascript:editItem('<%#Eval("OecID") %>')">
+                        <img alt="编辑" src="../images/edit.gif" /></a> &nbsp;&nbsp;<a href="javascript:deleteItem('<%#Eval("OecID") %>','<%#Eval("OecName") %>')">
+                        <img alt="删除" src="../images/del.gif" /></a>
+                        <!--开始第二级 repeater-->
+                        <asp:Repeater ID="rptSecond" runat="server" OnItemDataBound="RepeaterSecond_Oec_ItemDataBound">
+                            <ItemTemplate>
+                                <tr align="center">
+                                    <td class="head">
+                                        二级<!--<%#Eval("OecName").ToString() == "" ? "无" : Eval("OecName")%>-->
+                                    </td>
+                                    <td class="head" style="text-align: left">
+                                        <%#Eval("OecName").ToString() == "" ? "无" : "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-------->>" + Eval("OecName")%>
+                                    </td>
+                                    <td class="head" align="left" style="text-align: center">
+                                        <%#Eval("UserNumber").ToString() == "" ? "无" :   Eval("UserNumber")%>
+                                    </td>
+                                    <td class="head" align="left" style="text-align: center">
+                                        <%#Eval("UserName").ToString() == "" ? "无" :  Eval("UserName")%>
+                                    </td>
+                                    <td class="head">
+                                        <a href="javascript:editItem('<%#Eval("OecID") %>')">
+                                        <img alt="编辑" src="../images/edit.gif" /></a> &nbsp;&nbsp;<a href="javascript:deleteItem('<%#Eval("OecID") %>','<%#Eval("OecName") %>')">
+                                        <img alt="删除" src="../images/del.gif" /></a>
+                                        <!--开始第三级 repeater-->
+                                        <asp:Repeater ID="rptThird" runat="server" OnItemDataBound="RepeaterThird_Oec_ItemDataBound">
+                                            <ItemTemplate>
+                                                <tr align="center">
+                                                    <td class="head">
+                                                        三级
+
+                                                    </td>
+                                                    <td class="head" style="text-align: left">
+
+                                                        <%#Eval("OecName").ToString() == "" ? "无" : "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp|-------------->>>" + Eval("OecName")%>
+
+                                                    </td>
+                                                    <td class="head" align="left" style="text-align: center">
+                                                        <%#Eval("UserNumber").ToString() == "" ? "无" :   Eval("UserNumber")%>
+                                                    </td>
+                                                    <td class="head" align="left" style="text-align: center">
+                                                        <%#Eval("UserName").ToString() == "" ? "无" :  Eval("UserName")%>
+                                                    </td>
+                                                    <td class="head">
+                                                        <a href="javascript:editItem('<%#Eval("OecID") %>')">
+                                                        <img alt="编辑" src="../images/edit.gif" /></a> &nbsp;&nbsp; <a href="javascript:deleteItem('<%#Eval("OecID") %>','<%#Eval("OecName") %>')">
+                                                        <img alt="删除" src="../images/del.gif" /></a>
+
+                                                    </td>
+                                                </tr>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+
+
+                                    </td>
+                                </tr>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </td>
+                </tr>
+            </ItemTemplate>
+        </asp:Repeater>
+    </table>
+</form>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("form:first").validate();
+        $("#tblist").hoverOut();
+    });
+
+    function callBack() {
+        window.location.href = window.location.href;
+    }
+
+    function editItem(o) {
+        var result = false;
+
+        result = window.showModalDialog('OecModify.aspx?OecID=' + o + '&rdom=' + Math.random(), null, "resizable:no;scroll:no;status:no;dialogWidth=10cmpx;dialogHeight=4.3cm;center=yes;help=no");
+
+        window.location.href = location.href;
+
+    }
+
+    function deleteItem(id, name) {
+        jConfirm('确定执行操作?', '系统提示', function (r) {
+            if (r) {
+                $.post("../Ajax.aspx", { type: "deleteOec", OecID: id, OecName: name, rdom: Math.random() }, function (data) {
+                    if (data == "") {
+                        jAlert("删除成功", "删除成功");
+                        //$("#tr_" + o).remove();
+                        window.location.href = window.location.href;
+                    }
+                    else {
+                        alert(data);
+                        //jAlert("项删除失败", "删除出错");
+                        window.location.href = window.location.href;
+                    }
+                });
+            }
+        });
+    }
+
+
+</script>
+
+

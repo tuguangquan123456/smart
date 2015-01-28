@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>离职率信息</title>
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+
+    <script type="text/javascript" src="../Js/jquery-1.2.6.pack.js"></script>
+
+    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="gb2312"></script>
+
+    <script type="text/javascript" src="../Js/jquery.cluetip.js"></script>
+
+    <script type="text/javascript" src="../Js/resource_admin.js"></script>
+
+</head>
+<body style="clear: both; display: block; height:auto;" >
+<form id="form1" runat="server">
+    <div class="c_name">
+        <h2>
+            离职率管理
+        </h2>
+    </div>
+    <table border="1" class="table_top_search" bordercolor="#D7D7D7" align="center" style="display: block; overflow: auto">
+        <tr>
+            <td class="td_style" style="text-align: left; width:1800px">
+                    <span style="text-align: left" >
+                     &nbsp;&nbsp;&nbsp;<asp:TextBox ID="ResumeID"
+                                                    runat="server" Width="50px" MaxLength="20" Visible="False"></asp:TextBox>
+                    &nbsp;&nbsp;</span><asp:DropDownList ID="TitleList"
+                                                         runat="server" Visible="False"></asp:DropDownList>
+                &nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;
+                开始日期：<asp:DropDownList ID="TitleList1"
+                                       runat="server" Width="88px"></asp:DropDownList>
+                <%----按起始日期查看：从<asp:TextBox ID="beginTime" runat="server" onfocus="WdatePicker();"></asp:TextBox>
+                    <span style="color: Red"><a>
+                    </a> </span><span style="color: Gray">
+                            </span>&nbsp;~&nbsp;<asp:TextBox ID="endTime" runat="server" onfocus="WdatePicker();"></asp:TextBox>
+                    <span style="color: Red"><a>
+                        <img alt="点击选择日期" src="../Images/datePicker.gif" /></a> </span><span style="color: Gray">
+                            点击文本框后选择日期; </span>  --%>
+                &nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button1" runat="server" Text="查询"    Height="22px" Width="66px" OnClientClick="return checkTitle()"
+                                                    OnClick="btnSearch_Click" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="btnDraw" runat="server" Text="绘图"   Height="22px" Width="66px"  OnClientClick="return checkTitle()"
+                                                                                                                                            OnClick="btnDraw_Click" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:Button ID="btnExport" runat="server" Text="导出"  OnClick="btnExport_Click"  Height="22px" Width="66px" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp<asp:Button ID="addNew" runat="server"
+                                                                           Text="导入"  PostBackUrl="~/HrResource/AddHumanInYear.aspx" Height="22px" Width="66px"/>
+            </td>
+
+        </tr>
+
+
+    </table>
+    <table border="1" class="table_top_search" align="center" style="display: block; overflow: auto;">
+        <tr>
+            <th style="background-color: #EEEEEE;">
+                <input type="button" id="btnAll" value="全 选" onclick="chooseAll()" style="width: 66px;
+                        height: 22px" />
+                &nbsp;&nbsp;
+                <input type="button" id="btnReverse" value="反 选" onclick="reverseSelect()" style="width: 66px;
+                        height: 22px" />
+                &nbsp;&nbsp;
+                <%-- <asp:Button ID="DelAll" runat="server" Text="一键清空" Height="22px"    Width="66px" OnClick="DelAll_Click" />
+                &nbsp;--%>
+                &nbsp;<%--<asp:Button ID="btnAdd" runat="server" Text="新增资源" Height="22px" PostBackUrl="~/AdminResource/AddResource.aspx"
+                                      Width="66px" />&nbsp;--%>
+
+                <asp:Button ID="btnDelete" runat="server" Text="批量删除" Height="22px"
+                            Width="66px"  OnClientClick="return GetDelItem();" OnClick="DelSome_Click" Visible="false" />
+                &nbsp;
+            </th>
+
+        </tr>
+    </table>
+    <table id="tblist" border="1" bordercolor="#D7D7D7" class="table_search_98"
+           align="center" style="display: block; overflow: auto;" dir="ltr">
+        <asp:GridView ID="GridView1" runat="server"  CellPadding="4" DataKeyNames="ID"
+                      OnRowDeleting="GridView1_RowDeleting"  OnRowEditing="GridView1_RowEditing"
+                      OnRowUpdating="GridView1_RowUpdating"
+                      OnRowCancelingEdit="GridView1_RowCancelingEdit"
+                      AutoGenerateColumns="False" OnRowDataBound="GridView1_RowDataBound"
+                      HorizontalAlign="Center" Width="1400px">
+            <Columns>
+                <asp:TemplateField>
+                    <HeaderTemplate>
+                        选择
+                    </HeaderTemplate>
+                    <ItemTemplate>
+                        <input type="checkbox" name="GVchk" value='<%#Eval("ID") %>' />
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:CommandField HeaderText="编辑" ShowEditButton="True" ButtonType="Image" CancelImageUrl="../Images/back.jpg" EditImageUrl="../Images/edit.gif" UpdateImageUrl="../Images/ok.jpg" />
+                <asp:CommandField HeaderText="删除" ShowDeleteButton="True" ButtonType="Image" DeleteImageUrl="../Images/del.gif" Visible="false" />
+                <asp:BoundField DataField="Remark" HeaderText="部门" ReadOnly="True"/>
+                <asp:BoundField DataField="HsLibNumber_R" HeaderText="2012实验室（海思）" />
+                <asp:BoundField DataField="ZyLibNumber_R" HeaderText="2012实验室（中研）" />
+                <asp:BoundField DataField="FixeNetworkNumber_R" HeaderText="固定网络BU" />
+                <asp:BoundField DataField="ConsumerNumber_R" HeaderText="消费者BG" />
+                <asp:BoundField DataField="BSSWuhanNumber_R" HeaderText="电信软件（武汉）" />
+                <asp:BoundField DataField="BSSChangshaNumber_R" HeaderText="电信软件（长沙）" />
+                <asp:BoundField DataField="WuhanInstitute_R" HeaderText="武汉研究所" />
+                <asp:BoundField DataField="OthersNumber_R" HeaderText="其他" />
+                <asp:BoundField DataField="SumNumber_R" HeaderText="武研整体 " />
+                <asp:BoundField DataField="SaveDate" HeaderText="存储日期"  ReadOnly="True"/>
+                <asp:BoundField DataField="ID" HeaderText="序号" ReadOnly="True" Visible="False" />
+            </Columns>
+            <EditRowStyle BackColor="#33CCFF" HorizontalAlign="Center" Wrap="False"></EditRowStyle>
+            <HeaderStyle HorizontalAlign="Center" Wrap="False" />
+            <RowStyle HorizontalAlign="Center" Wrap="False" />
+        </asp:GridView>
+    </table>
+
+    <div id="tipbar0" class="tipbar0" runat="server" visible="false" >
+        提示：没有符合条件的记录</div>
+    <div id="tipbar1" class="tipbar1" runat="server" >
+        <span>共<%=count %>条记录，</span>
+        <span>当前第<%=ps.currentPage %>页，</span>
+        <span>共<%=ps.totalPageSize %>页</span>
+        <asp:ImageButton ID="First" runat="server" ImageUrl="~/Images/main_54.gif" ToolTip="首页"
+                         OnClick="First_Click" />
+        <asp:ImageButton ID="Pre" runat="server" ImageUrl="~/Images/main_56.gif" ToolTip="上一页"
+                         OnClick="Pre_Click" />
+        <asp:ImageButton ID="Next" runat="server" ImageUrl="~/Images/main_58.gif" ToolTip="下一页"
+                         OnClick="Next_Click" />
+        <asp:ImageButton ID="Last" runat="server" ImageUrl="~/Images/main_60.gif" ToolTip="尾页"
+                         OnClick="Last_Click" />
+
+    </div>
+    <%--存储每页显示的记录数，例如每页显示5条记录--%>
+    <asp:HiddenField ID="hidden_pageSize" runat="server" Value="20" />
+    <asp:HiddenField ID="currentPage" runat="server" />
+    <asp:HiddenField ID="totalPage" runat="server" />
+    <asp:HiddenField ID="SearchCondition" runat="server" />
+    <asp:HiddenField ID="DelPersonID" runat="server" />
+</form>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#tblist").hoverOut();
+        $("a.tip").cluetip({ 'activation': 'click', 'sticky': true, 'closePosition': 'title', 'closeText': "关闭" });
+    });
+    function checkTitle() {
+        //var temp = document.getElementById("ResumeStatus");
+        //alert(temp.selectedIndex);
+        var Mobilephone = $("#Mobilephone").val();
+        var Name = $("#Name").val();
+        var ResumeStatus = $("#ResumeStatus").val();
+        var IDCard = $("#IDCard").val();
+        if (Mobilephone == "" && Name == "" && ResumeStatus == "-1" && IDCard == "") {
+            jAlert("请输入查询条件！", "系统提示");
+            return false;
+        }
+        return true;
+    }
+    function showResume(rid, type) {
+        //      alert(rid + "" + type);
+        var url = '';
+        if (type == '校园招聘') {
+            url = "ShowCampusResumeInfo.aspx?ID=" + rid;
+        }
+        if (type == '社会招聘') {
+            url = "ShowResumeInfo.aspx?ID=" + rid;
+        }
+        var weight = 0.9;
+        var strFeatureInfo = "scroll:yes;dialogWidth=" + screen.width * weight + "px;dialogHeight=" + screen.height * weight + "px;center=yes;help:No;resizable:No;scroll:Yes;status:No;minimize:yes;maximize:yes; ";
+        window.showModalDialog(url, null, strFeatureInfo);
+    }
+
+    function GetDelItem() {
+        var chks = document.getElementsByName("GVchk");
+        var Ids = document.getElementById('DelPersonID');
+        var flag = false;
+        for (var i = 0; i < chks.length; i++) {
+            if (chks[i].checked == true) {
+                Ids.value += chks[i].value + ",";
+                flag = true;
+            }
+
+        }
+        if (!flag) {
+            jAlert("请选择要删去的数据！", "系统提示");
+        }
+        return flag;
+    }
+
+</script>
+

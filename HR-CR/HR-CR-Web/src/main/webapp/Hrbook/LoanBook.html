@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>资源列表</title>
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+
+    <script type="text/javascript" src="../Js/jquery-1.2.6.pack.js"></script>
+
+    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="gb2312"></script>
+
+    <script type="text/javascript" src="../Js/jquery.cluetip.js"></script>
+
+    <script type="text/javascript" src="../Js/resource_admin.js"></script>
+
+    <style type="text/css">
+        .style1
+        {
+            height: 8px;
+        }
+
+
+
+    </style>
+
+
+
+
+</head>
+<body style="clear: both; display: block; height:auto;" scroll="no" >
+<form id="form1" runat="server">
+    <div class="c_name">
+        <h2>
+            外借图书管理
+        </h2>
+    </div>
+
+    <table border="1" class="table_top_search" bordercolor="#D7D7D7" align="center" style="display: block; overflow: auto">
+        <tr>
+            <td class="td_style" style="text-align: left; width:1800px">
+                    <span style="text-align: left" >&nbsp;&nbsp;
+                    图书编号：<asp:TextBox ID="BookID" runat="server" Width="150px" MaxLength="50"></asp:TextBox>
+                    &nbsp;&nbsp;
+
+                    <span style="text-align: left" >&nbsp;&nbsp;
+                    图书名称：<asp:TextBox ID="BookName" runat="server" Width="150px" MaxLength="50"></asp:TextBox>
+                    &nbsp;&nbsp;
+                     <%-- 借阅者工号：--%><asp:TextBox ID="LendtoID" runat="server" Width="90px" MaxLength="20" Visible="False"></asp:TextBox>
+                    &nbsp;&nbsp;
+                       <%--借阅者姓名：--%><asp:TextBox ID="LendtoName" runat="server" Width="90px" MaxLength="20" Visible="False"></asp:TextBox>
+                    &nbsp;&nbsp;
+                    所属书库：</span><asp:DropDownList ID="Cangku" runat="server"></asp:DropDownList>&nbsp;&nbsp;
+                    借书人工号：<asp:TextBox ID="LendID" runat="server" Width="150px" MaxLength="50"></asp:TextBox>
+                     &nbsp;&nbsp;&nbsp;&nbsp
+                     <asp:Button ID="btnSearch" runat="server" Text="查询图书"  OnClientClick="return checkTitle()"
+                                 OnClick="btnSearch_Click" />    &nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp  <asp:Button ID="btnExport" runat="server" Text="导出图书信息"  OnClick="btnExport_Click"/> &nbsp;&nbsp;&nbsp;<%--<asp:Button ID="DelAll" runat="server" Text="一键清空"    Width="66px" OnClick="DelAll_Click" />--%>
+                &nbsp;&nbsp;&nbsp;<asp:Button ID="dangerous" runat="server" Text="外借超期图书"
+                                              OnClick="safeCount_Click"  />
+
+            </td>
+
+        </tr>
+        <%-- <tr> <td>
+        <%--<asp:Button ID="Button2" runat="server" Text="添加图书"  PostBackUrl="~/Hrbook/AddBook.aspx"
+                        Width="66px" />
+
+    </td></tr>--%>
+
+    </table>
+
+
+    <table id="tblist" border="1" bordercolor="#D7D7D7" class="table_top_search"
+           align="Center" style="display: block; overflow: auto;" cellpadding="8">
+        <div class="c_name">
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False"
+                          style="display: block; overflow: auto;" DataKeyNames="ID"
+                          OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing"
+                          OnRowUpdating="GridView1_RowUpdating"
+                          OnRowCancelingEdit="GridView1_RowCancelingEdit"
+                          OnRowDatabound="GridView1_RowDataBound1"
+
+                          HorizontalAlign="Center" BorderStyle="Solid"  Width="1300px">
+
+                <Columns>
+
+                    <asp:BoundField  HeaderText="序号"  DataField="RowNumber" ReadOnly="True"  />
+                    <asp:CommandField HeaderText="编辑" ShowEditButton="True" ButtonType="Image" CancelImageUrl="../Images/back.jpg" EditImageUrl="../Images/edit.gif" UpdateImageUrl="../Images/ok.jpg" />
+                    <asp:TemplateField HeaderText="删除" ShowHeader="False">
+                        <ItemTemplate>
+                            <asp:ImageButton ID="ImageButton1" runat="server" CausesValidation="False"
+                                             CommandName="Delete" ImageUrl="../Images/del.gif" Text="删除"  OnClientClick="return confirm('确定要删除该记录吗！')" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:BoundField DataField="BookID" HeaderText="图书编号" ReadOnly="True"  />
+                    <asp:BoundField DataField="BookName" HeaderText="图书名称" HeaderStyle-Wrap="False" ControlStyle-Width="100px" />
+                    <asp:BoundField DataField="Btime" HeaderText="借书时间"  Visible="True" />
+                    <asp:BoundField DataField="Rtime" HeaderText="应还时间" ControlStyle-Width="100px" Visible="True"/>
+                    <asp:BoundField DataField="LendID" HeaderText="借书人工号" Visible="True"/>
+                    <asp:BoundField DataField="Cangku" HeaderText="借书书库"  ControlStyle-Width="100px"  />
+
+
+                    <%--<asp:BoundField DataField="ID" HeaderText="id" ReadOnly="True" Visible="False" />--%>
+
+
+
+                </Columns>
+                <EditRowStyle BackColor="#33CCFF" HorizontalAlign="Center" Wrap="False"
+                              Width="1300px"></EditRowStyle>
+                <HeaderStyle HorizontalAlign="Center" Wrap="False" />
+                <RowStyle HorizontalAlign="Center" Wrap="False" />
+            </asp:GridView>
+        </div>
+    </table>
+    <div id="tipbar0" class="tipbar0" runat="server" visible="false" >
+        提示：没有符合条件的记录</div>
+    <div id="tipbar1" class="tipbar1" runat="server" >
+        <span>共<%=count %>条记录，</span>
+        <span>当前第<%=ps.currentPage %>页，</span>
+        <span>共<%=ps.totalPageSize %>页</span>
+        <asp:ImageButton ID="First" runat="server" ImageUrl="~/Images/main_54.gif" ToolTip="首页"
+                         OnClick="First_Click" />
+        <asp:ImageButton ID="Pre" runat="server" ImageUrl="~/Images/main_56.gif" ToolTip="上一页"
+                         OnClick="Pre_Click" />
+        <asp:ImageButton ID="Next" runat="server" ImageUrl="~/Images/main_58.gif" ToolTip="下一页"
+                         OnClick="Next_Click" />
+        <asp:ImageButton ID="Last" runat="server" ImageUrl="~/Images/main_60.gif" ToolTip="尾页"
+                         OnClick="Last_Click" />
+
+    </div>
+
+    <%--存储每页显示的记录数，例如每页显示5条记录--%>
+    <asp:HiddenField ID="hidden_pageSize" runat="server" Value="20" />
+    <asp:HiddenField ID="currentPage" runat="server" />
+    <asp:HiddenField ID="totalPage" runat="server" />
+    <asp:HiddenField ID="SearchCondition" runat="server" />
+</form>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#tblist").hoverOut();
+        $("a.tip").cluetip({ 'activation': 'click', 'sticky': true, 'closePosition': 'title', 'closeText': "关闭" });
+    });
+    function checkTitle() {
+        //var temp = document.getElementById("ResumeStatus");
+        //alert(temp.selectedIndex);
+        var Mobilephone = $("#Mobilephone").val();
+        var Name = $("#Name").val();
+        var ResumeStatus = $("#ResumeStatus").val();
+        var IDCard = $("#IDCard").val();
+        if (Mobilephone == "" && Name == "" && ResumeStatus == "-1" && IDCard == "") {
+            jAlert("请输入查询条件！", "系统提示");
+            return false;
+        }
+        return true;
+    }
+    function showResume(rid, type) {
+        //      alert(rid + "" + type);
+        var url = '';
+        if (type == '校园招聘') {
+            url = "ShowCampusResumeInfo.aspx?ID=" + rid;
+        }
+        if (type == '社会招聘') {
+            url = "ShowResumeInfo.aspx?ID=" + rid;
+        }
+        var weight = 0.9;
+        var strFeatureInfo = "scroll:yes;dialogWidth=" + screen.width * weight + "px;dialogHeight=" + screen.height * weight + "px;center=yes;help:No;resizable:No;scroll:Yes;status:No;minimize:yes;maximize:yes; ";
+        window.showModalDialog(url, null, strFeatureInfo);
+    }
+
+    function GetDelItem() {
+
+        var chks = document.getElementsByName("GVchk");
+        //var Ids = document.getElementById('DelPersonID');
+        var flag = false;
+        for (var i = 0; i < chks.length; i++) {
+            if (chks[i].checked == true) {
+                //Ids.value += chks[i].value + ",";
+                flag = true;
+                break;
+            }
+
+        }
+        if (!flag) {
+            jAlert("请选择要删去的数据！", "系统提示");
+            return false;
+        }
+        else if (confirm("确定要删除吗？")) {
+            var chks = document.getElementsByName("GVchk");
+            var Ids = document.getElementById('DelPersonID');
+            //var flag = false;
+            for (var i = 0; i < chks.length; i++) {
+                if (chks[i].checked == true) {
+                    Ids.value += chks[i].value + ",";
+                    // flag = true;
+                }
+
+            }
+
+            return flag;
+        } else
+            return false;
+    }
+
+</script>

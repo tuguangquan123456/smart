@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>修改操作员信息</title>
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+
+    <script type="text/javascript" src="../Js/jquery-1.2.6.pack.js"></script>
+
+    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="gb2312"></script>
+
+    <script type="text/javascript" src="../Js/XmlHttp.js"></script>
+
+    <script type="text/javascript" src="../Js/SystemAdmin_SelectDept.js"></script>
+
+    <base target="_self" />
+</head>
+<body style="clear: both; display: block; height:auto; ">
+<form id="form1" runat="server">
+    <div class="c_name">
+        <h2>
+            操作员信息详情</h2>
+    </div>
+    <table border="1" bordercolor="#D7D7D7" class="table_password" align="center">
+        <tr>
+            <th colspan="4">
+                &nbsp;
+            </th>
+        </tr>
+        <tr>
+            <td class="td_style">
+
+                用户工号
+            </td>
+            <td>
+                <asp:Label ID="txtUserID" runat="server"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                用户姓名
+            </td>
+            <td>
+                <asp:TextBox ID="txtUserName" MaxLength="16" Width="200px" runat="server"></asp:TextBox><span
+                    style="color: Red">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                用户性别
+            </td>
+            <td>
+                <asp:RadioButtonList ID="rbUserGender" runat="server" RepeatDirection="Horizontal"
+                                     Width="202px" RepeatLayout="Flow">
+                    <asp:ListItem Selected="True" Value="0">男</asp:ListItem>
+                    <asp:ListItem Value="1">女</asp:ListItem>
+                </asp:RadioButtonList>
+            </td>
+        </tr>
+        <!-- <tr>
+            <td class="td_style">
+                角色选择
+            </td>
+            <td>
+                <asp:DropDownList ID="ddlUserRoleList" runat="server">
+                </asp:DropDownList></td>
+        </tr>
+
+        <tr>
+           <td class="td_style">
+                请选择部门<span style="color: Red">*</span></td>
+            <td>
+                <%--<asp:Literal ID="txtInterviewDep" runat="server"></asp:Literal>--%>
+                <asp:TextBox ID="txtUserDep" runat="server"  Width="500px"></asp:TextBox>
+                <a   href="javascript:SelectDept_OperatorModify()">选择部门</a>
+            </td>
+        </tr>
+        -->
+        <tr>
+            <td class="td_style">
+                联系邮箱
+            </td>
+            <td>
+                <asp:TextBox ID="txtUserContactPhone"  Width="200px" runat="server"></asp:TextBox><span
+                    style="color: Red"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="test" runat="server" Text="测试邮箱" Width="65px"
+                            Height="25px" onclick="test_Click"  />
+            </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                工作地
+            </td>
+            <td>
+                <asp:TextBox ID="workplace" MaxLength="16" Width="200px" runat="server"></asp:TextBox><span
+                    style="color: Red"></span>
+            </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                备注
+            </td>
+            <td>
+                <asp:TextBox ID="txtUserRemark" MaxLength="16" Width="200px" runat="server"></asp:TextBox><span
+                    style="color: Red"></span>
+            </td>
+        </tr>
+        <tr>
+            <th>
+            </th>
+            <th colspan="3" style="height: 25px">
+                <asp:Button ID="btnSub" runat="server" Text="保存设置" Width="65px" Height="25px" OnClick="btnClick_ModifyOperator" />&nbsp;
+                <input id="btnClose" type="button" value="关 闭"  style="width:65px ; height:25px"  onclick="return back();" /></th>
+        </tr>
+    </table>
+</form>
+</body>
+
+<script type="text/javascript">
+    function back()
+    {
+        window.close();
+    }
+
+</script>
+
+</html>

@@ -1,9 +1,163 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>角色功能编辑</title>
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+
+    <script type="text/javascript" src="../Js/jquery-1.2.6.pack.js"></script>
+
+    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="gb2312"></script>
+
+    <script type="text/javascript" src="../Js/jquery.cluetip.js"></script>
+
 </head>
-<body>
-   hello
+<body style="clear: both; display: block; height:auto; ">
+<form id="form1" runat="server">
+    <div class="c_name">
+        <h2>系统用户管理</h2>
+    </div>
+    <div class="ptitle">
+        权限管理</div>
+    <table border="1" bordercolor="#D7D7D7" class="table_top_search" align="center">
+        <tr>
+            <td style="width: 73px; background-color: #FFF; border-right-width: 0px">
+                <input type="button" id="btnAdd" value="新增角色" style="width: 65px; height: 24px; font-size: 10px"
+                       onclick="add()" />
+            </td>
+        </tr>
+    </table>
+    <div id="add" style="display: none">
+        <table runat="server" id="tbAdd" class="tb_2" align="center" border="1">
+            <tr>
+                <td class="STYLE4 tr_1" style="width: 80px; text-align: center;">
+                    角色名称<span id="tip" style=" color: Red">*</span>
+                </td>
+                <td style="width: 289px;">
+                    <!--<asp:TextBox ID="txtRName" runat="server" Width="200px"></asp:TextBox>-->
+                    <!--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="不能为空"-->
+                                                <!--ControlToValidate="txtRName" Display="Dynamic"></asp:RequiredFieldValidator>-->
+                </td>
+                <td class="STYLE4 tr_1" style="width: 80px; text-align: center; height: 26px;">
+                    角色描述
+                </td>
+                <td style="height: 26px">
+                    <!--<asp:TextBox ID="txtRDesc" runat="server" Width="350px"></asp:TextBox>&nbsp;<asp:Button-->
+                        <!--ID="btnCreate" runat="server" Text="创建角色" OnClick="btnCreate_Click" CssClass="lbtn" />-->
+                </td>
+            </tr>
+        </table>
+    </div>
+    <table id="tblist" border="1" bordercolor="#D7D7D7" class="table_search_98" align="center">
+        <tr class="tr_1">
+            <th style="width: 10%;">
+                序 号
+            </th>
+            <th style="width: 35%;">
+                角色名称
+            </th>
+            <th style="width: 40%;">
+                描述
+            </th>
+            <th style="width: 15%;">
+                操 作
+            </th>
+        </tr>
+        <!--<asp:Repeater ID="rptList" runat="server">-->
+            <!--<ItemTemplate>-->
+                <!--<%-- <tr id="tr_<%#Eval("roleId") %>" onclick='focusRole(<%#Eval("roleId") %>)'>--%>-->
+                <!--<tr id="tr_<%#Eval("roleId") %>">-->
+                <!--<td class="head">-->
+                    <!--<%# (Container.ItemIndex + 1)%>-->
+                <!--</td>-->
+                <!--<td class="head">-->
+                    <!--<%#Eval("roleName") %>-->
+                <!--</td>-->
+                <!--<td class="head">-->
+                    <!--<%#Eval("roleDetail") %>-->
+                <!--</td>-->
+                <!--<td class="head">-->
+                    <!--<a href="javascript:editItem('<%#Eval("roleId") %>')">-->
+                    <!--<img alt="编辑" src="../Images/edit.gif" /></a> &nbsp; <a href="javascript:deleteItem('<%#Eval("roleId") %>')">-->
+                    <!--<img alt="删除" src="../Images/del.gif" /></a>-->
+                <!--</td>-->
+                <!--</tr>-->
+            <!--</ItemTemplate>-->
+        <!--</asp:Repeater>-->
+    </table>
+</form>
+
 </body>
 </html>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#tblist").hoverOut();
+        $("a.tip").cluetip({ 'activation': 'click', 'sticky': true, 'closePosition': 'title', 'closeText': "关闭" });
+    });
+
+    var oldIndex = "-1";
+    var newIndex = "-1";
+
+
+    function add()
+    {
+        var value = document.getElementById("add").style.display;
+
+        if(document.getElementById("btnAdd").value == "新增角色")
+        {
+            document.getElementById("btnAdd").value = "隐藏";
+        }
+        else
+        {
+            document.getElementById("btnAdd").value = "新增角色";
+        }
+
+        if(value=="none")
+        {
+            document.getElementById("add").style.display="block";
+        }
+        else
+        {
+            document.getElementById("add").style.display="none";
+        }
+    }
+    function edit()
+    {
+        if(newIndex=="-1")
+        {
+            alert("请点击选中要修改的记录","系统提示");
+        }
+        else
+        {
+            location.href = "roleFun.aspx?id="+newIndex;
+        }
+    }
+
+    function editItem(o1)
+    {
+        location.href='roleFun.aspx?RoleID='+o1;
+    }
+
+    function deleteItem(o) {
+        jConfirm('确定执行操作?', '系统提示', function(r) {
+            if (r) {
+                $.post("../Ajax.aspx", { type: "deleteRole", RoleID: o, rdom: Math.random() }, function(data) {
+
+                    if (data == "删除成功") {
+
+                        $("#tr_" + o).remove();
+                    }
+                    else
+                    {
+                        jAlert("该角色下存在用户，无法删除！","系统提示")
+                    }
+
+                });
+            }
+        });
+    }
+</script>
+
