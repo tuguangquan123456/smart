@@ -32,8 +32,6 @@
         overflow:hidden;
     }
 
-
-
     #right
     {
 
