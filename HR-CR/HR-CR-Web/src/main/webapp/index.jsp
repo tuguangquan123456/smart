@@ -27,7 +27,6 @@
     }
 
     #left {
-
         width: 195px;
         overflow:hidden;
     }
