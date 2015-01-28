@@ -8,7 +8,6 @@
 <script type="text/javascript" src="Js/jquery/jquery-1.10.2.js" ></script>
 <script src="Js/jquery/jquery.json-2.4.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="Js/menu.js"></script>
-<script type="text/javascript" src="Js/jquery.corners.js.js"></script>
 <base target="_self" />
 <style type="text/css">
     *{margin:0px;padding:0px;}
