@@ -1,0 +1,396 @@
+html, body
+{
+	height: 100%;
+	overflow:auto
+}
+body
+{
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-family: "宋体";
+	font-size: 12px;
+	background-color: white;
+    overflow:auto
+}
+a:link
+{
+	font-size: 12px;
+	/*color: #06482a;*/
+	color: rgb(19,112,171);
+	text-decoration: none;
+}
+a:visited
+{
+	font-size: 12px;
+	color: rgb(19,112,171);
+	text-decoration: none;
+}
+a:hover
+{
+	font-size: 12px;
+	color: rgb(7,74,229);
+	text-decoration: underline;
+}
+a:active
+{
+	font-size: 12px;
+	color: #FF0000;
+	text-decoration: none;
+}
+a img
+{
+	border: 0;
+	vertical-align: middle;
+}
+
+.STYLE4
+{
+	font-size: 12px;
+	color: #666;
+	font-weight: bold;
+}
+.STYLE5{ color:gray;}
+.h26
+{
+	height: 28px;
+	line-height: 28px;
+}
+.hh{ background-color:#ccddaa;}
+.dtd
+{
+	padding-left: 12px;
+}
+
+.oh
+{
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.top10{ margin-top:10px;}
+
+.tb_2
+{
+	width: 98%;
+	background-color: #FFFFFF;
+	border: 1px solid #D7D7D7;
+	clear: both;
+	table-layout:inherit;
+	margin-top:0px;
+}
+.tb_3
+{
+	width: 100%;
+	background-color: #FFFFFF;
+	border: 1px solid #C9DDF0;
+	clear: both;
+	table-layout:fixed;
+	 margin-top:0px;
+}
+.tb_2 td
+{
+	border-bottom: 1px dotted #C9DDF0;
+	line-height:22px;
+	overflow:hidden;
+	word-spacing:normal;
+	word-break:keep-all;
+	text-overflow:ellipsis;
+}
+.tb_2  th{font-style:normal;}
+.tb_2_b
+{
+	width: 100%;
+	background-color: #000000;
+	clear: both;
+}
+.tb_2_b th{ background-color:#eeeeee; line-height:24px;}
+.tb_2_b td{ background-color:#ffffff; line-height:25px;}
+.tb_3
+{
+	background-color: #ffffff;
+	border: 1px solid #C9DDF0;
+	margin: 15px auto;
+	padding: 5px;
+	clear: both;
+}
+.tr_1
+{
+	padding-left: 2px;
+	padding-top: 3px;
+	font-size: 12px;
+	height: 25px;
+	text-align: center;
+	background-color: #EEEEEE;
+}
+.tr_2
+{
+	text-align: center;
+}
+.tr_3
+{
+	padding-left: 3px;
+	padding-top: 3px;
+	padding-bottom:3px;
+	font-size: 12px;
+	height: 24px;
+	text-align: right;
+	background-color: #eeeeee;
+}
+
+.tr_4
+{
+	padding-left: 3px;
+	padding-top: 3px;
+	font-size: 12px;
+	height: 23px;
+	text-align: center;
+	background-color: #dde9f4 ;
+}
+
+.tr_5
+{
+	padding-left: 3px;
+	padding-top: 3px;
+	font-size: 12px;
+	height: 20px;
+	text-align: center;
+	background-color: #dde9f4 ;
+}
+.tr_6
+{
+	padding-left: 3px;
+	padding-top: 3px;
+	font-size: 12px;
+	height: 15px;
+	text-align: center;
+	background-color: #dde9f4 ;
+}
+
+.td_0
+{
+	text-align: right;
+}
+.td_1
+{
+	text-align: left;
+}
+.td_2
+{
+	text-align: center;
+}
+.td_3
+{
+	text-align: right;
+}
+
+/*这行将给所有的tr加上背景色*/
+/*
+tr.alt td {
+        background:#ecf6fc;  
+}
+*/
+ 
+tr.over td {
+        background:#fff7cd;  /*这个将是鼠标高亮行的背景色*/
+}
+.pl20{ padding-left:20px;}
+/*
+* button样式
+*/
+.lbtn
+{
+	height:22px;
+	width:86px;
+	border:none;
+	padding-top:2px;
+	cursor:hand;
+	background-image:url(../images/btn_bg.gif);
+	background-position:left top;
+	background-repeat:no-repeat;
+}
+
+.sbtn
+{
+	height:22px;
+	width:73px;
+	border:none;
+	padding-top:2px;
+	cursor:hand;
+	background-image:url(../images/btn_bg_short.gif);
+	background-position:left top;
+	background-repeat:no-repeat;
+}
+/*
+* 表单错误提示效果
+*/
+input.error
+{
+	background-color: #FFC080;
+}
+label.error
+{
+	background: url("../images/unchecked.gif") no-repeat 0px 0px;
+	padding-left: 16px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	color: #EA5200;
+	margin-left: 5px;
+}
+#tip{ color:Red; font-size:9pt;}
+label.checked
+{
+	background: url("../images/checked.gif") no-repeat 0px 0px;
+}
+.tb_2 label em
+{
+	color: Red;
+	margin: 0 3px;
+	font-weight: bold;
+	font-style:normal;
+}
+@media print
+{
+	.noprint
+	{
+		display: none;
+	}
+	.pagenext
+	{
+		page-break-after: always;
+	}
+}
+
+.div_vscroll
+{
+	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.height380
+{
+	height:380px;	
+}
+.height410
+{
+	height:410px;
+}
+
+.height420
+{
+	height:420px;	
+}
+
+.height450
+{
+height:450px;	
+}
+.height500
+{
+	height:500px;
+	}
+/* treeview*/
+.tree_content
+{
+	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color:#EEEEEE; 
+	border:#222222 1px solid;
+	/*max-height:450px;*/
+}
+
+.tree_content0
+{
+	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
+	background-color:#dde9f4; 
+	border:#222222 1px solid;
+	
+	/*max-height:450px;*/
+}
+
+.tree_selected
+{
+	font-weight: bold;
+	border: solid 1px #ccddee;
+	background-color: #dde9f4;
+	padding: 0 5px;
+}
+.tree_selected a
+{
+	color: Red;
+}
+.tipbar0
+{
+	margin:0 auto;
+	width:97%;
+	border:1px solid #F90;
+	padding:5px; 
+	background:#FFF8DC;
+	color:Red;
+ }
+.tipbar
+{
+	margin:0 auto;
+	/*width:100%;*/
+	border:1px ;
+	padding:5px; 
+	text-align:right;
+	/*background:#FFF8DC;*/
+	background:#dde9f4;
+	color:black;
+ }
+ .tipbar span
+ {
+	color :#295568;
+	text-align :left ;
+ }
+ 
+ .tipbarNum
+{
+	margin:0 auto;
+	width:98.5%;
+	border:0px solid #F90;
+	padding:5px; 
+	background:#ffffff;
+	text-align:center
+ }
+ .tipbar1
+ {
+	/*border:1px solid black;*/ 
+	padding-right:11px;
+	float:right;
+	/*width: 100%;*/
+ }
+ 
+ .tipbar2
+ {
+	border:1px solid black; 
+	margin:0 auto;
+	padding:10px; 
+	background:#ffffff;
+	/*background:#dde9f4;*/ 
+	color:black;
+	text-align:left;
+	width: 100%;
+ }
+ 
+ .bg1{ background-color:#f0f4fb; text-align:center;}
+ .bg2{ background-color:#ffffff; text-align:left; height: 15px}
+  
+ .tipbar_money
+ {
+	border:1px solid black; 
+	padding:6px; 
+	background:#eeeeee; 
+	margin:2px;
+	color:black;
+	text-align:right;
+ }
+  
+ #pagebar
+ {
+	padding-right:10px;
+}

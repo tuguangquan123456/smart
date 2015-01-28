@@ -1,0 +1,12 @@
+﻿.datagrid{  position:relative; }
+.datagrid td { padding:4px; height:20px; text-align:center;}
+.datagrid th {padding:8px;}
+
+.fixed{width:60px;  border:none; position:relative; left:0px; top:0px; background:#fff; z-index:2; }
+
+.gridWidth{ width:13000px;}                                              /*滚动条宽度与GridView一致*/
+.unfixed{  table-layout:fixed;  position:relative;  }
+
+#grid {display:block; width:95%; margin:30px auto; overflow:hidden;}  
+#total{ width:95%; margin:0 auto; overflow:auto;}
+

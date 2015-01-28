@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="userService" class="com.huawei.smart.business.user.service.UserService" depends-on="mappers"/>
+    <bean id="userAuthorityService" class="com.huawei.smart.business.user.service.UserAuthorityService" depends-on="mappers"/>
+    <bean id="authorityPowerService" class="com.huawei.smart.business.user.service.AuthorityPowerService" depends-on="mappers"/>
+    <bean id="powerService" class="com.huawei.smart.business.user.service.PowerService" depends-on="mappers"/>
+    <bean id="authorityService" class="com.huawei.smart.business.user.service.AuthorityService" depends-on="mappers"/>
+</beans>

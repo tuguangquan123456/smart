@@ -1,0 +1,79 @@
+/* CSS Document */
+body {
+    color: #666666;
+    font-family: Arial,"ËÎÌו";
+    font-size: 12px;
+	text-align:center;
+	min-width:1000px;
+}
+a:hover{
+color:#ff9900;
+}
+
+.header{
+width:980px;
+text-align:left;
+margin:auto;
+}
+.main{
+width:980px;
+text-align:left;
+border: thin solid #999999;
+margin:auto;
+margin-top:80px;
+margin-bottom:5px;
+}
+.bottom{
+width:980px;
+text-align:left;
+margin:auto;
+}
+
+
+.title{
+font-family:"ËÎÌו";
+font-size:14px;
+color:#000000;
+padding-left:24px;
+padding-top:24px;
+margin-bottom:10px;
+}
+.imp_red_title_en{
+font-family:Arial, Helvetica, sans-serif;
+font-size:16px;
+color:#990000;
+margin:10px;
+line-height:15px;
+}
+.imp_red_text_en{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#990000;
+margin:10px;
+line-height:15px;
+}
+.nor_text_en{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+}
+.button{
+font-family:Arial, Helvetica, sans-serif;
+background-color: #F1F1F1;
+background-image: url("img/button_bg.gif");
+border: 1px solid #999999;
+color: #000000;
+height: 19px;
+margin: 0;
+}
+.input_text{
+background: url("img/input_text_bg.gif") repeat scroll 0 0 transparent;
+border: 1px solid #666666;
+width:200px;
+margin-left:12px;
+}
+
+.div_hr{
+background-color:#999999; height:1px; margin-top:24px; margin-bottom:24px;
+}
+
+

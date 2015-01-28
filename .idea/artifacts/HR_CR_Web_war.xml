@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="HR-CR-Web:war">
+    <output-path>$PROJECT_DIR$/HR-CR/HR-CR-Web/target</output-path>
+    <root id="archive" name="HR-CR-Web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="HR-CR-Web:war exploded" />
+    </root>
+  </artifact>
+</component>

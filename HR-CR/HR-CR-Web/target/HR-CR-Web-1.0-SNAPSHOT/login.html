@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart_管理系统</title>
+    <meta  charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="Css/login_layout.css" />
+    <style>
+        #wrap{
+            width:652px;
+            margin:0 auto;
+            margin-top:80px;
+        }
+        .login_button{
+            cursor:pointer;
+            border:none;
+            background-image:url('/Images/login_button.jpg');
+            width:97px;
+            height:64px;
+            margin:4px;
+        }
+        .login_button:hover{
+            cursor:pointer;
+            border:none;
+            background-image:url('Images/login_button.jpg');
+            background-position:0px -65px;
+            width:97px;
+            height:64px;
+            margin:4px;
+        }
+
+    </style>
+</head>
+<body style="clear: both; display: block; height:auto; ">
+
+<form id="form1" runat="server" name='f' action='/smart/j_spring_security_check' method='POST'>
+
+
+
+
+    <!--header-->
+    <div class="header">
+        <div style="float:left;"><img src="Images/logo.jpg" width="80px" /></div>
+        <div class="title" style="float:left; position:relative; top:10px; font-size:22px; left: 0px; height: 19px;">
+            <span style="font-family: Arial;font-size: xx-large;"><strong>Smart</strong></span>
+        </div>
+        <div id="myInfo" style="float:right; display:none;">
+            <span>Hi admin567</span><span>|</span>
+            <span>我的信息</span><span>|</span>
+            <span>意见反馈</span><span>|</span>
+            <span>退出</span>
+        </div>
+    </div>
+    <!--body-->
+    <div class="main" style="clear:left;">
+        <div>
+            <div style="padding:24px;">
+                <div>
+                    <div style="width:399px; height:33px; background-image:url(/Images/login_l_top.jpg)"></div>
+                    <div>
+                        <div style="width:6px; height:117px; background-image:url(/Images/login_l_left.jpg); float:left;"></div>
+                        <div style="width:387px; float:left;">
+                            <div style="margin-top:24px; margin-left:24px;">
+                                <div>
+                                    <table border="0" cellspacing="0" cellpadding="0"  width="100%">
+                                        <tbody>
+
+                                        <tr>
+                                            <td width="100px"><span class="nor_text_en">用户名：</span></td>
+                                            <td width="220px;"> <input  maxlength="20" name="j_username" value="" runat="server" style=" width:220px; margin:4px 0;" /></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="nor_text_en">密码：</span></td>
+                                            <td><input  type="password" name="j_password"  value="800103" runat="server" style=" width:220px;" /></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td><div id="info" style="display: none; color: Red; margin-left: 10px" runat="server" /></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="width:6px; height:117px; background-image:url(/Images/login_l_right.jpg); float:left;"></div>
+                        <!--<tr><td colspan='2'><input name="submit" type="submit" value="Login"/></td></tr>-->
+                    </div>
+                    <div style="width:399px; height:41px; background-image:url(/Images/login_l_bottom.jpg); clear:both;">
+                        <div style="text-align:right; padding:12px; bottom:35px; position:relative;">
+                            <input name="submit" type="submit" value="Login"/>
+                            <!--<asp:Button ID="IbtnEnter" class="button" Text="Log In" runat="server"  OnClick="IbtnEnter_Click"  />-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div></div>
+        </div>
+    </div>
+    <!--bottom-->
+    <div class="bottom">
+        <div>
+            <div style="background-color:#ebebeb; height:1px;"></div>
+            <div style="height:1px;"></div>
+            <div style="background-color:#ebebeb; height:45px;">
+                <div style="padding:5px; text-align:right;">版权所有@ 华为技术有限公司</div>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+</body>
+</html>
+
