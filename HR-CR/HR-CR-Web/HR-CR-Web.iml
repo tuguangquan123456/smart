@@ -22,7 +22,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Maven: smart:HR-CR-business-user:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="business-user" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.0.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.0.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
@@ -64,8 +64,8 @@
     <orderEntry type="library" name="Maven: org.glassfish.hk2:class-model:2.2.0-b21" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:4.3.1" level="project" />
     <orderEntry type="library" name="Maven: org.glassfish.hk2:spring-bridge:2.2.0-b21" level="project" />
-    <orderEntry type="library" name="Maven: project:fundamental-datasource:1.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" name="Maven: project:fundamental-config:1.0-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="funfamental-dataSource" />
+    <orderEntry type="module" module-name="funfamental-config" />
     <orderEntry type="library" name="Maven: commons-io:commons-io:2.4" level="project" />
     <orderEntry type="library" name="Maven: org.logback-extensions:logback-ext-spring:0.1.1" level="project" />
     <orderEntry type="library" name="Maven: ch.qos.logback:logback-classic:1.0.9" level="project" />

@@ -25,7 +25,7 @@
 
 
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="realtimemonitor" />
+        <property name="dataSource" ref="smart" />
     </bean>
     <!-- 使用annotation定义事务 -->
     <tx:annotation-driven transaction-manager="transactionManager"
@@ -37,7 +37,7 @@
 
     <!-- define the SqlSessionFactory -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="realtimemonitor" />
+        <property name="dataSource" ref="smart" />
         <property name="typeAliasesPackage" value="com.huawei.smart.business" />
     </bean>
     <bean id="mappers" class="org.mybatis.spring.mapper.MapperScannerConfigurer">

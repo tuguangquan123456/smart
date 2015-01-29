@@ -26,8 +26,8 @@
 
 
         <dependency>
-            <groupId>project</groupId>
-            <artifactId>fundamental-config</artifactId>
+            <groupId>smart</groupId>
+            <artifactId>funfamental-config</artifactId>
             <version>${project.version}</version>
         </dependency>
 

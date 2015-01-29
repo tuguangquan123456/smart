@@ -56,7 +56,7 @@
     <dependencies>
         <dependency>
             <groupId>smart</groupId>
-            <artifactId>HR-CR-business-user</artifactId>
+            <artifactId>business-user</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

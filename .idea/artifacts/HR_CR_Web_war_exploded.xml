@@ -8,7 +8,9 @@
           <element id="module-output" name="HR-CR-Web" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: smart:HR-CR-business-user:1.0-SNAPSHOT" />
+          <element id="archive" name="business-user-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="business-user" />
+          </element>
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.0.2.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.0.2.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
@@ -50,8 +52,12 @@
           <element id="library" level="project" name="Maven: org.glassfish.hk2:class-model:2.2.0-b21" />
           <element id="library" level="project" name="Maven: junit:junit:4.3.1" />
           <element id="library" level="project" name="Maven: org.glassfish.hk2:spring-bridge:2.2.0-b21" />
-          <element id="file-copy" path="$MAVEN_REPOSITORY$/project/fundamental-dataSource/1.0-SNAPSHOT/fundamental-dataSource-1.0-SNAPSHOT.jar" output-file-name="fundamental-datasource-1.0-SNAPSHOT.jar" />
-          <element id="library" level="project" name="Maven: project:fundamental-config:1.0-SNAPSHOT" />
+          <element id="archive" name="funfamental-dataSource-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="funfamental-dataSource" />
+          </element>
+          <element id="archive" name="funfamental-config-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="funfamental-config" />
+          </element>
           <element id="library" level="project" name="Maven: commons-io:commons-io:2.4" />
           <element id="library" level="project" name="Maven: org.logback-extensions:logback-ext-spring:0.1.1" />
           <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.0.9" />

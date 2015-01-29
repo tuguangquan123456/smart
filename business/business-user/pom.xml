@@ -70,8 +70,8 @@
         </dependency>
 
         <dependency>
-            <groupId>project</groupId>
-            <artifactId>fundamental-datasource</artifactId>
+            <groupId>smart</groupId>
+            <artifactId>funfamental-dataSource</artifactId>
             <version>${project.version}</version>
         </dependency>
 
