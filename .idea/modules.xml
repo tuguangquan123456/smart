@@ -10,6 +10,10 @@
       <module fileurl="file://$PROJECT_DIR$/funfamental/funfamental.iml" filepath="$PROJECT_DIR$/funfamental/funfamental.iml" />
       <module fileurl="file://$PROJECT_DIR$/funfamental/funfamental-config/funfamental-config.iml" filepath="$PROJECT_DIR$/funfamental/funfamental-config/funfamental-config.iml" />
       <module fileurl="file://$PROJECT_DIR$/funfamental/funfamental-dataSource/funfamental-dataSource.iml" filepath="$PROJECT_DIR$/funfamental/funfamental-dataSource/funfamental-dataSource.iml" />
+      <module fileurl="file://$PROJECT_DIR$/funfamental/funfamental-exception/funfamental-exception.iml" filepath="$PROJECT_DIR$/funfamental/funfamental-exception/funfamental-exception.iml" />
+      <module fileurl="file://$PROJECT_DIR$/funfamental/funfamental-logger/funfamental-logger.iml" filepath="$PROJECT_DIR$/funfamental/funfamental-logger/funfamental-logger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/funfamental/funfamental-orm/funfamental-orm.iml" filepath="$PROJECT_DIR$/funfamental/funfamental-orm/funfamental-orm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/funfamental/funfamental-util/funfamental-util.iml" filepath="$PROJECT_DIR$/funfamental/funfamental-util/funfamental-util.iml" />
       <module fileurl="file://$PROJECT_DIR$/smart.iml" filepath="$PROJECT_DIR$/smart.iml" />
     </modules>
   </component>

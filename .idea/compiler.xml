@@ -25,6 +25,10 @@
         <module name="business-user" />
         <module name="funfamental-config" />
         <module name="funfamental-dataSource" />
+        <module name="funfamental-exception" />
+        <module name="funfamental-logger" />
+        <module name="funfamental-orm" />
+        <module name="funfamental-util" />
         <module name="HR-CR-Web" />
       </profile>
     </annotationProcessing>
