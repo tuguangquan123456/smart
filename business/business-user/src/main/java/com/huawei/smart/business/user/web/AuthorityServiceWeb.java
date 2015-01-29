@@ -1,9 +1,10 @@
 package com.huawei.smart.business.user.web;
 
-import com.huawei.smart.business.user.entity.Authority;
-import com.huawei.smart.business.user.entity.AuthorityPower;
-import com.huawei.smart.business.user.entity.SubAuthority;
+import com.huawei.smart.business.user.entity.*;
 import com.huawei.smart.business.user.service.*;
+import com.huawei.smart.logger.SmartLogger;
+import com.huawei.smart.util.json.JsonMapper;
+import com.huawei.smart.util.json.JsonResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -24,11 +25,13 @@ import javax.ws.rs.core.MediaType;
 @Component
 @Path("/authority")
 public class AuthorityServiceWeb {
+    private static SmartLogger logger = SmartLogger.getLogger(AuthorityServiceWeb.class);
+
     @Autowired
     AuthorityService authorityService;
 
     @Autowired
-    PowerService powerService;
+    PowerService  powerService;
 
     @Autowired
     AuthorityPowerService authorityPowerService;
@@ -71,10 +74,10 @@ public class AuthorityServiceWeb {
                 authorityPower.setAuthorityName(name);
                 authorityPowerService.add(authorityPower);
             }
-            return "success";
+            return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
         }
         else{
-            return "ERROR";
+            return JsonResultUtils.getObjectResultByStringAsDefault("fail",JsonResultUtils.Code.ERROR);
         }
 
 
@@ -84,16 +87,87 @@ public class AuthorityServiceWeb {
     @Path("/update")
     @POST
     public String update(@FormParam("jsonString") String jsonString){
-      return "ERROR";
+        SubAuthority subAuthority = JsonMapper.buildNonDefaultMapper().fromJson(jsonString,SubAuthority.class);
+        long authorityId= subAuthority.getId();
+        String authorityName = subAuthority.getName();
+        String authorityDescription = subAuthority.getDescription();
+        int  authorityStatus = subAuthority.getStatus();
+        String resource = subAuthority.getResource();
+        Authority authority = new Authority();
+        authority.setId(authorityId);
+        authority.setName(authorityName);
+        authority.setDescription(authorityDescription);
+        authority.setStatus(authorityStatus);
+        int deleted = authorityPowerService.deleteByAuthorityName(authorityName);
+        if(deleted>=0){
+            int result = authorityService.update(authority);
+            String[] resourceArray = resource.split(";");
+            for(int i=0;i<resourceArray.length;i++){
+                Long powId = powerService.getIdByResource(resourceArray[i]);
+                AuthorityPower authorityPower = new AuthorityPower();
+                authorityPower.setAuthorityId(authorityId);
+                authorityPower.setPowerId(powId);
+                authorityPower.setPowerResource(resourceArray[i]);
+                authorityPower.setAuthorityName(authorityName);
+                authorityPowerService.add(authorityPower);
+            }
+            if(result>0){
+                return  JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
+            }
+            else{
+                return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.ERROR);
+            }
+        }
+        else{
+            return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.ERROR);
+        }
     }
 
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/delete")
     @POST
     public String delete(@FormParam("jsonString") String jsonString){
-
-            return "SUCCESS";
-
+        Authority authority = JsonMapper.buildNonDefaultMapper().fromJson(jsonString,Authority.class);
+        String authorityName = authority.getName();
+        int numDeleted = authorityPowerService.deleteByAuthorityName(authorityName);
+        int result = authorityService.delete(authority);
+        List<UserAuthority> userAuthorityList = userAuthorityService.findByAuthorityName(authorityName);
+        if(userAuthorityList.size()>0){
+            for(UserAuthority ua:userAuthorityList){
+                String userName = ua.getUserName();
+                User user = userService.findByName(userName);
+                String role = user.getRole();
+                String[] roles = role.split(";");
+                String[] newRoles = new String[roles.length-1];
+                int temp=0;
+                for(int i = 0;i<roles.length;i++){
+                    if(!roles[i].equals(authorityName)){
+                        newRoles[temp]=roles[i]+";";
+                        temp++;
+                    }
+                }
+                String roles2 = "";
+                String nr;
+                for(int i=0;i<newRoles.length;i++){
+                    roles2+=newRoles[i];
+                }
+                if(roles2.equals("")){
+                    nr="";
+                }
+                else{
+                    nr = roles2.substring(0,roles2.length()-1);
+                }
+                user.setRole(nr);
+                userService.update(user);
+                userAuthorityService.delete(ua);
+            }
+        }
+        if((result>0)&&(numDeleted>=0)){
+            return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
+        }
+        else{
+            return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.ERROR);
+        }
     }
 
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
@@ -139,14 +213,14 @@ public class AuthorityServiceWeb {
             subAuthority.setResource(r1);
             listNew.add(subAuthority);
         }
-        return "";
+        return JsonResultUtils.getObjectResultByStringAsDefault(listNew, JsonResultUtils.Code.SUCCESS);
     }
     @Produces( MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Path("/show")
     @GET
     public String show(){
         List<Authority> list=authorityService.list();
-        return "";
+        return JsonResultUtils.getObjectResultByStringAsDefault(list, JsonResultUtils.Code.SUCCESS);
     }
 
 }
