@@ -1,5 +1,6 @@
 package com.huawei.smart.business.user.mapper;
 import com.huawei.smart.business.user.entity.Power;
+import com.huawei.smart.orm.AbstractMapper;
 
 import java.util.List;
 import java.util.Map;

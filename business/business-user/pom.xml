@@ -74,6 +74,21 @@
             <artifactId>funfamental-dataSource</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>smart</groupId>
+            <artifactId>funfamental-logger</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>smart</groupId>
+            <artifactId>funfamental-util</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>smart</groupId>
+            <artifactId>funfamental-orm</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.security</groupId>
@@ -87,6 +102,7 @@
             <artifactId>spring-security-web</artifactId>
             <version>3.2.0.RELEASE</version>
         </dependency>
+
 
     </dependencies>
 </project>
