@@ -30,15 +30,41 @@
                             Width="58px"  />
             </td>
             <td class="td_style"style="text-align: left; width:1780px">
-                    <span style="text-align: left">用户类型：<asp:DropDownList ID="ddlUserType" runat="server">
-                    </asp:DropDownList> &nbsp;&nbsp;
-                    用户身份：<asp:DropDownList ID="UserStatusList" runat="server">
-                        </asp:DropDownList>
-                    研究所：<asp:DropDownList ID="DepList" runat="server">
-                        </asp:DropDownList>
-                        &nbsp;&nbsp;&nbsp;&nbsp;用户工号：<asp:TextBox ID="txtUserAccount" runat="server" Width="160px" MaxLength="20"></asp:TextBox>
-                        &nbsp;&nbsp;&nbsp;&nbsp;用户姓名：<asp:TextBox ID="txtUserName" runat="server" Width="160px" MaxLength="18"></asp:TextBox>
-                        &nbsp;&nbsp;<asp:Button ID="btnSearch" runat="server" Text="立即查找" Height="21px"  OnClientClick="return checkTitle();" OnClick="btnSub_Click" />
+                    <span style="text-align: left">用户类型：
+                       <select id="ddlUserType">
+                            <option>系统管理员</option>
+                            <option>学生</option>
+                           <option>教师</option>
+                           <option>开发工程师</option>
+                        </select>
+                        <!--<asp:DropDownList ID="ddlUserType" runat="server">-->
+                       <!--</asp:DropDownList>--> &nbsp;&nbsp;
+                    用户身份：
+                        <select id="UserStatusList">
+                            <option>a</option>
+                            <option>b</option>
+                            <option>c</option>
+                            <option>d</option>
+                        </select>
+                        <!--<asp:DropDownList ID="UserStatusList" runat="server">-->
+                        <!--</asp:DropDownList>-->
+                    研究所：
+                        <select id="DepList">
+                            <option>武汉</option>
+                            <option>长沙</option>
+                        </select>
+                        <!--<asp:DropDownList ID="DepList" runat="server">-->
+                        <!--</asp:DropDownList>-->
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="txtUserAccount">用户工号：</label><input id="txtUserAccount" type="text" style="width: 160px;" maxlength="20" >
+                        <!--<asp:TextBox ID="txtUserAccount" runat="server" Width="160px" MaxLength="20"></asp:TextBox>-->
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                    <label for="txtUserName">用户姓名：</label>
+                        <input id="txtUserName" type="text" style="width: 160px;" maxlength="18" >
+                        <!--<asp:TextBox ID="txtUserName" runat="server" Width="160px" MaxLength="18"></asp:TextBox>-->
+                        &nbsp;&nbsp;
+                        <button id="btnSearch" style="height: 21px" OnClientClick="return checkTitle();" OnClick="btnSub_Click">立即查找</button>
+                     <!--<asp:Button ID="btnSearch" runat="server" Text="立即查找" Height="21px"  OnClientClick="return checkTitle();" OnClick="btnSub_Click" />-->
                         &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
                       <!--<input type="button" id="btnAllocate" value="秘书轮岗" style="width: 66px; height: 22px" onclick="javascript:ShowUserInfo()"/>-->
                             
@@ -79,11 +105,57 @@
                 操 作
             </th>
         </tr>
-        <asp:Repeater ID="Repeater_UserList" runat="server">
-            <ItemTemplate>
-                <tr id="tr_<%#Eval("UserID") %>" style="line-height: 28px">
+        <!--一下是表格显示部分，通过js的innerhtML加入-->
+        <!--<asp:Repeater ID="Repeater_UserList" runat="server">-->
+            <!--<ItemTemplate>-->
+                <!--<tr id="tr_<%#Eval("UserID") %>" style="line-height: 28px">-->
+                <!--<td class="head">-->
+                    <!--<%# (Container.ItemIndex + 1 + (curpage - 1) * (Convert.ToInt32(hidden_pageSize.Value)))%>-->
+                <!--</td>-->
+                <!--<td class="head">-->
+                    <!--<%# Eval("YuID")%>-->
+                <!--</td>-->
+                <!--<td class="head">-->
+                    <!--<%# Eval("UserID")%>-->
+                <!--</td>-->
+
+
+                <!--<td class="head">-->
+                    <!--<%# Eval("RoleName")%>-->
+                <!--</td>-->
+                <!--<td class="head">-->
+                    <!--<%# Eval("StatusName")%>-->
+                <!--</td>-->
+                <!--<td class="head">-->
+                    <!--<%# Eval("UserName")%>-->
+                <!--</td>-->
+                <!--<td class="head">-->
+                    <!--<%# (((Eval("FirstDepID").ToString() == "") ||((Eval("FirstDepID").ToString() == "0"))) ?  "" : Eval("FirstDepName"))   %>-->
+                    <!--<%#  (((Eval("SecondDepID").ToString() == "") || ((Eval("SecondDepID").ToString() == "0"))) ? "" : "->" + Eval("SecondDepName"))%>-->
+                    <!--<%#  (((Eval("ThirdDepID").ToString() == "") || ((Eval("ThirdDepID").ToString() == "0"))) ? "" : "->" + Eval("ThirdDepName"))%>-->
+                    <!--<%# (((Eval("FourthDepID").ToString() == "") || ((Eval("FourthDepID").ToString() == "0"))) ? "" : "->" + Eval("FourthDepName"))%>-->
+                <!--</td>-->
+                <!--<td class="head">-->
+                    <!--<%# Eval("workpalce")%>-->
+                <!--</td>-->
+
+                <!--<td class="head">-->
+                    <!--<%# Eval("UserContactPhone")%>-->
+                <!--</td>-->
+
+
+                <!--<td class="head">-->
+                    <!--<a href="javascript:editItem('<%#Eval("UserID") %>')">-->
+                    <!--<img alt="编辑" src="../Images/edit.gif" /></a> &nbsp; <a href="javascript:deleteItem('<%#Eval("UserID") %>')">-->
+                    <!--<img alt="删除" src="../Images/del.gif" /></a>-->
+                <!--</td>-->
+                <!--</tr>-->
+            <!--</ItemTemplate>-->
+        <!--</asp:Repeater>-->
+
+                <tr id="" style="line-height: 28px">
                 <td class="head">
-                    <%# (Container.ItemIndex + 1 + (curpage - 1) * (Convert.ToInt32(hidden_pageSize.Value)))%>
+                   (Container.ItemIndex
                 </td>
                 <td class="head">
                     <%# Eval("YuID")%>
@@ -103,10 +175,7 @@
                     <%# Eval("UserName")%>
                 </td>
                 <td class="head">
-                    <%# (((Eval("FirstDepID").ToString() == "") ||((Eval("FirstDepID").ToString() == "0"))) ?  "" : Eval("FirstDepName"))   %>
-                    <%#  (((Eval("SecondDepID").ToString() == "") || ((Eval("SecondDepID").ToString() == "0"))) ? "" : "->" + Eval("SecondDepName"))%>
-                    <%#  (((Eval("ThirdDepID").ToString() == "") || ((Eval("ThirdDepID").ToString() == "0"))) ? "" : "->" + Eval("ThirdDepName"))%>
-                    <%# (((Eval("FourthDepID").ToString() == "") || ((Eval("FourthDepID").ToString() == "0"))) ? "" : "->" + Eval("FourthDepName"))%>
+                    Eval("FourthDepName"))%>
                 </td>
                 <td class="head">
                     <%# Eval("workpalce")%>
@@ -118,8 +187,9 @@
 
 
                 <td class="head">
-                    <a href="javascript:editItem('<%#Eval("UserID") %>')">
-                    <img alt="编辑" src="../Images/edit.gif" /></a> &nbsp; <a href="javascript:deleteItem('<%#Eval("UserID") %>')">
+                    <a href="javascript:editItem()">
+                    <img alt="编辑" src="../Images/edit.gif" /></a> &nbsp;
+                    <a href="javascript:deleteItem()">
                     <img alt="删除" src="../Images/del.gif" /></a>
                 </td>
                 </tr>
@@ -129,19 +199,24 @@
     <div runat="server" id="tipbar" class="tipbar0" visible="false">
         提示：没有符合条件的记录</div>
     <div id="pagebar" visible="false" runat="server" style="float: right">
-        <span>共<asp:Label ID="lb_count" runat="server"></asp:Label>条记录,</span> <span>当前第<asp:Label
-            ID="labcurrentpage" runat="server" ForeColor="Blue" Text="1"></asp:Label>页,</span>
-        <span>共<asp:Label ID="labsumpage" runat="server" ForeColor="Blue"></asp:Label>页</span>
-        <asp:ImageButton ID="First" runat="server" ImageUrl="~/Images/main_54.gif" ToolTip="首页"
-                         OnClick="First_Click" />
-        <asp:ImageButton ID="Pre" runat="server" ImageUrl="~/Images/main_56.gif" ToolTip="上一页"
-                         OnClick="Pre_Click" Style="height: 15px" />
-        <asp:ImageButton ID="Next" runat="server" ImageUrl="~/Images/main_58.gif" ToolTip="下一页"
-                         OnClick="Next_Click" />
-        <asp:ImageButton ID="Last" runat="server" ImageUrl="~/Images/main_60.gif" ToolTip="尾页"
-                         OnClick="Last_Click" />
+        <span>共<Label ID="lb_count" runat="server">11</Label>条记录,</span> <span>当前第<Label
+            ID="labcurrentpage" runat="server" ForeColor="Blue" Text="1">2</Label>页,</span>
+        <span>共<Label ID="labsumpage" runat="server" ForeColor="Blue">3</Label>页</span>
+
+        <button id="First"><img src="../Images/main_54.gif" alt="首页">首页</button>
+        <button id="Pre"><img src="../Images/main_56.gif" alt="上一页">上一页</button>
+        <button id="Next"><img src="../Images/main_58.gif" alt="下一页">下一页</button>
+        <button id="Last"><img src="../Images/main_60.gif" alt="尾页">尾页</button>
+        <!--<asp:ImageButton ID="First" runat="server" ImageUrl="~/Images/main_54.gif" ToolTip="首页"-->
+                         <!--OnClick="First_Click" />-->
+        <!--<asp:ImageButton ID="Pre" runat="server" ImageUrl="~/Images/main_56.gif" ToolTip="上一页"-->
+                         <!--OnClick="Pre_Click" Style="height: 15px" />-->
+        <!--<asp:ImageButton ID="Next" runat="server" ImageUrl="~/Images/main_58.gif" ToolTip="下一页"-->
+                         <!--OnClick="Next_Click" />-->
+        <!--<asp:ImageButton ID="Last" runat="server" ImageUrl="~/Images/main_60.gif" ToolTip="尾页"-->
+                         <!--OnClick="Last_Click" />-->
     </div>
-    <asp:HiddenField ID="hidden_pageSize" runat="server" Value="20" />
+    <!--<asp:HiddenField ID="hidden_pageSize" runat="server" Value="20" />-->
 </form>
 </body>
 </html>

@@ -193,12 +193,12 @@
             }
         }
 
-    }
+    };
 
     // Shortuct functions
     jAlert = function(message, title, callback) {
         $.alerts.alert(message, title, callback);
-    }
+    };
 
     jConfirm = function(message, title, callback) {
         $.alerts.confirm(message, title, callback);

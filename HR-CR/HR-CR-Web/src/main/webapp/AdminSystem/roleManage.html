@@ -1,6 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html >
+<html >
 <head id="Head1" runat="server">
+    <meta charset="utf-8">
     <title>角色功能编辑</title>
     <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
     <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
@@ -9,7 +10,7 @@
 
     <script type="text/javascript" src="../Js/jquery-1.2.6.pack.js"></script>
 
-    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="gb2312"></script>
+    <script type="text/javascript" src="../Js/jquery.alerts.js"></script>
 
     <script type="text/javascript" src="../Js/jquery.cluetip.js"></script>
 
@@ -33,19 +34,17 @@
         <table runat="server" id="tbAdd" class="tb_2" align="center" border="1">
             <tr>
                 <td class="STYLE4 tr_1" style="width: 80px; text-align: center;">
-                    角色名称<span id="tip" style=" color: Red">*</span>
+                    <label for="txtRName">角色名称</label><span id="tip" style=" color: Red">*</span>
                 </td>
                 <td style="width: 289px;">
-                    <!--<asp:TextBox ID="txtRName" runat="server" Width="200px"></asp:TextBox>-->
-                    <!--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="不能为空"-->
-                                                <!--ControlToValidate="txtRName" Display="Dynamic"></asp:RequiredFieldValidator>-->
+                    <input type="text" id="txtRName" runat="server" style="width: 200px" required>
                 </td>
                 <td class="STYLE4 tr_1" style="width: 80px; text-align: center; height: 26px;">
-                    角色描述
+                    <label for="txtRDesc">角色描述</label>
                 </td>
                 <td style="height: 26px">
-                    <!--<asp:TextBox ID="txtRDesc" runat="server" Width="350px"></asp:TextBox>&nbsp;<asp:Button-->
-                        <!--ID="btnCreate" runat="server" Text="创建角色" OnClick="btnCreate_Click" CssClass="lbtn" />-->
+                    <input type="text" id="txtRDesc" runat="server" style="width: 350px">
+                    <button id="btnCreate" runat="server"   class="lbtn" >创建角色</button>
                 </td>
             </tr>
         </table>
@@ -65,6 +64,7 @@
                 操 作
             </th>
         </tr>
+        <!--这里改成一个循环，用js的innerhtML加进去-->
         <!--<asp:Repeater ID="rptList" runat="server">-->
             <!--<ItemTemplate>-->
                 <!--<%-- <tr id="tr_<%#Eval("roleId") %>" onclick='focusRole(<%#Eval("roleId") %>)'>--%>-->
@@ -86,6 +86,24 @@
                 <!--</tr>-->
             <!--</ItemTemplate>-->
         <!--</asp:Repeater>-->
+        <tr id="" onclick='focusRole()'>
+        <tr id=">">
+        <td class="head">
+          Role-Admin
+        </td>
+        <td class="head">
+          系统管理员
+        </td>
+        <td class="head">
+          可以进行一切操作
+        </td>
+        <td class="head">
+        <a href="javascript:editItem()">
+        <img alt="编辑" src="../Images/edit.gif" /></a> &nbsp;
+        <a href="javascript:deleteItem('1')">
+        <img alt="删除" src="../Images/del.gif" /></a>
+        </td>
+        </tr>
     </table>
 </form>
 
@@ -138,7 +156,7 @@
 
     function editItem(o1)
     {
-        location.href='roleFun.aspx?RoleID='+o1;
+        location.href='roleFun.html?RoleID='+o1;
     }
 
     function deleteItem(o) {
