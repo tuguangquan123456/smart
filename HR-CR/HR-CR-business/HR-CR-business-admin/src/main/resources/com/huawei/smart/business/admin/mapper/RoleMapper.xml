@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huawei.smart.business.admin.mapper.RoleMapper">
+    <sql id="role_fields">
+		ROLEID,ROLENAME,ROLEDETAIL
+	</sql>
+
+    <resultMap id="roleResultMap" type="Role">
+        <id property="roleId" column="ROLEID" />
+        <result property="roleName" column="ROLENAME" />
+        <result property="roleDetail" column="ROLEDETAIL" />
+    </resultMap>
+
+
+    <select id="roleList" resultMap="roleResultMap">
+        SELECT
+        <include refid="role_fields" />
+        FROM role
+    </select>
+</mapper>

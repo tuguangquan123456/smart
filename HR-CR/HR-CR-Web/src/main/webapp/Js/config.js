@@ -10,6 +10,11 @@
         "user":{
             "findByName":"rs/user/findByName",
             "userInfo":"rs/user/userInfo"
+        },
+        "role":{
+            "list":"rs/role/list",
+            "add":"rs/role/add",
+            "delete":"rs/role/delete"
         }
     }
 })(jQuery);

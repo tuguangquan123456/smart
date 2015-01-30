@@ -29,6 +29,8 @@
         <module name="funfamental-logger" />
         <module name="funfamental-orm" />
         <module name="funfamental-util" />
+        <module name="HR-CR-business-admin" />
+        <module name="HR-CR-business-HrSourse" />
         <module name="HR-CR-Web" />
       </profile>
     </annotationProcessing>

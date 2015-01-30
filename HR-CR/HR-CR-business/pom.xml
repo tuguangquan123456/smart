@@ -12,7 +12,8 @@
     <artifactId>HR-CR-business</artifactId>
     <packaging>pom</packaging>
     <modules>
-
+        <module>HR-CR-business-admin</module>
+        <module>HR-CR-business-HrSourse</module>
     </modules>
 
 
