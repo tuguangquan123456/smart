@@ -264,6 +264,7 @@
         <span><a target="iframe_main" href="HrResource/DeleteConfirmList.html">删除（待确认）</a></span>
         <span><a target="iframe_main" href="AdminSystem/PersonExportComfirm.html">转移（待确认）</a></span>
         <span><a target="iframe_main" href="AdminSystem/HistoryList.html">最近使用记录</a></span>
+
     </div>
 
     <div id="slink2" class="second_links" style="display:none;">

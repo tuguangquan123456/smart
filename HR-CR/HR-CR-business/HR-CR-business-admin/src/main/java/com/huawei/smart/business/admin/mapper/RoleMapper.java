@@ -14,4 +14,5 @@ import java.util.List;
  */
 public interface RoleMapper extends AbstractMapper<Role> {
     public List<Role> roleList();
+    public long getIdByName(String RoleName);
 }

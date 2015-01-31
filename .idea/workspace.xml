@@ -2,57 +2,92 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b261edc9-becd-41c6-8546-bc00cca019fd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-HrSourse/HR-CR-business-HrSourse.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/HR-CR-business-admin.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__smart_HR_CR_business_admin_1_0_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/entity/Role.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/mapper/RoleMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/com/huawei/smart/business/admin/mapper/RoleMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/service/RoleService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/web/RoleServiceWeb.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-HrSourse/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/META-INF/spring/role-applicationContext.xml" />
-      <change type="DELETED" beforePath="D:\java work\0129\smart\.idea\libraries\Maven__ch_qos_logback_logback_classic_1_0_9.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\java work\0129\smart\.idea\libraries\Maven__ch_qos_logback_logback_core_1_0_9.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\java work\0129\smart\.idea\libraries\Maven__commons_logging_commons_logging_1_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\java work\0129\smart\.idea\libraries\Maven__net_sourceforge_jexcelapi_jxl_2_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\java work\0129\smart\.idea\libraries\Maven__org_apache_commons_commons_lang3_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\java work\0129\smart\.idea\libraries\Maven__org_logback_extensions_logback_ext_spring_0_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\java work\0129\smart\.idea\libraries\Maven__org_slf4j_slf4j_api_1_7_2.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/action_add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/action_check.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/action_delete.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/action_remove.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/application.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/arrow_back.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/arrow_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/arrow_next.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/arrow_top.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/attention.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/backward.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/base.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/blog.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/comments.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/download.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/female.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/file.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/folder.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/folder_files.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/folder_open.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/foward.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/group.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/heart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/letter.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/letter_open.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/listen.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/login.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/male.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/maximize.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/minimize.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/offline.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/online.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/options.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/pause.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/photo.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/play.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/record.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/reply.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/rss.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/save.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/shoppingcart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/star.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/stop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/stopplay.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/tag.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/time.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/toend.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/tostart.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/user.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/vote_no.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/vote_yes.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_logback_extensions_logback_ext_spring_0_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/Styles/Site.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/Scripts/jquery-1.4.1-vsdoc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/Scripts/jquery-1.4.1.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/Scripts/jquery-1.4.1.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/jquery/jquery-1.8.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/Scripts/popup.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/readme.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/Styles/test.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/CompanySolvePlan/images/懒人图库.url" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/Default.css" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/Default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/DepartmentManage.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/DepartmentManage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/HR-CR-Web.iml" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/HR-CR-Web.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business.iml" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR.iml" afterPath="$PROJECT_DIR$/HR-CR/HR-CR.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/HR_CR_Web_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/HR_CR_Web_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/mapper/RoleMapper.java" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/mapper/RoleMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/com/huawei/smart/business/admin/mapper/RoleMapper.xml" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/com/huawei/smart/business/admin/mapper/RoleMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/service/RoleService.java" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/service/RoleService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/web/RoleServiceWeb.java" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/web/RoleServiceWeb.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/src/main/java/com/huawei/smart/business/user/web/UserServiceWeb.java" afterPath="$PROJECT_DIR$/business/business-user/src/main/java/com/huawei/smart/business/user/web/UserServiceWeb.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business-user/business-user.iml" afterPath="$PROJECT_DIR$/business/business-user/business-user.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business/business.iml" afterPath="$PROJECT_DIR$/business/business.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/config.js" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/funfamental/funfamental-config/funfamental-config.iml" afterPath="$PROJECT_DIR$/funfamental/funfamental-config/funfamental-config.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/funfamental/funfamental-dataSource/funfamental-dataSource.iml" afterPath="$PROJECT_DIR$/funfamental/funfamental-dataSource/funfamental-dataSource.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/funfamental/funfamental-exception/funfamental-exception.iml" afterPath="$PROJECT_DIR$/funfamental/funfamental-exception/funfamental-exception.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/funfamental/funfamental-logger/funfamental-logger.iml" afterPath="$PROJECT_DIR$/funfamental/funfamental-logger/funfamental-logger.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/funfamental/funfamental-orm/funfamental-orm.iml" afterPath="$PROJECT_DIR$/funfamental/funfamental-orm/funfamental-orm.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/funfamental/funfamental-util/funfamental-util.iml" afterPath="$PROJECT_DIR$/funfamental/funfamental-util/funfamental-util.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/funfamental/funfamental.iml" afterPath="$PROJECT_DIR$/funfamental/funfamental.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/base.css" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/base.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/login.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/pom.xml" afterPath="$PROJECT_DIR$/HR-CR/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/jquery.alerts.css" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/jquery.alerts.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/jquery.cluetip.css" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/jquery.cluetip.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/login_layout.css" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/login_layout.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/menu.css" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/menu.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/pom.xml" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-business/pom.xml" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/roleManage.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/roleManage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smart.iml" afterPath="$PROJECT_DIR$/smart.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\java work\0129\smart\.idea\libraries\Maven__com_google_guava_guava_14_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_13_0_1.xml" />
     </list>
     <ignored path="smart.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/funfamental-config/pom.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422409747171" ignored="false" />
     <file path="/fragment.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422530429204" ignored="false" />
-    <file path="/Dummy.txt" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422583048557" ignored="false" />
+    <file path="/Dummy.txt" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422670590432" ignored="false" />
     <file path="/pom.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422584293961" ignored="false" />
     <file path="/web.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422428261131" ignored="false" />
     <file path="/security-applicationContext.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422419728656" ignored="false" />
@@ -60,11 +95,11 @@
     <file path="/user-applicationContext.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422420150109" ignored="false" />
     <file path="/UserMapper.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422420848191" ignored="false" />
     <file path="/Default.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422424087577" ignored="false" />
-    <file path="/base.css" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422422992542" ignored="false" />
+    <file path="/base.css" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422606249311" ignored="false" />
     <file path="/login.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422586604917" ignored="false" />
-    <file path="/index.jsp" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422593382671" ignored="false" />
+    <file path="/index.jsp" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422599163628" ignored="false" />
     <file path="/index.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422427099845" ignored="false" />
-    <file path="/roleManage.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422592201954" ignored="false" />
+    <file path="/roleManage.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422624116356" ignored="false" />
     <file path="/OperatorManage.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422499103398" ignored="false" />
     <file path="/roleFun.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422497009917" ignored="false" />
     <file path="/DbcpFactoryBean.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422526116587" ignored="false" />
@@ -77,17 +112,24 @@
     <file path="/AuthorityPowerMapper.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422532369543" ignored="false" />
     <file path="/UserMapper.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422532375340" ignored="false" />
     <file path="/Role.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422535406660" ignored="false" />
-    <file path="/RoleMapper.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422535842989" ignored="false" />
-    <file path="/RoleService.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422535325782" ignored="false" />
-    <file path="/RoleServiceWeb.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422587084676" ignored="false" />
+    <file path="/RoleMapper.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422602397490" ignored="false" />
+    <file path="/RoleService.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422602748751" ignored="false" />
+    <file path="/RoleServiceWeb.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422624793608" ignored="false" />
     <file path="/role-applicationContext.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422535563855" ignored="false" />
-    <file path="/RoleMapper.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422590121225" ignored="false" />
+    <file path="/RoleMapper.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422602614473" ignored="false" />
     <file path="/config.js" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422536217540" ignored="false" />
     <file path="D:/platform/eatWhatManagement/eatWhatManagementWeb/src/main/webapp/login.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422582569418" ignored="false" />
     <file path="$PROJECT_DIR$/../../1215/platform/realtimeMonitor/realtimeMonitor-business/realtimeMonitor-business-report/pom.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422584419618" ignored="false" />
     <file path="$PROJECT_DIR$/../../1215/platform/realtimeMonitor/realtimeMonitor-business/realtimeMonitor-business-monitor/pom.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422584447141" ignored="false" />
     <file path="$PROJECT_DIR$/../../1215/platform/riskManagement/riskManagementWeb/src/main/webapp/menu.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422593010882" ignored="false" />
     <file path="/menu.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422593002649" ignored="false" />
+    <file path="$PROJECT_DIR$/../../1215/platform/business/business-user/src/main/java/org/whut/platform/business/user/web/UserServiceWeb.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422602123548" ignored="false" />
+    <file path="/jquery.alerts.css" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422604322209" ignored="false" />
+    <file path="/Default.css" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422605682532" ignored="false" />
+    <file path="/menu.css" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422605750522" ignored="false" />
+    <file path="/login_layout.css" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422605915292" ignored="false" />
+    <file path="/jquery.cluetip.css" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422606096915" ignored="false" />
+    <file path="/DepartmentManage.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422667077557" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +137,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel />
+    <rightPanel />
+    <splitter proportion="0.5" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="D:\java work\1125\smart" />
   </component>
@@ -151,16 +198,72 @@
       <file leaf-file-name="roleManage.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/roleManage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="32" selection-start="790" selection-end="790" vertical-scroll-proportion="-8.142858">
+            <state line="24" column="12" selection-start="1342" selection-end="1342" vertical-scroll-proportion="-6.785714">
+              <folding>
+                <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#div#2;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#3;n#tr#0;n#table#0;n#div#2;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#3;n#tr#0;n#table#0;n#div#2;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#6074#6150#0" expanded="false" />
+                <marker date="1422627049313" expanded="false" signature="1069:1080" placeholder="..." />
+                <marker date="1422627049313" expanded="false" signature="1146:1157" placeholder="..." />
+                <marker date="1422627049313" expanded="false" signature="1224:1235" placeholder="..." />
+                <marker date="1422627049313" expanded="false" signature="1300:1311" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="258" column="63" selection-start="7945" selection-end="7945" vertical-scroll-proportion="-5.428571">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/config.js">
+      <file leaf-file-name="DepartmentManage.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/DepartmentManage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="19" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0">
+            <state line="53" column="78" selection-start="2212" selection-end="2212" vertical-scroll-proportion="-3.3214285">
+              <folding>
+                <element signature="n#style#0;n#button#0;n#td#0;n#tr#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Default.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/Default.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="229" column="257" selection-start="8083" selection-end="8083" vertical-scroll-proportion="0.33146068">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OperatorManage.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/OperatorManage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="35" selection-start="1086" selection-end="1086" vertical-scroll-proportion="97.03571">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="65" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="130" column="11" selection-start="5088" selection-end="5512" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -169,63 +272,7 @@
       <file leaf-file-name="RoleServiceWeb.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/web/RoleServiceWeb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="12" selection-start="672" selection-end="676" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthorityMapper.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/business/business-user/src/main/resources/com/huawei/smart/business/user/mapper/AuthorityMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="56" selection-start="214" selection-end="220" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/business/business-user/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RoleMapper.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/com/huawei/smart/business/admin/mapper/RoleMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="39" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#4674#5040#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="applicationContext.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/WEB-INF/applicationContext.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="77" selection-start="2482" selection-end="2482" vertical-scroll-proportion="-11.64">
+            <state line="35" column="43" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -236,16 +283,25 @@
           <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
             <state />
           </provider>
+          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="29" selection-start="2807" selection-end="2807" vertical-scroll-proportion="-10.076923">
+            <state line="46" column="26" selection-start="1902" selection-end="1902" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
           <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
             <state />
           </provider>
-          <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="UserServiceWeb.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/business/business-user/src/main/java/com/huawei/smart/business/user/web/UserServiceWeb.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="142" column="0" selection-start="5536" selection-end="5536" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
@@ -269,22 +325,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/HR_CR/business/admin/service/RoleService.java" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/config.js" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/pom.xml" />
-        <option value="$PROJECT_DIR$/HR-CR/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/pom.xml" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/pom.xml" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/login.html" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/HR_CR/business/admin/web/RoleServiceWeb.java" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/web/RoleServiceWeb.java" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/WEB-INF/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/META-INF/spring/role-applicationContext.xml" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/com/huawei/smart/HR_CR/business/admin/mapper/RoleMapper.xml" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/js/config.js" />
         <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/mapper/RoleMapper.java" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/com/huawei/smart/business/admin/mapper/RoleMapper.xml" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/service/RoleService.java" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/jquery.alerts.css" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/Default.css" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/menu.css" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/login_layout.css" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/jquery.cluetip.css" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/base.css" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/config.js" />
+        <option value="$PROJECT_DIR$/business/business-user/src/main/java/com/huawei/smart/business/user/web/UserServiceWeb.java" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/web/RoleServiceWeb.java" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/pom.xml" />
         <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/roleManage.html" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/DepartmentManage.html" />
       </list>
     </option>
   </component>
@@ -309,6 +365,24 @@
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smart" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smart" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
       </PATH>
       <PATH>
         <PATH_ELEMENT>
@@ -338,24 +412,6 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="HR-CR-business-HrSourse" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="HR-CR-business-HrSourse" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -388,30 +444,6 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="HR-CR-business" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="HR-CR-business" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
           <option name="myItemId" value="HR-CR" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
@@ -423,102 +455,6 @@
         </PATH_ELEMENT>
         <PATH_ELEMENT>
           <option name="myItemId" value="HR-CR" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="funfamental-config" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="funfamental-config" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="funfamental" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="funfamental" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="business-user" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="business-user" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="business" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="business" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
@@ -543,7 +479,7 @@
     <OptionsSetting value="true" id="Edit" />
     <OptionsSetting value="true" id="Undo Check Out" />
     <OptionsSetting value="true" id="Get Latest Version" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -562,7 +498,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -708,6 +643,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Hrbook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="AdminSystem" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -774,84 +743,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="HR-CR-business-HrSourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HR-CR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HR-CR-business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HR-CR-business-HrSourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HR-CR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HR-CR-business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HR-CR-business-HrSourse" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="smart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HR-CR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="HR-CR-business" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="HR-CR-business-admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -1037,6 +928,10 @@
               <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1077,6 +972,44 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1139,10 +1072,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="spring" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1249,11 +1178,88 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="business-user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1272,12 +1278,12 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -1286,11 +1292,11 @@
       <recent name="com.huawei.smart.dataSource" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java work\0129\smart\HR-CR\HR-CR-Web\src\main\webapp\Js\jquery" />
+      <recent name="D:\java work\0129\smart\HR-CR\HR-CR-Web\src\main\webapp\CompanySolvePlan" />
       <recent name="D:\java work\0129\smart\HR-CR\HR-CR-Web\src\main\webapp\AdminSystem\js" />
       <recent name="D:\java work\0129\smart\HR-CR\HR-CR-business\HR-CR-business-admin\src\main\resources\com\huawei\smart\business\admin\mapper" />
       <recent name="D:\java work\0129\smart\HR-CR\HR-CR-business\HR-CR-business-admin\src\main\java\com\huawei\smart\business\admin" />
-      <recent name="D:\java work\0129\smart\HR-CR\HR-CR-business\HR-CR-business-admin\src\main\resources\com\huawei\smart\HR_CR\business\admin\mapper" />
-      <recent name="D:\java work\0129\smart\HR-CR\HR-CR-business\HR-CR-business-admin\src\main\resources\META-INF\spring" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.huawei.smart.business.user" />
@@ -1336,6 +1342,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1364,19 +1383,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -1399,6 +1405,13 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1418,13 +1431,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
@@ -1571,11 +1577,15 @@
       <created>1422532615617</created>
       <updated>1422532615617</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="增加role">
+      <created>1422595128463</created>
+      <updated>1422595128463</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29845625" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1583,22 +1593,23 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3327616" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.58833617" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.58833617" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2159091" sideWeight="0.29845625" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22424242" sideWeight="0.7409949" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25378788" sideWeight="0.34991422" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21515152" sideWeight="0.7409949" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25900516" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09242424" sideWeight="0.4116638" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27631578" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1648,7 +1659,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="上传config.js文件，此文件是js插件，用于ajax调用方便" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加role列表显示和增加功能" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1668,6 +1679,8 @@
     <MESSAGE value="添加日志组件，异常处理组件" />
     <MESSAGE value="添加orm组件" />
     <MESSAGE value="上传config.js文件，此文件是js插件，用于ajax调用方便" />
+    <MESSAGE value="增加role" />
+    <MESSAGE value="增加role列表显示和增加功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1677,130 +1690,129 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="216" column="24" selection-start="2883" selection-end="2883" vertical-scroll-proportion="0.44378698">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/jquery/jquery-1.10.2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8272" column="0" selection-start="231122" selection-end="231122" vertical-scroll-proportion="0.33333334" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="37" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/FeedBack.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="31" selection-start="3243" selection-end="3243" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/jquery/jquery-1.8.3.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business/business-user/src/main/java/com/huawei/smart/business/user/web/UserServiceWeb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="0" selection-start="5536" selection-end="5536" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="11" selection-start="5088" selection-end="5512" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="52" selection-start="3346" selection-end="3346" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="tag#build#0;tag#project#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/business-user/src/main/java/com/huawei/smart/business/user/web/AuthorityServiceWeb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="13" selection-start="768" selection-end="768" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/WEB-INF/security-applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="40" selection-start="1059" selection-end="1059" vertical-scroll-proportion="-9.88">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/business-user/src/main/resources/META-INF/spring/user-applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/mapper/RoleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="49" selection-start="48" selection-end="48" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/META-INF/spring/role-applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="50" selection-start="350" selection-end="350" vertical-scroll-proportion="-3.8">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/business-user/src/main/resources/com/huawei/smart/business/user/mapper/AuthorityMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="56" selection-start="214" selection-end="220" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/business/business-user/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/com/huawei/smart/business/admin/mapper/RoleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/WEB-INF/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="77" selection-start="2482" selection-end="2482" vertical-scroll-proportion="-11.64">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/web/RoleServiceWeb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="12" selection-start="672" selection-end="676" vertical-scroll-proportion="0.0">
+        <state line="63" column="65" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="29" selection-start="2807" selection-end="2807" vertical-scroll-proportion="-10.076923">
+        <state line="46" column="26" selection-start="1902" selection-end="1902" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
         <state />
       </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/XmlHttp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="9" selection-start="42" selection-end="42" vertical-scroll-proportion="0.035580523" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/roleManage.html">
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/web/RoleServiceWeb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="32" selection-start="790" selection-end="790" vertical-scroll-proportion="-8.142858">
+        <state line="35" column="43" selection-start="1098" selection-end="1098" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/config.js">
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/roleManage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="19" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0">
+        <state line="24" column="12" selection-start="1342" selection-end="1342" vertical-scroll-proportion="-6.785714">
+          <folding>
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#div#2;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#0;n#table#0;n#div#2;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#3;n#tr#0;n#table#0;n#div#2;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#6074#6150#0" expanded="false" />
+            <marker date="1422627049313" expanded="false" signature="1069:1080" placeholder="..." />
+            <marker date="1422627049313" expanded="false" signature="1146:1157" placeholder="..." />
+            <marker date="1422627049313" expanded="false" signature="1224:1235" placeholder="..." />
+            <marker date="1422627049313" expanded="false" signature="1300:1311" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/OperatorManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="35" selection-start="1086" selection-end="1086" vertical-scroll-proportion="97.03571">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="39" selection-start="960" selection-end="960" vertical-scroll-proportion="0.0">
+        <state line="258" column="63" selection-start="7945" selection-end="7945" vertical-scroll-proportion="-5.428571">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/DepartmentManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="78" selection-start="2212" selection-end="2212" vertical-scroll-proportion="-3.3214285">
           <folding>
-            <element signature="e#4674#5040#0" expanded="false" />
+            <element signature="n#style#0;n#button#0;n#td#0;n#tr#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/Default.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="229" column="257" selection-start="8083" selection-end="8083" vertical-scroll-proportion="0.33146068">
+          <folding />
         </state>
       </provider>
     </entry>

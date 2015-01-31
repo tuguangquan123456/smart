@@ -7,9 +7,7 @@ import com.huawei.smart.util.json.JsonResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
@@ -35,5 +33,29 @@ public class RoleServiceWeb {
         System.out.println("hhhhhhhhh");
         List<Role> list = roleService.list();
         return JsonResultUtils.getObjectResultByStringAsDefault(list, JsonResultUtils.Code.SUCCESS);
+    }
+
+    @Produces(MediaType.APPLICATION_JSON+";charset=UTF-8")
+    @Path("/add")
+    @POST
+    public String add(@FormParam("roleName") String roleName,@FormParam("roleDetail") String roleDetail){
+       System.out.println("111111111111111");
+        long id;
+        try{
+            id = roleService.getIdByName(roleName);
+        }
+        catch (Exception ex){
+            id=0;
+        }
+        if(id==0){
+            Role role=new Role();
+            role.setRoleDetail(roleDetail);
+            role.setRoleName(roleName);
+            roleService.add(role);
+            return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
+    }
+    else{
+        return JsonResultUtils.getCodeAndMesByString(JsonResultUtils.Code.ERROR.getCode(), "用户名已存在!");
+    }
     }
 }

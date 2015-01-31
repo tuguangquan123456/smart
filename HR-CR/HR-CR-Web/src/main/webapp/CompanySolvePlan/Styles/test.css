@@ -1,0 +1,97 @@
+﻿
+
+/*超链接样式*/
+a:link, a:visited
+{
+    color: #034af3;
+}
+
+a:hover
+{
+    color: #1d60ff;
+    text-decoration: none;
+}
+
+a:active
+{
+    color: #034af3;
+}
+
+
+/*浮动样式*/
+.float-right
+{
+    float:right;
+}
+
+.float-left
+{
+    float:left;
+}
+
+.clear
+{
+    clear:both;
+}
+
+.bg
+{
+    background-color:#F5E37E;
+    vertical-align:top;
+    width:250px;
+    margin:20px;
+    border-width:medium;
+    border-color: Aqua;
+}
+.abstract
+{
+    width:200px;
+    margin:5px;
+    font-family:@华文宋体;
+    font-size:15px;
+    color:Gray;
+    float:right;
+    display:none;
+}
+
+.row
+{
+    background-color:#F5E37E;
+    height:280px;
+    vertical-align:top;
+    margin:15px;
+    overflow:hidden;
+}
+
+.header
+{
+    width:300px;
+    height:40px;
+    top: 0px;
+    left: 0px;
+}
+
+
+.h-center
+{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.icon
+{
+    width:15px;
+    height:15px;
+}
+
+.mainframework
+{
+    display:block;
+}
+
+.hidden
+{
+    width:0px;
+    height:0px;
+    overflow:hidden;
+}

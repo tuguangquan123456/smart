@@ -9,7 +9,7 @@ body
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
-	font-family: "ËÎÌå";
+	font-family: "ï¿½ï¿½ï¿½ï¿½";
 	font-size: 12px;
 	background-color: white;
     overflow:auto
@@ -184,7 +184,7 @@ a img
 	text-align: right;
 }
 
-/*ÕâÐÐ½«¸øËùÓÐµÄtr¼ÓÉÏ±³¾°É«*/
+/*ï¿½ï¿½ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ðµï¿½trï¿½ï¿½ï¿½Ï±ï¿½ï¿½ï¿½É«*/
 /*
 tr.alt td {
         background:#ecf6fc;  
@@ -192,11 +192,11 @@ tr.alt td {
 */
  
 tr.over td {
-        background:#fff7cd;  /*Õâ¸ö½«ÊÇÊó±ê¸ßÁÁÐÐµÄ±³¾°É«*/
+        background:#fff7cd;  /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ±ï¿½ï¿½ï¿½É«*/
 }
 .pl20{ padding-left:20px;}
 /*
-* buttonÑùÊ½
+* buttonï¿½ï¿½Ê½
 */
 .lbtn
 {
@@ -217,12 +217,12 @@ tr.over td {
 	border:none;
 	padding-top:2px;
 	cursor:hand;
-	background-image:url(../images/btn_bg_short.gif);
+	background-image:url(../Images/btn_bg_short.gif);
 	background-position:left top;
 	background-repeat:no-repeat;
 }
 /*
-* ±íµ¥´íÎóÌáÊ¾Ð§¹û
+* ï¿½?ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾Ð§ï¿½ï¿½
 */
 input.error
 {
@@ -230,7 +230,7 @@ input.error
 }
 label.error
 {
-	background: url("../images/unchecked.gif") no-repeat 0px 0px;
+	background: url("../Images/unchecked.gif") no-repeat 0px 0px;
 	padding-left: 16px;
 	padding-bottom: 2px;
 	font-weight: bold;
@@ -240,7 +240,7 @@ label.error
 #tip{ color:Red; font-size:9pt;}
 label.checked
 {
-	background: url("../images/checked.gif") no-repeat 0px 0px;
+	background: url("../Images/checked.gif") no-repeat 0px 0px;
 }
 .tb_2 label em
 {

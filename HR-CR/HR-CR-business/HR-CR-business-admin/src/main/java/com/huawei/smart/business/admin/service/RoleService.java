@@ -20,4 +20,13 @@ public class RoleService {
     public List<Role> list(){
         return roleMapper.roleList();
     }
+
+    public long getIdByName(String name){
+        return roleMapper.getIdByName(name);
+    }
+
+    public void add(Role role){
+        roleMapper.add(role);
+    }
+
 }
