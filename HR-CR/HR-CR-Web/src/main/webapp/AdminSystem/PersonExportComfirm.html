@@ -1,8 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html >
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html >
 <head id="Head1" runat="server">
     <title>员工转移确认</title>
+    <meta charset="utf-8">
     <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
     <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
     <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
@@ -45,79 +46,146 @@
         <tr> <td class="td_style" style="text-align: left; width:1800px">
             <span style="text-align: left" ></span>
             &nbsp;&nbsp;
-            1. <asp:DropDownList ID="TitleList"  OnTextChanged="SelectedIndexChanged1"    runat="server" AutoPostBack="true">
-            <asp:ListItem>一级部门</asp:ListItem>
-            <asp:ListItem>二级部门</asp:ListItem>
-            <asp:ListItem>三级部门</asp:ListItem>
-        </asp:DropDownList>
+            1.
+            <select id="TitleList">
+                <option>一级属性</option>
+                <option>二级属性</option>
+                <option>三级属性</option>
+            </select>
+            <!--<asp:DropDownList ID="TitleList"  OnTextChanged="SelectedIndexChanged1"    runat="server" AutoPostBack="true">-->
+            <!--<asp:ListItem>一级部门</asp:ListItem>-->
+            <!--<asp:ListItem>二级部门</asp:ListItem>-->
+            <!--<asp:ListItem>三级部门</asp:ListItem>-->
+        <!--</asp:DropDownList>-->
 
-            ：<asp:DropDownList ID="DropDownList1"    runat="server" >
-            <asp:ListItem Value="-1">请选择...</asp:ListItem>
-        </asp:DropDownList>
+            ：
+            <select id="DropDownList1">
+                <option selected>请选择...</option>         <!--这里动态添加对应级别的列表-->
+            </select>
+            <!--<asp:DropDownList ID="DropDownList1"    runat="server" >-->
+            <!--<asp:ListItem Value="-1">请选择...</asp:ListItem>-->
+        <!--</asp:DropDownList>-->
             &nbsp;&nbsp;&nbsp;
-            2.  <asp:DropDownList ID="link0" runat="server">
-            <asp:ListItem Value="or">或者</asp:ListItem>
-            <asp:ListItem Value="and">并且</asp:ListItem>
-
-        </asp:DropDownList>
+            2.
+            <select id="link0">
+                <option>或者</option>
+                <option>并且</option>
+            </select>
+            <!--<asp:DropDownList ID="link0" runat="server">-->
+            <!--<asp:ListItem Value="or">或者</asp:ListItem>-->
+            <!--<asp:ListItem Value="and">并且</asp:ListItem>-->
+        <!--</asp:DropDownList>-->
             &nbsp;&nbsp;
-            <asp:DropDownList ID="roleList"   OnTextChanged="SelectedIndexChanged1" runat="server" AutoPostBack="true">
-                <asp:ListItem Value="Role1Name">角色1</asp:ListItem>
-                <asp:ListItem Value="Role2Name">角色2</asp:ListItem>
-            </asp:DropDownList>
 
-            ：<asp:DropDownList ID="DropDownList4"    runat="server" >
-            <asp:ListItem Value="-1">请选择...</asp:ListItem>
-        </asp:DropDownList>
+            <select id="roleList">
+                <option>角色1</option>
+                <option>角色2</option>
+            </select>
+            <!--<asp:DropDownList ID="roleList"   OnTextChanged="SelectedIndexChanged1" runat="server" AutoPostBack="true">-->
+                <!--<asp:ListItem Value="Role1Name">角色1</asp:ListItem>-->
+                <!--<asp:ListItem Value="Role2Name">角色2</asp:ListItem>-->
+            <!--</asp:DropDownList>-->
+
+            ：
+            <select id="DropDownList4">
+                <option>请选择...</option>          <!--这里动态添加对应角色的列表-->
+            </select>
+            <!--<asp:DropDownList ID="DropDownList4"    runat="server" >-->
+            <!--<asp:ListItem Value="-1">请选择...</asp:ListItem>-->
+        <!--</asp:DropDownList>-->
             &nbsp;&nbsp;&nbsp;
-            3. <asp:DropDownList ID="link1" runat="server">
-            <asp:ListItem Value="or">或者</asp:ListItem>
-            <asp:ListItem Value="and">并且</asp:ListItem>
-        </asp:DropDownList>
+            3.
+            <select id="link1">
+                <option>或者</option>
+                <option>并且</option>
+            </select>
+            <!--<asp:DropDownList ID="link1" runat="server">-->
+            <!--<asp:ListItem Value="or">或者</asp:ListItem>-->
+            <!--<asp:ListItem Value="and">并且</asp:ListItem>-->
+        <!--</asp:DropDownList>-->
             &nbsp;&nbsp;
-            <asp:DropDownList ID="search1" runat="server" >
-                <asp:ListItem Value="UserNumber">工号</asp:ListItem>
-                <asp:ListItem Value="UserName">姓名</asp:ListItem>
-                <asp:ListItem Value="Role1Name">角色1</asp:ListItem>
-                <asp:ListItem Value="Role2Name">角色2</asp:ListItem>
-                <asp:ListItem Value="BelongPLID">PL工号</asp:ListItem>
-                <asp:ListItem Value="BelongPLName">PL姓名</asp:ListItem>
-                <asp:ListItem Value="BelongPLProTeam">PL项目组</asp:ListItem>
-                <asp:ListItem Value="BelongLMID">LM工号</asp:ListItem>
-                <asp:ListItem Value="BelongLMName">LM姓名</asp:ListItem>
-                <asp:ListItem Value="BelongLMProTeam">LM项目组</asp:ListItem>
-                <asp:ListItem Value="BelongSecretaryID">所属秘书工号</asp:ListItem>
-                <asp:ListItem Value="BelongSecretaryName">所属秘书姓名</asp:ListItem>
-            </asp:DropDownList>
+            <select id="search1">
+                <option Value="UserNumber">工号</option>
+                <option  Value="UserName">姓名</option>
+                <option Value="Role1Name">角色1</option>
+                <option Value="Role2Name">角色2</option>
+                <option Value="BelongPLID">PL工号</option>
+                <option Value="BelongPLName">PL姓名</option>
+                <option Value="BelongPLProTeam">PL项目组</option>
+                <option Value="BelongLMID">LM工号</option>
+                <option Value="BelongLMName">LM姓名</option>
+                <option Value="BelongLMProTeam">LM项目组</option>
+                <option Value="BelongSecretaryID">所属秘书工号</option>
+                <option Value="BelongSecretaryName">所属秘书姓名</option>
+            </select>
+            <!--<asp:DropDownList ID="search1" runat="server" >-->
+                <!--<asp:ListItem Value="UserNumber">工号</asp:ListItem>-->
+                <!--<asp:ListItem Value="UserName">姓名</asp:ListItem>-->
+                <!--<asp:ListItem Value="Role1Name">角色1</asp:ListItem>-->
+                <!--<asp:ListItem Value="Role2Name">角色2</asp:ListItem>-->
+                <!--<asp:ListItem Value="BelongPLID">PL工号</asp:ListItem>-->
+                <!--<asp:ListItem Value="BelongPLName">PL姓名</asp:ListItem>-->
+                <!--<asp:ListItem Value="BelongPLProTeam">PL项目组</asp:ListItem>-->
+                <!--<asp:ListItem Value="BelongLMID">LM工号</asp:ListItem>-->
+                <!--<asp:ListItem Value="BelongLMName">LM姓名</asp:ListItem>-->
+                <!--<asp:ListItem Value="BelongLMProTeam">LM项目组</asp:ListItem>-->
+                <!--<asp:ListItem Value="BelongSecretaryID">所属秘书工号</asp:ListItem>-->
+                <!--<asp:ListItem Value="BelongSecretaryName">所属秘书姓名</asp:ListItem>-->
+            <!--</asp:DropDownList>-->
 
-            ：<asp:TextBox ID="ResumeID" runat="server" Width="100px" MaxLength="1000" ></asp:TextBox>
-            <%--   <asp:DropDownList ID="DropDownList2"    runat="server" Visible="false" >
-            <asp:ListItem Value="-1">请选择...</asp:ListItem>
-        </asp:DropDownList>--%>
+            ：
+            <input id="ResumeID" style="width: 100px" maxlength="1000"/>
+            <!--<asp:TextBox ID="ResumeID" runat="server" Width="100px" MaxLength="1000" ></asp:TextBox>-->
+            <!--<%--   <asp:DropDownList ID="DropDownList2"    runat="server" Visible="false" >-->
+            <!--<asp:ListItem Value="-1">请选择...</asp:ListItem>-->
+        <!--</asp:DropDownList>--%>-->
             &nbsp;&nbsp;&nbsp;
-            4.<asp:DropDownList ID="link2" runat="server">
-            <asp:ListItem Value="or">或者</asp:ListItem>
-            <asp:ListItem Value="and">并且</asp:ListItem>
-        </asp:DropDownList>
+            4.
+            <select id="link2">
+                <option>或者</option>
+                <option>并且</option>
+            </select>
+            <!--<asp:DropDownList ID="link2" runat="server">-->
+            <!--<asp:ListItem Value="or">或者</asp:ListItem>-->
+            <!--<asp:ListItem Value="and">并且</asp:ListItem>-->
+        <!--</asp:DropDownList>-->
             &nbsp;&nbsp;
-            <asp:DropDownList ID="search2" runat="server">
-                <asp:ListItem Value="UserName">姓名</asp:ListItem>
-                <asp:ListItem Value="UserNumber">工号</asp:ListItem>
-                <asp:ListItem Value="Role1Name">角色1</asp:ListItem>
-                <asp:ListItem Value="Role2Name">角色2</asp:ListItem>
-                <asp:ListItem Value="BelongPLID">PL工号</asp:ListItem>
-                <asp:ListItem Value="BelongPLName">PL姓名</asp:ListItem>
-                <asp:ListItem Value="BelongPLProTeam">PL项目组</asp:ListItem>
-                <asp:ListItem Value="BelongLMID">LM工号</asp:ListItem>
-                <asp:ListItem Value="BelongLMName">LM姓名</asp:ListItem>
-                <asp:ListItem Value="BelongLMProTeam">LM项目组</asp:ListItem>
-                <asp:ListItem Value="BelongSecretaryID">所属秘书工号</asp:ListItem>
-                <asp:ListItem Value="BelongSecretaryName">所属秘书姓名</asp:ListItem>
-            </asp:DropDownList>
+            <select id="search1">
+                <option Value="UserNumber">工号</option>
+                <option  Value="UserName">姓名</option>
+                <option Value="Role1Name">角色1</option>
+                <option Value="Role2Name">角色2</option>
+                <option Value="BelongPLID">PL工号</option>
+                <option Value="BelongPLName">PL姓名</option>
+                <option Value="BelongPLProTeam">PL项目组</option>
+                <option Value="BelongLMID">LM工号</option>
+                <option Value="BelongLMName">LM姓名</option>
+                <option Value="BelongLMProTeam">LM项目组</option>
+                <option Value="BelongSecretaryID">所属秘书工号</option>
+                <option Value="BelongSecretaryName">所属秘书姓名</option>
+            </select>
+            <!--<asp:DropDownList ID="search2" runat="server">-->
+                <!--<asp:ListItem Value="UserName">姓名</asp:ListItem>-->
+                <!--<asp:ListItem Value="UserNumber">工号</asp:ListItem>-->
+                <!--<asp:ListItem Value="Role1Name">角色1</asp:ListItem>-->
+                <!--<asp:ListItem Value="Role2Name">角色2</asp:ListItem>-->
+                <!--<asp:ListItem Value="BelongPLID">PL工号</asp:ListItem>-->
+                <!--<asp:ListItem Value="BelongPLName">PL姓名</asp:ListItem>-->
+                <!--<asp:ListItem Value="BelongPLProTeam">PL项目组</asp:ListItem>-->
+                <!--<asp:ListItem Value="BelongLMID">LM工号</asp:ListItem>-->
+                <!--<asp:ListItem Value="BelongLMName">LM姓名</asp:ListItem>-->
+                <!--<asp:ListItem Value="BelongLMProTeam">LM项目组</asp:ListItem>-->
+                <!--<asp:ListItem Value="BelongSecretaryID">所属秘书工号</asp:ListItem>-->
+                <!--<asp:ListItem Value="BelongSecretaryName">所属秘书姓名</asp:ListItem>-->
+            <!--</asp:DropDownList>-->
 
-            ：<asp:TextBox ID="Name" runat="server" Width="100px" MaxLength="1000"></asp:TextBox>
-            &nbsp;&nbsp;&nbsp;<asp:Button ID="btnSearch" runat="server" Text="查找"  Width="66px" OnClientClick="return checkTitle()"
-                                          OnClick="btnSearch_Click" />
+            ：
+            <input id="Name" style="width: 100px" maxlength="1000"/>
+            <!--<asp:TextBox ID="Name" runat="server" Width="100px" MaxLength="1000"></asp:TextBox>-->
+            &nbsp;&nbsp;&nbsp;
+            <button id="btnSearch" style="width: 66px" onclick="checkTitle()">查找</button>
+            <!--<asp:Button ID="btnSearch" runat="server" Text="查找"  Width="66px" OnClientClick="return checkTitle()"-->
+                                          <!--OnClick="btnSearch_Click" />-->
 
         </td>
 
@@ -135,15 +203,21 @@
                 <input type="button" id="btnReverse" value="反 选" onclick="reverseSelect()" style="width: 54px;
                         height: 22px" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnDelete" runat="server" Text="确认转移" Height="22px"
-                            Width="66px"  OnClientClick="return GetDelItem();" OnClick="ExpSome_Click" />
+                <button id="btnDelete" style="height: 22px;width: 66px" onclick="GetDelItem">确认转移</button>
                 &nbsp;&nbsp;
-                <asp:Button ID="back" runat="server" Text="驳回转移" Height="22px"
-                            Width="66px"  OnClientClick="return GetDelItem1();" onclick="back_Click"  />
+                <button id="back" style="height: 22px;width: 66px" onclick="GetDelItem">驳回转移</button>
                 &nbsp; &nbsp; &nbsp;  &nbsp;
+                <button id="Button1" style="height: 22px;width: 66px" onclick="GetDelItem">已转移一览</button>
+                <!---->
+                <!--<asp:Button ID="btnDelete" runat="server" Text="确认转移" Height="22px"-->
+                            <!--Width="66px"  OnClientClick="return GetDelItem();" OnClick="ExpSome_Click" />-->
+                <!--&nbsp;&nbsp;-->
+                <!--<asp:Button ID="back" runat="server" Text="驳回转移" Height="22px"-->
+                            <!--Width="66px"  OnClientClick="return GetDelItem1();" onclick="back_Click"  />-->
+                <!--&nbsp; &nbsp; &nbsp;  &nbsp;-->
 
-                <asp:Button ID="Button1" runat="server" Text="已转移一览" Height="22px"
-                            Width="85px" PostBackUrl="~/AdminSystem/PersonExportComfirmed.aspx"  />
+                <!--<asp:Button ID="Button1" runat="server" Text="已转移一览" Height="22px"-->
+                            <!--Width="85px" PostBackUrl="~/AdminSystem/PersonExportComfirmed.aspx"  />-->
             </th>
 
         </tr>
@@ -153,41 +227,41 @@
                align="center" style="display: block; " >
 
 
-            <asp:GridView ID="GridView1" runat="server"  CellPadding="4" DataKeyNames="UserNumber"
-                          OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing"
-                          OnRowUpdating="GridView1_RowUpdating"
-                          OnRowCancelingEdit="GridView1_RowCancelingEdit"
-                          AutoGenerateColumns="False" AllowSorting="True" SortExpression="UserNumber" SortDirection="ASC"
-                          onsorting="GridView1_Sorting" OnRowDataBound="GridView1_RowDataBound"
-                          Width="13000px" >
-                <Columns>
-                    <asp:TemplateField>
-                        <HeaderTemplate>
-                            选择
-                        </HeaderTemplate>
-                        <ItemTemplate>
-                            <input type="checkbox" name="GVchk" value='<%#Eval("UserNumber") %>' />
-                        </ItemTemplate>
-                    </asp:TemplateField>
-                    <asp:CommandField HeaderText="编辑" ShowEditButton="True" ButtonType="Image" CancelImageUrl="../Images/back.jpg" EditImageUrl="../Images/edit.gif" UpdateImageUrl="../Images/ok.jpg" />
+            <!--<asp:GridView ID="GridView1" runat="server"  CellPadding="4" DataKeyNames="UserNumber"-->
+                          <!--OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing"-->
+                          <!--OnRowUpdating="GridView1_RowUpdating"-->
+                          <!--OnRowCancelingEdit="GridView1_RowCancelingEdit"-->
+                          <!--AutoGenerateColumns="False" AllowSorting="True" SortExpression="UserNumber" SortDirection="ASC"-->
+                          <!--onsorting="GridView1_Sorting" OnRowDataBound="GridView1_RowDataBound"-->
+                          <!--Width="13000px" >-->
+                <!--<Columns>-->
+                    <!--<asp:TemplateField>-->
+                        <!--<HeaderTemplate>-->
+                            <!--选择-->
+                        <!--</HeaderTemplate>-->
+                        <!--<ItemTemplate>-->
+                            <!--<input type="checkbox" name="GVchk" value='<%#Eval("UserNumber") %>' />-->
+                        <!--</ItemTemplate>-->
+                    <!--</asp:TemplateField>-->
+                    <!--<asp:CommandField HeaderText="编辑" ShowEditButton="True" ButtonType="Image" CancelImageUrl="../Images/back.jpg" EditImageUrl="../Images/edit.gif" UpdateImageUrl="../Images/ok.jpg" />-->
 
-                    <asp:TemplateField HeaderText="删除" ShowHeader="False" Visible="False">
-                        <ItemTemplate>
-                            <asp:ImageButton ID="ImageButton1" runat="server" CausesValidation="False"
-                                             CommandName="Delete" ImageUrl="../Images/del.gif" Text="删除"  OnClientClick="return confirm('确定要删除该记录吗！')" />
-                        </ItemTemplate>
-                    </asp:TemplateField>
+                    <!--<asp:TemplateField HeaderText="删除" ShowHeader="False" Visible="False">-->
+                        <!--<ItemTemplate>-->
+                            <!--<asp:ImageButton ID="ImageButton1" runat="server" CausesValidation="False"-->
+                                             <!--CommandName="Delete" ImageUrl="../Images/del.gif" Text="删除"  OnClientClick="return confirm('确定要删除该记录吗！')" />-->
+                        <!--</ItemTemplate>-->
+                    <!--</asp:TemplateField>-->
 
-                </Columns>
-                <EditRowStyle BackColor="#33CCFF" HorizontalAlign="Center" Wrap="False"></EditRowStyle>
-                <HeaderStyle HorizontalAlign="Center" Wrap="False" />
-                <RowStyle HorizontalAlign="Center" Wrap="False" />
+                <!--</Columns>-->
+                <!--<EditRowStyle BackColor="#33CCFF" HorizontalAlign="Center" Wrap="False"></EditRowStyle>-->
+                <!--<HeaderStyle HorizontalAlign="Center" Wrap="False" />-->
+                <!--<RowStyle HorizontalAlign="Center" Wrap="False" />-->
 
-            </asp:GridView>
+            <!--</asp:GridView>-->
 
         </table>
-        <asp:GridView ID="GridView2" runat="server" Visible="False">
-        </asp:GridView>
+        <!--<asp:GridView ID="GridView2" runat="server" Visible="False">-->
+        <!--</asp:GridView>-->
 
     </div>
     <div id="tipbar0" class="tipbar0" runat="server" visible="false" align="left">
@@ -196,23 +270,29 @@
         <span>共<%=count %>条记录，</span>
         <span>当前第<%=ps.currentPage %>页，</span>
         <span>共<%=ps.totalPageSize %>页</span>
-        <asp:ImageButton ID="First" runat="server" ImageUrl="~/Images/main_54.gif" ToolTip="首页"
-                         OnClick="First_Click" />
-        <asp:ImageButton ID="Pre" runat="server" ImageUrl="~/Images/main_56.gif" ToolTip="上一页"
-                         OnClick="Pre_Click" />
-        <asp:ImageButton ID="Next" runat="server" ImageUrl="~/Images/main_58.gif" ToolTip="下一页"
-                         OnClick="Next_Click" />
-        <asp:ImageButton ID="Last" runat="server" ImageUrl="~/Images/main_60.gif" ToolTip="尾页"
-                         OnClick="Last_Click" />
+        <button id="First" onclick="First_Click()"><img src="../Images/main_54.gif" alt="首页"></button>
+        <button id="Pre" onclick="Pre_Click()"><img src="../Images/main_56.gif" alt="上一页"></button>
+        <button id="Next" onclick="Next_Click()"><img src="../Images/main_58.gif" alt="下一页"></button>
+        <button id="Last" onclick="Last_Click()"><img src="../Images/main_60.gif" alt="尾页"></button>
+        <!--<asp:ImageButton ID="First" runat="server" ImageUrl="~/Images/main_54.gif" ToolTip="首页"-->
+                         <!--OnClick="First_Click" />-->
+        <!--<asp:ImageButton ID="Pre" runat="server" ImageUrl="~/Images/main_56.gif" ToolTip="上一页"-->
+                         <!--OnClick="Pre_Click" />-->
+        <!--<asp:ImageButton ID="Next" runat="server" ImageUrl="~/Images/main_58.gif" ToolTip="下一页"-->
+                         <!--OnClick="Next_Click" />-->
+        <!--<asp:ImageButton ID="Last" runat="server" ImageUrl="~/Images/main_60.gif" ToolTip="尾页"-->
+                         <!--OnClick="Last_Click" />-->
     </div>
-    <%--存储每页显示的记录数，例如每页显示5条记录--%>
-    <asp:HiddenField ID="hidden_pageSize" runat="server" Value="20" />
-    <asp:HiddenField ID="currentPage" runat="server" />
-    <asp:HiddenField ID="totalPage" runat="server" />
-    <asp:HiddenField ID="SearchCondition" runat="server" />
-    <asp:HiddenField ID="DelPersonID" runat="server" />
-    <asp:TextBox ID="temp1"  runat="server" Visible="false"></asp:TextBox>
-    <asp:TextBox ID="temp2" Text="false" runat="server" Visible="false"></asp:TextBox>
+    <!--<%--存储每页显示的记录数，例如每页显示5条记录--%>-->
+    <!--<asp:HiddenField ID="hidden_pageSize" runat="server" Value="20" />-->
+    <!--<asp:HiddenField ID="currentPage" runat="server" />-->
+    <!--<asp:HiddenField ID="totalPage" runat="server" />-->
+    <!--<asp:HiddenField ID="SearchCondition" runat="server" />-->
+    <!--<asp:HiddenField ID="DelPersonID" runat="server" />-->
+    <input id="temp1" style="visibility:hidden "/>
+    <input id="temp2" style="visibility:hidden "/>
+    <!--<asp:TextBox ID="temp1"  runat="server" Visible="false"></asp:TextBox>-->
+    <!--<asp:TextBox ID="temp2" Text="false" runat="server" Visible="false"></asp:TextBox>-->
 </form>
 </body>
 </html>

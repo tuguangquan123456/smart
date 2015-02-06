@@ -1,7 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html >
+<html>
 <head id="Head1" runat="server">
     <title>属性管理</title>
+     <meta charset="utf-8">
     <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
     <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
     <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
@@ -46,81 +47,81 @@
             </th>
         </tr>
         <!-- 开始第一级 repeater -->
-        <asp:Repeater ID="rptFirst" runat="server" OnItemDataBound="RepeaterFirst_Department_ItemDataBound">
-            <ItemTemplate>
-                <tr align="center">
-                    <td class="head">
-                        一级<!--<%#Eval("DepartmentName").ToString() == "" ? "无" : Eval("DepartmentName")%>-->
-                    </td>
-                    <td class="head" align="left" style="text-align: left">
-                        <%#Eval("DepartmentName").ToString() == "" ? "无" : "|----->" + Eval("DepartmentName")%>
-                    </td>
-                    <td class="head">
-                        <a href="javascript:editItem('<%#Eval("DepartmentID") %>')">
-                        <img alt="编辑" src="../images/edit.gif" /></a> &nbsp;&nbsp; <a href="javascript:deleteItem('<%#Eval("DepartmentID") %>','<%#Eval("DepartmentName") %>')">
-                        <img alt="删除" src="../images/del.gif" /></a>
-                        <!--开始第二级 repeater-->
-                        <asp:Repeater ID="rptSecond" runat="server" OnItemDataBound="RepeaterSecond_Department_ItemDataBound">
-                            <ItemTemplate>
-                                <tr align="center">
-                                    <td class="head">
-                                        二级<!--<%#Eval("DepartmentName").ToString() == "" ? "无" : Eval("DepartmentName")%>-->
-                                    </td>
-                                    <td class="head" style="text-align: left">
-                                        <%#Eval("DepartmentName").ToString() == "" ? "无" : "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-------->>" + Eval("DepartmentName")%>
-                                    </td>
-                                    <td class="head">
-                                        <a href="javascript:editItem('<%#Eval("DepartmentID") %>')">
-                                        <img alt="编辑" src="../images/edit.gif" /></a> &nbsp;&nbsp; <a href="javascript:deleteItem('<%#Eval("DepartmentID") %>','<%#Eval("DepartmentName") %>')">
-                                        <img alt="删除" src="../images/del.gif" /></a>
-                                        <!--开始第三级 repeater-->
-                                        <asp:Repeater ID="rptThird" runat="server" OnItemDataBound="RepeaterThird_Department_ItemDataBound">
-                                            <ItemTemplate>
-                                                <tr align="center">
-                                                    <td class="head">
-                                                        三级
-                                                        <!-- <%#Eval("DepartmentID").ToString() == "" ? "无" : Eval("DepartmentID")%>-->
-                                                    </td>
-                                                    <td class="head" style="text-align: left">
-                                                        <a title="<%# Eval("DepartmentName")%>">
-                                                        <%#Eval("DepartmentName").ToString() == "" ? "无" : "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp|-------------->>>" + Eval("DepartmentName")%>
-                                                        </a>
-                                                    </td>
-                                                    <td class="head">
-                                                        <a href="javascript:editItem('<%#Eval("DepartmentID") %>')">
-                                                        <img alt="编辑" src="../images/edit.gif" /></a> &nbsp;&nbsp; <a href="javascript:deleteItem('<%#Eval("DepartmentID") %>','<%#Eval("DepartmentName") %>')">
-                                                        <img alt="删除" src="../images/del.gif" /></a>
-                                                        <!--开始第四级 repeater-->
-                                                        <asp:Repeater ID="rptFourth" runat="server">
-                                                            <ItemTemplate>
-                                                                <tr align="center">
-                                                                    <td class="head">
-                                                                        四级
-                                                                        <!--<%#Eval("DepartmentID").ToString() == "" ? "无" : Eval("DepartmentID")%>-->
-                                                                    </td>
-                                                                    <td class="head" style="text-align: left">
-                                                                        <%#Eval("DepartmentName").ToString() == "" ? "无" : "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp|------------------->>>>" + Eval("DepartmentName")%>
-                                                                    </td>
-                                                                    <td class="head">
-                                                                        <a href="javascript:editItem('<%#Eval("DepartmentID") %>')">
-                                                                        <img alt="编辑" src="../images/edit.gif" /></a> &nbsp;&nbsp; <a href="javascript:deleteItem('<%#Eval("DepartmentID") %>','<%#Eval("DepartmentName") %>')">
-                                                                        <img alt="删除" src="../images/del.gif" /></a>
-                                                                    </td>
-                                                                </tr>
-                                                            </ItemTemplate>
-                                                        </asp:Repeater>
-                                                    </td>
-                                                </tr>
-                                            </ItemTemplate>
-                                        </asp:Repeater>
-                                    </td>
-                                </tr>
-                            </ItemTemplate>
-                        </asp:Repeater>
-                    </td>
-                </tr>
-            </ItemTemplate>
-        </asp:Repeater>
+        <!--<asp:Repeater ID="rptFirst" runat="server" OnItemDataBound="RepeaterFirst_Department_ItemDataBound">-->
+            <!--<ItemTemplate>-->
+                <!--<tr align="center">-->
+                    <!--<td class="head">-->
+                        <!--一级&lt;!&ndash;<%#Eval("DepartmentName").ToString() == "" ? "无" : Eval("DepartmentName")%>&ndash;&gt;-->
+                    <!--</td>-->
+                    <!--<td class="head" align="left" style="text-align: left">-->
+                        <!--<%#Eval("DepartmentName").ToString() == "" ? "无" : "|---&ndash;&gt;" + Eval("DepartmentName")%>-->
+                    <!--</td>-->
+                    <!--<td class="head">-->
+                        <!--<a href="javascript:editItem('<%#Eval("DepartmentID") %>')">-->
+                        <!--<img alt="编辑" src="../images/edit.gif" /></a> &nbsp;&nbsp; <a href="javascript:deleteItem('<%#Eval("DepartmentID") %>','<%#Eval("DepartmentName") %>')">-->
+                        <!--<img alt="删除" src="../images/del.gif" /></a>-->
+                        <!--&lt;!&ndash;开始第二级 repeater&ndash;&gt;-->
+                        <!--<asp:Repeater ID="rptSecond" runat="server" OnItemDataBound="RepeaterSecond_Department_ItemDataBound">-->
+                            <!--<ItemTemplate>-->
+                                <!--<tr align="center">-->
+                                    <!--<td class="head">-->
+                                        <!--二级&lt;!&ndash;<%#Eval("DepartmentName").ToString() == "" ? "无" : Eval("DepartmentName")%>&ndash;&gt;-->
+                                    <!--</td>-->
+                                    <!--<td class="head" style="text-align: left">-->
+                                        <!--<%#Eval("DepartmentName").ToString() == "" ? "无" : "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|------&ndash;&gt;>" + Eval("DepartmentName")%>-->
+                                    <!--</td>-->
+                                    <!--<td class="head">-->
+                                        <!--<a href="javascript:editItem('<%#Eval("DepartmentID") %>')">-->
+                                        <!--<img alt="编辑" src="../images/edit.gif" /></a> &nbsp;&nbsp; <a href="javascript:deleteItem('<%#Eval("DepartmentID") %>','<%#Eval("DepartmentName") %>')">-->
+                                        <!--<img alt="删除" src="../images/del.gif" /></a>-->
+                                        <!--&lt;!&ndash;开始第三级 repeater&ndash;&gt;-->
+                                        <!--<asp:Repeater ID="rptThird" runat="server" OnItemDataBound="RepeaterThird_Department_ItemDataBound">-->
+                                            <!--<ItemTemplate>-->
+                                                <!--<tr align="center">-->
+                                                    <!--<td class="head">-->
+                                                        <!--三级-->
+                                                        <!--&lt;!&ndash; <%#Eval("DepartmentID").ToString() == "" ? "无" : Eval("DepartmentID")%>&ndash;&gt;-->
+                                                    <!--</td>-->
+                                                    <!--<td class="head" style="text-align: left">-->
+                                                        <!--<a title="<%# Eval("DepartmentName")%>">-->
+                                                        <!--<%#Eval("DepartmentName").ToString() == "" ? "无" : "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp|------------&ndash;&gt;>>" + Eval("DepartmentName")%>-->
+                                                        <!--</a>-->
+                                                    <!--</td>-->
+                                                    <!--<td class="head">-->
+                                                        <!--<a href="javascript:editItem('<%#Eval("DepartmentID") %>')">-->
+                                                        <!--<img alt="编辑" src="../images/edit.gif" /></a> &nbsp;&nbsp; <a href="javascript:deleteItem('<%#Eval("DepartmentID") %>','<%#Eval("DepartmentName") %>')">-->
+                                                        <!--<img alt="删除" src="../images/del.gif" /></a>-->
+                                                        <!--&lt;!&ndash;开始第四级 repeater&ndash;&gt;-->
+                                                        <!--<asp:Repeater ID="rptFourth" runat="server">-->
+                                                            <!--<ItemTemplate>-->
+                                                                <!--<tr align="center">-->
+                                                                    <!--<td class="head">-->
+                                                                        <!--四级-->
+                                                                        <!--&lt;!&ndash;<%#Eval("DepartmentID").ToString() == "" ? "无" : Eval("DepartmentID")%>&ndash;&gt;-->
+                                                                    <!--</td>-->
+                                                                    <!--<td class="head" style="text-align: left">-->
+                                                                        <!--<%#Eval("DepartmentName").ToString() == "" ? "无" : "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp|-----------------&ndash;&gt;>>>" + Eval("DepartmentName")%>-->
+                                                                    <!--</td>-->
+                                                                    <!--<td class="head">-->
+                                                                        <!--<a href="javascript:editItem('<%#Eval("DepartmentID") %>')">-->
+                                                                        <!--<img alt="编辑" src="../images/edit.gif" /></a> &nbsp;&nbsp; <a href="javascript:deleteItem('<%#Eval("DepartmentID") %>','<%#Eval("DepartmentName") %>')">-->
+                                                                        <!--<img alt="删除" src="../images/del.gif" /></a>-->
+                                                                    <!--</td>-->
+                                                                <!--</tr>-->
+                                                            <!--</ItemTemplate>-->
+                                                        <!--</asp:Repeater>-->
+                                                    <!--</td>-->
+                                                <!--</tr>-->
+                                            <!--</ItemTemplate>-->
+                                        <!--</asp:Repeater>-->
+                                    <!--</td>-->
+                                <!--</tr>-->
+                            <!--</ItemTemplate>-->
+                        <!--</asp:Repeater>-->
+                    <!--</td>-->
+                <!--</tr>-->
+            <!--</ItemTemplate>-->
+        <!--</asp:Repeater>-->
     </table>
 </form>
 </body>

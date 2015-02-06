@@ -78,9 +78,11 @@
         </tr>
         <tr height="50">
             <td class="td_style" >
-                &nbsp;系统公共邮箱&nbsp;</td>
+                &nbsp;<label for="Emailname">系统公共邮箱</label>&nbsp;</td>
             <td  >
-                <asp:TextBox ID="Emailname" runat="server" Width="250" Height="30"></asp:TextBox> </td>
+                <input id="Emailname" style="width: 250px;height: 30px"/>
+                <!--<asp:TextBox ID="Emailname" runat="server" Width="250" Height="30"></asp:TextBox>-->
+            </td>
         </tr>
         <tr>
             <td class="td_style">
@@ -92,9 +94,11 @@
         </tr>
         <tr height="50">
             <td class="td_style" >
-                &nbsp;系统邮箱账号&nbsp;</td>
+                &nbsp;<label for="EmailID">系统邮箱账号</label>&nbsp;</td>
             <td  >
-                <asp:TextBox ID="EmailID" runat="server" Width="250" Height="30"></asp:TextBox> </td>
+                <input id="EmailID" style="width: 250px;height: 30px"/>
+                <!--<asp:TextBox ID="EmailID" runat="server" Width="250" Height="30"></asp:TextBox>-->
+            </td>
         </tr>
         <tr>
             <td class="td_style">
@@ -106,9 +110,11 @@
         </tr>
         <tr height="50">
             <td class="td_style" >
-                &nbsp;系统邮箱密码&nbsp;</td>
+                &nbsp;<label for="EmailPassword">系统邮箱密码</label>&nbsp;</td>
             <td  >
-                <asp:TextBox ID="EmailPassword" runat="server" Width="250" Height="30"></asp:TextBox> </td>
+                <input id="EmailPassword" style="width: 250px;height: 30px"/>
+                <!--<asp:TextBox ID="EmailPassword" runat="server" Width="250" Height="30"></asp:TextBox>-->
+            </td>
         </tr>
 
 
@@ -126,15 +132,18 @@
 
         <tr>
             <th align="center" colspan="2">
-                <asp:Button ID="btnSubmit"  Text="保存修改" runat="server" Height="21px"
-                            OnClick="btnSubmit_Click" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <%-- <asp:Button ID="sendBirthday"  Text="发送生日提醒" runat="server" Height="21px" onclick="sendBirthday_Click"
-                    />&nbsp;--%>
-                <%--  <asp:Button ID="sendCangku"  Text="发送仓库提醒" runat="server" Height="21px" onclick="sendCangku_Click"
-                    />&nbsp;--%>
-                <asp:Button ID="Button1"  Text="test" runat="server" Height="21px"
-                            onclick="Button1_Click" Visible="False"
-                        />
+                <button id="btnSubmit" style="height: 25px">保存修改</button>
+                <!--<asp:Button ID="btnSubmit"  Text="保存修改" runat="server" Height="21px" OnClick="btnSubmit_Click" />-->
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                <!--<%-- <asp:Button ID="sendBirthday"  Text="发送生日提醒" runat="server" Height="21px" onclick="sendBirthday_Click"-->
+                    <!--/>&nbsp;--%>-->
+                <!--<%--  <asp:Button ID="sendCangku"  Text="发送仓库提醒" runat="server" Height="21px" onclick="sendCangku_Click"-->
+                    <!--/>&nbsp;--%>-->
+                <button id="Button1" style="height: 25px;visibility: hidden">test</button>
+                <!--<asp:Button ID="Button1"  Text="test" runat="server" Height="21px"-->
+                            <!--onclick="Button1_Click" Visible="False"-->
+                        <!--/>-->
             </th>
 
         </tr>

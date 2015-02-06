@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>属性添加</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+    <script type="text/javascript" src="../Js/jquery-1.2.6.pack.js"></script>
+    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="gb2312"></script>
+    <script type="text/javascript" src="../Js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../Js/messages_cn.js"></script>
+
+</head>
+<body style="clear: both; display: block; height:auto; ">
+<form id="form1" runat="server">
+    <div class="c_name">
+        <h2>
+            属性管理</h2>
+    </div>
+    <div class="ptitle">
+        一级属性添加</div>
+    <table id="requiredInfo" border="1" bordercolor="#D7D7D7" align="center" class="table_PrjApply">
+        <tr>
+            <td class="td_style">
+                属性名称
+            </td>
+            <td>
+                <input type="text" id="txtName1" style="width:30% "/>
+                <!--<asp:TextBox ID="txtName1" runat="server" Width="30%"></asp:TextBox> -->
+                <span style="color: Red">*</span>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">
+              <button id="btn1Save" style="width: 60px;height: 25px" OnClick="save1()">保 存</button>
+                <!--<asp:Button ID="btn1Save" runat="server" Text="保 存" -->
+                            <!--Width="59px" Height="21px" OnClick="btn1Save_Click" />-->
+            </th>
+        </tr>
+    </table>
+    <div class="ptitle">
+        二级属性添加</div>
+    <table border="1" bordercolor="#D7D7D7" align="center" class="table_PrjApply">
+        <tr>
+            <td class="td_style">
+                一级属性选择：
+            </td>
+            <td>
+                <select id="ddl_2_FirstDep" style="width: 150px">
+                    <option>武汉研究所</option>
+                    <option>长沙研究所</option>
+                </select>
+                <!--<asp:DropDownList ID="ddl_2_FirstDep" Width="150px" runat="server" />-->
+                <span style="color: Red">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                二级属性名称
+            </td>
+            <td>
+                <input id="txtName2" style="width: 30%"/>
+                <!--<asp:TextBox ID="txtName2" runat="server" Width="30%"></asp:TextBox>-->
+                <span style="color: Red">*</span>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <button id="btn2Save" style="width: 60px;height: 25px" onclick="save2()">保 存</button>
+                <!--<asp:Button ID="btn2Save" runat="server" Text="保 存" OnClientClick="return save2();"-->
+                            <!--Width="59px" Height="21px" OnClick="btn2Save_Click" />-->
+            </th>
+        </tr>
+    </table>
+    <div class="ptitle">
+        三级属性添加</div>
+    <table class="table_PrjApply" border="1" bordercolor="#D7D7D7" align="center">
+        <tr>
+            <td class="td_style">
+                一级属性选择：
+            </td>
+            <td>
+                <select id="ddl_3_FirstDep" style="width: 150px">
+                    <option>招聘部门</option>
+                    <option>软件开发部门</option>
+                    <option>招聘123部门</option>
+                </select>
+                <!--<asp:DropDownList ID="ddl_3_FirstDep" Width="150px" runat="server" AutoPostBack="True"-->
+                                  <!--OnSelectedIndexChanged="ddl_3_FirstDep_SelectedIndexChanged" OnTextChanged="ddl_3_FirstDep_SelectedIndexChanged" />-->
+                <span style="color: Red">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                二级属性选择：
+            </td>
+            <td>
+                <select id="ddl_3_SecondDep" style="width: 150px">
+                    <option>人力资源部</option>
+                    <option>测试12</option>
+                    <option>123</option>
+                </select>
+                <!--<asp:DropDownList ID="ddl_3_SecondDep" Width="150px" runat="server" />-->
+                <span style="color: Red">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                三级属性名称
+            </td>
+            <td>
+                <input id="txtName3" style="width: 30%"/>
+                <!--<asp:TextBox ID="txtName3" runat="server" Width="30%"></asp:TextBox>-->
+                <span style="color: Red">*</span>
+            </td>
+        </tr>
+        <th colspan="2">
+            <button id="btn3Save" style="width: 60px;height: 25px" onclick="save3()">保 存</button>
+            <!--<asp:Button ID="btn3Save" runat="server" Text="保 存" OnClientClick="return save3();"-->
+                        <!--Width="59px" Height="21px" OnClick="btn3Save_Click" />-->
+        </th>
+    </table>
+    <%-- <div class="ptitle">
+    四级属性添加</div>
+    <table class="table_PrjApply" border="1" bordercolor="#D7D7D7" align="center">
+        <tr>
+            <td class="td_style">
+                一级属性选择：
+            </td>
+            <td>
+                <select id="ddl_4_FirstDep" style="width: 150px">
+                    <option>武汉研究所</option>
+                    <option>长沙研究所</option>
+                </select>
+                <!--<asp:DropDownList ID="ddl_4_FirstDep" Width="150px" runat="server" AutoPostBack="True"-->
+                                  <!--OnSelectedIndexChanged="ddl_4_FirstDep_SelectedIndexChanged" />-->
+                <span style="color: Red">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                二级属性选择：
+            </td>
+            <td>
+                <select id="ddl_4_SecondDep" style="width: 150px">
+                    <option>人力资源部</option>
+                    <option>测试12</option>
+                    <option>123</option>
+                </select>
+                <!--<asp:DropDownList ID="ddl_4_SecondDep" Width="150px" runat="server" AutoPostBack="True"-->
+                                  <!--OnSelectedIndexChanged="ddl_4_SecondDep_SelectedIndexChanged" />-->
+                <span style="color: Red">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                三级属性选择：
+            </td>
+            <td>
+                <select id="ddl_4_ThirdDep" style="width: 150px">
+                    <option>人力资源部</option>
+                    <option>测试12</option>
+                    <option>123</option>
+                </select>
+                <!--<asp:DropDownList ID="ddl_4_ThirdDep" Width="150px" runat="server" AutoPostBack="True" />-->
+                <span  style="color: Red">*</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                四级属性名称
+            </td>
+            <td>
+                <input id="txtName4" style="width: 30%" />
+                <!--<asp:TextBox ID="txtName4" runat="server" Width="30%"></asp:TextBox>-->
+                <span style="color: Red">*</span>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <button id="btn4Save" style="width: 60px;height: 25px" onclick="save4()">保 存</button>
+                <!--<asp:Button ID="btn4Save" runat="server" Text="保 存" OnClientClick="return save4();"-->
+                            <!--Width="59px" Height="21px" OnClick="btn4Save_Click" />-->
+            </th>
+        </tr>
+    </table>--%>
+</form>
+</body>
+
+<script type="text/javascript">
+    function save1()
+    {
+        name = document.getElementById("txtName1").value;
+
+        if(name=="")
+        {
+            alert("名称不能为空！","系统提示");
+            return false;
+        }
+    }
+
+    function save2()
+    {
+        depId = document.getElementById("ddl_2_FirstDep").value;
+        name = document.getElementById("txtName2").value;
+        if(depId=="请选择" || name=="")
+        {
+            alert("一级属性未选择或者所添加的属性名称为空！","系统提示");
+            return false;
+        }
+    }
+
+    function save3()
+    {
+        dep1Id = document.getElementById("ddl_3_FirstDep").value;
+        dep2Id = document.getElementById("ddl_3_SecondDep").value;
+        name = document.getElementById("txtName3").value;
+        if(dep1Id=="请选择" || dep2Id == "请选择" || name=="")
+        {
+            alert("属性未选择或者所添加的属性名称为空！","系统提示");
+            return false;
+        }
+    }
+
+    function save4()
+    {
+        dep1Id = document.getElementById("ddl_4_FirstDep").value;
+        dep2Id = document.getElementById("ddl_4_SecondDep").value;
+        dep3Id = document.getElementById("ddl_4_ThirdDep").value;
+        name = document.getElementById("txtName4").value;
+        if(dep1Id=="请选择" || dep2Id == "请选择" || dep3Id == "请选择"|| name=="")
+        {
+            alert("属性未选择或者所添加的属性名称为空！","系统提示");
+            return false;
+        }
+    }
+
+</script>
+
+</html>

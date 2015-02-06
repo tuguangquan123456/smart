@@ -1,0 +1,434 @@
+<!DOCTYPE >
+
+<html>
+<head runat="server">
+    <title>新增资源</title>
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+
+    <script type="text/javascript" src="../Js/My97DatePicker/WdatePicker.js"></script>
+
+    <script type="text/javascript" src="../Js/SystemAdmin_SelectDept.js"></script>
+
+    <script type="text/javascript">
+
+        function selectA() {
+            if (document.form1["ForeignLanguage"].value == "-1") {
+                document.form1["ForeignLanguageLevel"].options.length = 0;
+                document.form1["ForeignLanguageLevel"].options[0] = new Option('请选择...', '-1');
+                document.form1["ForeignLanguageLevel"].value = -1;
+            }
+        }
+
+        function selectJobName() {
+            if (document.form1["JobName"].value == "-1") {
+                document.form1["JobNameSecondLevel"].options.length = 0;
+                document.form1["JobNameSecondLevel"].options[0] = new Option('请选择...', '-1');
+                document.form1["JobNameSecondLevel"].value = -1;
+            }
+        }
+
+        function checkParam() {
+            /* var date = document.getElementById("InvitationTime").value;
+             var hour = document.getElementById("Hour").value;
+             var min = document.getElementById("Minute").value;
+             var degree = document.getElementById("Degree").value;
+             var school = document.getElementById("School").value;
+             var req_id = document.getElementById("ReqID").value;
+             var type = document.getElementById("type").value;
+             var container = document.getElementById("Gender"); // Gender: RadioButtonList 的 ID
+             */
+
+            var date1 = document.getElementById("TextBox5").value;
+            var date2 = document.getElementById("TextBox6").value;
+            var date3 = document.getElementById("TextBox9").value;
+            var date4 = document.getElementById("TextBox12").value;
+
+            var type = document.getElementById("type").value;
+
+            var container = document.getElementById("Gender"); // Gender: RadioButtonList 的 ID
+
+//            if (date1 == "" || date2 == "") {
+//                alert("请选择日期！");
+//                return false;
+//            }
+
+//            if (type == "-1") {
+//                alert("请选择招聘类型！");
+//                return false;
+//            }
+//            if (!(container.getElementsByTagName('input')[0].checked) && !(container.getElementsByTagName('input')[1].checked)) {
+//                alert("请选择性别！");
+//                return false;
+//            }
+
+
+            return true;
+        }
+    </script>
+
+    <script type="text/javascript" src="../Js/jquery-1.2.6.pack.js"></script>
+
+    <script type="text/javascript" src="../Js/My97DatePicker/WdatePicker.js"></script>
+
+    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="gb2312"></script>
+
+    <script type="text/javascript" src="../Js/jquery.validate.min.js"></script>
+
+    <script type="text/javascript" src="../Js/messages_cn.js"></script>
+
+    <script type="text/javascript" src="../Js/resource_admin.js"></script>
+</head>
+<body>
+<form id="form1" runat="server" method="post">
+<div class="c_name">
+    <h2>
+        资源管理
+    </h2>
+</div>
+<div class="ptitle">
+    新增资源
+</div>
+
+<table border="1" bordercolor="#D7D7D7" class="table_PrjApply" align="center">
+<tr>
+    <th colspan="2">
+        个人基本信息
+    </th>
+</tr>
+<tr>
+    <td class="td_style">
+        工号<span style="color: Red">*</span>
+    </td>
+    <td>
+        <asp:TextBox ID="UserNumber" runat="server" CssClass="required"></asp:TextBox><span style="color: Gray">
+                            备注：必须为8位数字; </span>
+    </td>
+</tr>
+<tr>
+    <td class="td_style">
+        姓名<span style="color: Red">*</span></td>
+    <td>
+        <asp:TextBox ID="Name" runat="server" CssClass="required"></asp:TextBox>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        选择属性<span style="color:Red">*</span></td>
+    <td>
+        <asp:TextBox ID="txtUserDep" runat="server" ReadOnly="True" Width="148px"></asp:TextBox><a
+            href="javascript:SelectDept_OperatorModify()">选择属性</a>
+                        <span style="color: Gray">
+                            备注：属性是研究所双属性; </span>
+    </td>
+</tr>
+
+
+
+<tr>
+    <td class="td_style">
+        性别
+    </td>
+    <td>
+        <asp:RadioButtonList ID="Gender" runat="server" RepeatColumns="2">
+            <asp:ListItem Value="Male">男</asp:ListItem>
+            <asp:ListItem Value="Female">女</asp:ListItem>
+        </asp:RadioButtonList>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        出生日期
+    </td>
+    <td>
+        <asp:TextBox ID="TextBox5" runat="server" onfocus="WdatePicker();"></asp:TextBox>
+                    <span style="color: Red"><a>
+                        <img alt="点击选择日期" src="../Images/datePicker.gif" /></a> </span><span style="color: Gray">
+                            点击文本框后选择日期; </span>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        入职日期
+    </td>
+    <td>
+        <asp:TextBox ID="TextBox6" runat="server" onfocus="WdatePicker();"></asp:TextBox>
+                    <span style="color: Red"><a>
+                        <img alt="点击选择日期" src="../Images/datePicker.gif" /></a> </span><span style="color: Gray">
+                            点击文本框后选择日期; </span>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        招聘类型
+    </td>
+    <td>
+        <asp:DropDownList ID="type" runat="server">
+            <asp:ListItem Value="-1">请选择...</asp:ListItem>
+            <asp:ListItem>Fresh Graduates</asp:ListItem>
+            <asp:ListItem>Experienced Hires</asp:ListItem>
+        </asp:DropDownList>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        角色1
+    </td>
+    <td>
+        <asp:DropDownList ID="role1" runat="server">
+
+        </asp:DropDownList>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        角色1技能要求1</td>
+    <td>
+        <asp:TextBox ID="TextBox7" runat="server" ></asp:TextBox>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        角色1技能要求2</td>
+    <td>
+        <asp:TextBox ID="TextBox10" runat="server" ></asp:TextBox>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        角色1上岗时间
+    </td>
+    <td>
+        <asp:TextBox ID="TextBox9" runat="server" onfocus="WdatePicker();"></asp:TextBox>
+                    <span style="color: Red"><a>
+                        <img alt="点击选择日期" src="../Images/datePicker.gif" /></a> </span><span style="color: Gray">
+                            点击文本框后选择日期; </span>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        角色2
+    </td>
+    <td>
+        <asp:DropDownList ID="role2" runat="server">
+
+        </asp:DropDownList>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        角色2技能要求1</td>
+    <td>
+        <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        角色2技能要求2</td>
+    <td>
+        <asp:TextBox ID="TextBox11" runat="server" ></asp:TextBox>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        角色2上岗时间
+    </td>
+    <td>
+        <asp:TextBox ID="TextBox12" runat="server" onfocus="WdatePicker();"></asp:TextBox>
+                    <span style="color: Red"><a>
+                        <img alt="点击选择日期" src="../Images/datePicker.gif" /></a> </span><span style="color: Gray">
+                            点击文本框后选择日期; </span>
+    </td>
+</tr>
+
+
+<tr>
+    <td class="td_style">
+        所属PL工号</td>
+    <td>
+        <asp:TextBox ID="TextBox13" runat="server"></asp:TextBox><span style="color: Gray">
+                            备注：必须为8位数字; </span>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        所属PL姓名</td>
+    <td>
+        <asp:TextBox ID="TextBox14" runat="server" ></asp:TextBox>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        所属PL项目组</td>
+    <td>
+        <asp:TextBox ID="TextBox15" runat="server" ></asp:TextBox>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        所属LM工号</td>
+    <td>
+        <asp:TextBox ID="TextBox16" runat="server" ></asp:TextBox><span style="color: Gray">
+                            备注：必须为8位数字; </span>
+    </td>
+</tr>
+
+
+<tr>
+    <td class="td_style">
+        所属LM姓名</td>
+    <td>
+        <asp:TextBox ID="TextBox17" runat="server"></asp:TextBox>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        所属LM项目组</td>
+    <td>
+        <asp:TextBox ID="TextBox18" runat="server" ></asp:TextBox>
+    </td>
+</tr>
+
+
+<tr>
+    <td class="td_style">
+        身份证</td>
+    <td>
+        <asp:TextBox ID="TextBox19" runat="server" ></asp:TextBox>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        导师姓名</td>
+    <td>
+        <asp:TextBox ID="TextBox20" runat="server" ></asp:TextBox>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        导师工号 </td>
+    <td>
+        <asp:TextBox ID="TextBox21" runat="server" ></asp:TextBox><span style="color: Gray">
+                            备注：必须为8位数字; </span>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        角色范围
+    </td>
+    <td>
+        <asp:DropDownList ID="RoleRange" runat="server">
+            <asp:ListItem Value="-1">请选择...</asp:ListItem>
+            <asp:ListItem>专家</asp:ListItem>
+            <asp:ListItem>管理者</asp:ListItem>
+            <asp:ListItem>讲师</asp:ListItem>
+        </asp:DropDownList>
+    </td>
+</tr>
+
+<tr>
+    <td class="td_style">
+        所属秘书工号 </td>
+    <td>
+        <asp:TextBox ID="TextBox22" runat="server" ></asp:TextBox><span style="color: Gray">
+                            备注：必须为8位数字; </span>
+    </td>
+</tr>
+
+<tr>
+    <th align="center" colspan="2">
+        <asp:Button ID="btnSubmit"  Text="提 交" runat="server" Height="21px" Width="58px" OnClientClick="return save()"
+                    OnClick="btnSubmit_Click" />
+    </th>
+</tr>
+
+<asp:HiddenField ID="lbDep1Id" runat="server" />
+<asp:HiddenField ID="lbDep1Name" runat="server" />
+<asp:HiddenField ID="lbDep2Id" runat="server" />
+<asp:HiddenField ID="lbDep2Name" runat="server" />
+<asp:HiddenField ID="lbDep3Id" runat="server" />
+<asp:HiddenField ID="lbDep3Name" runat="server" />
+<asp:HiddenField ID="lbDep4Id" runat="server" />
+<asp:HiddenField ID="lbDep4Name" runat="server" />
+
+</table>
+</form>
+</body>
+<script type="text/javascript">
+    function save() {
+        userDep = document.getElementById("txtUserDep").value;
+        if (userDep == "") {
+            jAlert("请您选择部门", "系统提示");
+            return false;
+        }
+
+        UserNumber = document.getElementById("UserNumber").value;
+        if (UserNumber.length != 8 || isNaN(UserNumber)) {
+            jAlert("请您输入8位数字工号", "系统提示");
+            return false;
+        }
+        BelongPLID = document.getElementById("TextBox13").value;
+        if ((BelongPLID.length != 8 || isNaN(BelongPLID))&&(BelongPLID!="")) {
+            jAlert("请您输入8位所属PL工号", "系统提示");
+            return false;
+        }
+        BelongLMID = document.getElementById("TextBox16").value;
+        if ((BelongLMID.length != 8 || isNaN(BelongLMID))&&(BelongLMID!="")) {
+            jAlert("请您输入8位所属LM数字工号", "系统提示");
+            return false;
+        }
+        tutorID = document.getElementById("TextBox21").value;
+        if ((tutorID.length != 8 || isNaN(tutorID))&&(tutorID!="")) {
+            jAlert("请您输入8位所属导师数字工号", "系统提示");
+            return false;
+        }
+        BelongSecretaryID = document.getElementById("TextBox22").value;
+        if ((BelongSecretaryID.length != 8 || isNaN(BelongSecretaryID)) && (BelongSecretaryID!="")) {
+            jAlert("请您输入8位所属导师数字工号", "系统提示");
+            return false;
+        }
+
+
+    }
+</script>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("form:first").validate();
+
+        //保存
+        $("#btnNext").click(function () {
+
+            var query = { type: "addMember", f1_1: "", f2_1: "", rdom: Math.random() };
+            query.f2_1 = $("#tblist tr:gt(0)").map(function () {
+                return $(this).find(":text").map(function () {
+                    return $(this).val();
+                }).get().join("<=>");
+            }).get().join('<|>');
+            document.getElementById('f2_1').value = query.f2_1;
+
+        });
+    });
+</script>

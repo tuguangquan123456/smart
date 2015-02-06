@@ -15,6 +15,13 @@
             "list":"rs/role/list",
             "add":"rs/role/add",
             "delete":"rs/role/delete"
+        },
+        "department":{
+            "departmentListBydepartmentLevel":"rs/department/departmentListBydepartmentLevel"
+        },
+        "general":{
+            "depList":"rs/general/depList" ,
+            "roleList":"rs/general/roleList"
         }
     }
 })(jQuery);

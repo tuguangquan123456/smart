@@ -26,9 +26,9 @@
                      roleDetailTable= roleDetailTable+'<tr id=""><td class="head">'+data.data[i].roleId+'</td>'+
                              '<td class="head">'+data.data[i].roleName+'</td>'+
                              '<td class="head">'+data.data[i].roleDetail+'</td>'+
-                             '</td><td class="head"><a href="javascript:editItem()">' +
+                             '</td><td class="head"><a href="javascript:editItem(' + data.data[i].roleId+  ')">' +
                              '<img alt="编辑" src="../Images/edit.gif" /></a> &nbsp;' +
-                             '<a href="javascript:deleteItem()"><img alt="删除" src="../Images/del.gif" /></a></td> </tr>'
+                             '<a href="javascript:deleteItem(' + data.data[i].roleId+  ')"><img alt="删除" src="../Images/del.gif" /></a></td> </tr>'
                  }
                  document.getElementById('tblist').innerHTML=roleDetailTable;
              }
@@ -36,7 +36,7 @@
      </script>
 </head>
 <body style="clear: both; display: block; height:auto; ">
-<form id="form1" runat="server">
+<div id="form1" runat="server">
     <div class="c_name">
         <h2>系统用户管理</h2>
     </div>
@@ -95,7 +95,7 @@
         <!--</asp:Repeater>-->
               <!--动态加载-->
     </table>
-</form>
+</div>
 
 </body>
 </html>
