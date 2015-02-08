@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business.iml" filepath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business.iml" />
       <module fileurl="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-HrSourse/HR-CR-business-HrSourse.iml" filepath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-HrSourse/HR-CR-business-HrSourse.iml" />
       <module fileurl="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/HR-CR-business-admin.iml" filepath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/HR-CR-business-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/HR-CR-business-book.iml" filepath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/HR-CR-business-book.iml" />
       <module fileurl="file://$PROJECT_DIR$/business/business.iml" filepath="$PROJECT_DIR$/business/business.iml" />
       <module fileurl="file://$PROJECT_DIR$/business/business-user/business-user.iml" filepath="$PROJECT_DIR$/business/business-user/business-user.iml" />
       <module fileurl="file://$PROJECT_DIR$/funfamental/funfamental.iml" filepath="$PROJECT_DIR$/funfamental/funfamental.iml" />

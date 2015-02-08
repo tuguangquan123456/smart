@@ -2,38 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b261edc9-becd-41c6-8546-bc00cca019fd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/AddGeneral.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/entity/Department.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/DepartmentAdd.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/mapper/DepartmentMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/com/huawei/smart/business/admin/mapper/DepartmentMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/service/DepartmentService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/web/DepartmentServiceWeb.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/entity/Generalinfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/mapper/GeneralinfoMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/com/huawei/smart/business/admin/mapper/GeneralinfoMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/service/GeneralinfoService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/web/GeneralinfoServiceWeb.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookCangKu.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookInInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BookMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookOutHistory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookOutInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/Bookbr.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/Books.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/HR-CR-business-book.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/META-INF/spring/book-applicationContext.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/BasicList.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/BasicList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/BookImport.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/BookImport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrImport/BookInfoImport.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrImport/BookInfoImport.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/BookList.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/BookList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/BookOut.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/BookOut.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/Bookcangku.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/Bookcangku.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/Bookdonator.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/Bookdonator.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/DeleteConfirmList.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/DeleteConfirmList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/DepartmentManage.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/DepartmentManage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/EmailManage.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/EmailManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/DonatorBillboard.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/DonatorBillboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/FamilyList.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/FamilyList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/FeedBack.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/FeedBack.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/GeneralList.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/GeneralList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/HistoryList.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/HistoryList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/HistoryInBook.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/HistoryInBook.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/HistoryOutBook.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/HistoryOutBook.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/LeaveConfirmList.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/LeaveConfirmList.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/OperatorManage.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/OperatorManage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/LoanBook.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/LoanBook.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/MyLoanBook.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/MyLoanBook.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/OfficeList.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/OfficeList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/OffsiteClockOut.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/OffsiteClockOut.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/OtherList.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/OtherList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/PerformanceList.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/PerformanceList.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/PersonExportComfirm.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/PersonExportComfirm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/UsernumberChange.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/UsernumberChange.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/config.js" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/roleManage.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/roleManage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/secretaryChange.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/secretaryChange.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/PostList.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/PostList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-business/pom.xml" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\java work\0129\smart\HR-CR\HR-CR-business\HR-CR-business-admin\src\main\resources\META-INF\spring\role-applicationContext.xml" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/META-INF/spring/admin-applicationContext.xml" />
     </list>
     <ignored path="smart.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/funfamental-config/pom.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422409747171" ignored="false" />
     <file path="/fragment.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422530429204" ignored="false" />
-    <file path="/Dummy.txt" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423219394039" ignored="false" />
+    <file path="/Dummy.txt" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423386659442" ignored="false" />
     <file path="/pom.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422584293961" ignored="false" />
     <file path="/web.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422428261131" ignored="false" />
     <file path="/security-applicationContext.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422419728656" ignored="false" />
@@ -87,7 +98,7 @@
     <file path="/DeleteConfirmList.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422708692713" ignored="false" />
     <file path="/PersonExportComfirm.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422708791722" ignored="false" />
     <file path="/HistoryList.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423191601555" ignored="false" />
-    <file path="/GeneralList.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423217934134" ignored="false" />
+    <file path="/GeneralList.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423357712748" ignored="false" />
     <file path="/DepartmentService.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423198534655" ignored="false" />
     <file path="/DepartmentServiceWeb.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423198814168" ignored="false" />
     <file path="/Generalinfo.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423205160387" ignored="false" />
@@ -96,6 +107,28 @@
     <file path="/GeneralinfoService.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423219034938" ignored="false" />
     <file path="/GeneralinfoServiceWeb.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423218950584" ignored="false" />
     <file path="/admin-applicationContext.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423207792959" ignored="false" />
+    <file path="/BasicList.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423379147564" ignored="false" />
+    <file path="/FamilyList.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423379415127" ignored="false" />
+    <file path="/PerformanceList.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423379650751" ignored="false" />
+    <file path="/OfficeList.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423379809823" ignored="false" />
+    <file path="/OffsiteClockOut.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423380533695" ignored="false" />
+    <file path="/BookList.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423381384326" ignored="false" />
+    <file path="/MyLoanBook.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423382135029" ignored="false" />
+    <file path="/FeedBack.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423382217163" ignored="false" />
+    <file path="/BookInfoImport.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423382532775" ignored="false" />
+    <file path="/Bookcangku.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423382604931" ignored="false" />
+    <file path="/HistoryOutBook.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423383641171" ignored="false" />
+    <file path="/BookImport.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423382837064" ignored="false" />
+    <file path="/HistoryInBook.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423383199039" ignored="false" />
+    <file path="/BookOut.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423383808978" ignored="false" />
+    <file path="/LoanBook.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423384322692" ignored="false" />
+    <file path="/Bookdonator.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423384552936" ignored="false" />
+    <file path="/Bookbr.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423385405777" ignored="false" />
+    <file path="/BookCangKu.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423385727424" ignored="false" />
+    <file path="/Books.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423386022443" ignored="false" />
+    <file path="/BookOutInfo.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423386232185" ignored="false" />
+    <file path="/BookOutHistory.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423386385662" ignored="false" />
+    <file path="/BookInInfo.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423386612862" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,142 +194,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GeneralList.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/GeneralList.html">
+      <file leaf-file-name="BookOutInfo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookOutInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="143" column="38" selection-start="5579" selection-end="5579" vertical-scroll-proportion="-2.0566037">
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="tag#select#2;tag#td#0;tag#tr#0;tag#table#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-                <element signature="n#style#0;n#input#1;n#td#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#2;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#3;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#2;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#3;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#4;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#4;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#5;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#6;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#7;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#8;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#9;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GeneralinfoMapper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/mapper/GeneralinfoMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="73" selection-start="956" selection-end="965" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="admin-applicationContext.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/META-INF/spring/admin-applicationContext.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="113" selection-start="645" selection-end="645" vertical-scroll-proportion="-5.32">
+            <state line="66" column="59" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddGeneral.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/AddGeneral.html">
+      <file leaf-file-name="BookOutHistory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookOutHistory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="105" column="74" selection-start="3784" selection-end="3784" vertical-scroll-proportion="-4.571429">
-              <folding>
-                <element signature="n#style#0;n#span#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#1;n#tr#1;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#0;n#tr#2;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#0;n#tr#3;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#1;n#tr#3;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#1;n#tr#5;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#td#1;n#tr#5;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#1;n#tr#6;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#td#1;n#tr#6;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#1;n#tr#11;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#td#1;n#tr#11;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#1;n#tr#15;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#1;n#td#1;n#tr#15;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#1;n#tr#16;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#1;n#tr#19;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#1;n#tr#24;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#td#1;n#tr#26;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DepartmentAdd.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/DepartmentAdd.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="192" column="13" selection-start="7665" selection-end="7665" vertical-scroll-proportion="0.35677084">
+            <state line="58" column="60" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeneralinfoMapper.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/com/huawei/smart/business/admin/mapper/GeneralinfoMapper.xml">
+      <file leaf-file-name="BookInInfo.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookInInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="38" selection-start="9185" selection-end="9185" vertical-scroll-proportion="0.0">
+            <state line="13" column="31" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Generalinfo.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/entity/Generalinfo.java">
+      <file leaf-file-name="book-applicationContext.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/META-INF/spring/book-applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="742" column="52" selection-start="16125" selection-end="16125" vertical-scroll-proportion="0.0">
+            <state line="7" column="113" selection-start="645" selection-end="645" vertical-scroll-proportion="0.3292683">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DepartmentMapper.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/com/huawei/smart/business/admin/mapper/DepartmentMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="35" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GeneralinfoServiceWeb.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/web/GeneralinfoServiceWeb.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="54" selection-start="2572" selection-end="2572" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#departmentList#0;class#GeneralinfoServiceWeb#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GeneralinfoService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/service/GeneralinfoService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="119" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -321,22 +250,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/OperatorManage.html" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/DepartmentManage.html" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/PersonExportComfirm.html" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/AddGeneral.html" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/service/DepartmentService.java" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/mapper/DepartmentMapper.java" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/web/DepartmentServiceWeb.java" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/com/huawei/smart/business/admin/mapper/DepartmentMapper.xml" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/entity/Generalinfo.java" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/META-INF/spring/admin-applicationContext.xml" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/config.js" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/mapper/GeneralinfoMapper.java" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/com/huawei/smart/business/admin/mapper/GeneralinfoMapper.xml" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/GeneralList.html" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/web/GeneralinfoServiceWeb.java" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/service/GeneralinfoService.java" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/DonatorBillboard.html" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/BookOut.html" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/BookImport.html" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/HistoryOutBook.html" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/HistoryInBook.html" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/Bookcangku.html" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrImport/BookInfoImport.html" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/FeedBack.html" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/MyLoanBook.html" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/pom.xml" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/Bookbr.java" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookCangKu.java" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/Books.java" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookOutInfo.java" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookOutHistory.java" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookInInfo.java" />
       </list>
     </option>
   </component>
@@ -392,7 +321,7 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="HR-CR-business-admin" />
+          <option name="myItemId" value="HR-CR-business-book" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
       </PATH>
@@ -402,7 +331,7 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
-          <option name="myItemId" value="HR-CR-business-admin" />
+          <option name="myItemId" value="HR-CR-business-book" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
         <PATH_ELEMENT>
@@ -413,10 +342,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="96" />
+    <option name="y" value="145" />
     <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="height" value="582" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -446,11 +375,546 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business-HrSourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business-HrSourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business-HrSourse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business-book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business-book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business-book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business-book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business-book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business-book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="book" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-business-admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -483,17 +947,17 @@
       <recent name="com.huawei.smart.dataSource" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java work\0129\smart\HR-CR\HR-CR-business\HR-CR-business-book\src\main\resources\com\huawei\smart\business\book\mapper" />
+      <recent name="D:\java work\0129\smart\HR-CR\HR-CR-business\HR-CR-business-book\src\main\resources\META-INF\spring" />
       <recent name="D:\java work\0129\smart\HR-CR\HR-CR-business\HR-CR-business-admin\src\main\resources\META-INF\spring" />
       <recent name="D:\java work\0129\smart\HR-CR\HR-CR-Web\src\main\webapp\Js\jquery" />
       <recent name="D:\java work\0129\smart\HR-CR\HR-CR-Web\src\main\webapp\CompanySolvePlan" />
-      <recent name="D:\java work\0129\smart\HR-CR\HR-CR-Web\src\main\webapp\AdminSystem\js" />
-      <recent name="D:\java work\0129\smart\HR-CR\HR-CR-business\HR-CR-business-admin\src\main\resources\com\huawei\smart\business\admin\mapper" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\java work\1125\smart\HR-CR\HR-CR-Web\src\main\webapp" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.huawei.smart.business.user" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\java work\1125\smart\HR-CR\HR-CR-Web\src\main\webapp" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 7.0">
@@ -776,11 +1240,15 @@
       <created>1422670765956</created>
       <updated>1422670765956</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="增加第二个模块的一些功能">
+      <created>1423219473483</created>
+      <updated>1423219473484</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="96" y="145" width="1382" height="582" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29845625" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -794,16 +1262,16 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20926243" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5985748" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2159091" sideWeight="0.29845625" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16515152" sideWeight="0.79073757" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16515152" sideWeight="0.40142518" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25757575" sideWeight="0.69982845" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5574614" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34318182" sideWeight="0.40142518" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36579573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -854,7 +1322,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加第二个模块的一些功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加图书管理模块的一些功能" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -877,6 +1345,7 @@
     <MESSAGE value="增加role" />
     <MESSAGE value="增加role列表显示和增加功能" />
     <MESSAGE value="增加第二个模块的一些功能" />
+    <MESSAGE value="增加图书管理模块的一些功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -886,168 +1355,130 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/mapper/DepartmentMapper.java">
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/Bookcangku.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="73" selection-start="400" selection-end="462" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/service/DepartmentService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="9" selection-start="446" selection-end="632" vertical-scroll-proportion="0.0">
+        <state line="13" column="67" selection-start="899" selection-end="899" vertical-scroll-proportion="-6.785714">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#td#0;n#tr#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/web/DepartmentServiceWeb.java">
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrImport/BookInfoImport.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="731" selection-end="1518" vertical-scroll-proportion="0.0">
+        <state line="24" column="67" selection-start="1288" selection-end="1288" vertical-scroll-proportion="-14.25">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#th#0;n#tr#2;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#th#0;n#tr#2;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#0;n#tr#3;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#0;n#td#0;n#tr#4;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/3.2.5.RELEASE/spring-beans-3.2.5.RELEASE.jar!/org/springframework/beans/factory/support/BeanDefinitionValueResolver.class">
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/FeedBack.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="2606" selection-end="2606" vertical-scroll-proportion="-9.36">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/com/huawei/smart/business/admin/mapper/RoleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="60" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="19" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/com/huawei/smart/business/admin/mapper/DepartmentMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/GeneralList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="38" selection-start="5579" selection-end="5579" vertical-scroll-proportion="-2.0566037">
+        <state line="13" column="67" selection-start="897" selection-end="897" vertical-scroll-proportion="-6.785714">
           <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="tag#select#2;tag#td#0;tag#tr#0;tag#table#0;tag#div#0;tag#body#0;tag#html#0" expanded="false" />
-            <element signature="n#style#0;n#input#1;n#td#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#2;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#3;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#3;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#4;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#4;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#5;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#6;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#7;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#8;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#9;n#th#0;n#tr#0;n#table#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#td#0;n#tr#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/com/huawei/smart/business/admin/mapper/GeneralinfoMapper.xml">
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/MyLoanBook.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="38" selection-start="9185" selection-end="9185" vertical-scroll-proportion="0.0">
+        <state line="12" column="67" selection-start="896" selection-end="896" vertical-scroll-proportion="-0.0">
+          <folding>
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#td#0;n#tr#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#span#0;n#td#0;n#tr#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#span#0;n#td#0;n#tr#0;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="21" selection-start="533" selection-end="2679" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="tag#dependencies#0;tag#project#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="17" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/entity/Generalinfo.java">
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BookMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="742" column="52" selection-start="16125" selection-end="16125" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/mapper/GeneralinfoMapper.java">
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/entity/Department.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="73" selection-start="956" selection-end="965" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/web/GeneralinfoServiceWeb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="54" selection-start="2572" selection-end="2572" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#departmentList#0;class#GeneralinfoServiceWeb#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/java/com/huawei/smart/business/admin/service/GeneralinfoService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="119" selection-start="629" selection-end="629" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-admin/src/main/resources/META-INF/spring/admin-applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="113" selection-start="645" selection-end="645" vertical-scroll-proportion="-5.32">
+        <state line="6" column="22" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/HrResource/AddGeneral.html">
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/Bookbr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="74" selection-start="3784" selection-end="3784" vertical-scroll-proportion="-4.571429">
-          <folding>
-            <element signature="n#style#0;n#span#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#1;n#tr#1;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#0;n#tr#2;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#0;n#tr#3;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#1;n#tr#3;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#1;n#tr#5;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#td#1;n#tr#5;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#1;n#tr#6;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#td#1;n#tr#6;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#1;n#tr#11;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#td#1;n#tr#11;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#1;n#tr#15;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#td#1;n#tr#15;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#1;n#tr#16;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#1;n#tr#19;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#1;n#tr#24;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#td#1;n#tr#26;n#table#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="41" column="40" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/AdminSystem/DepartmentAdd.html">
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookCangKu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="13" selection-start="7665" selection-end="7665" vertical-scroll-proportion="0.35677084">
+        <state line="31" column="57" selection-start="701" selection-end="701" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/Books.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="54" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="336" column="24" selection-start="12854" selection-end="12854" vertical-scroll-proportion="0.8592965">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookOutInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="59" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookOutHistory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="60" selection-start="1425" selection-end="1425" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookInInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="31" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/META-INF/spring/book-applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="113" selection-start="645" selection-end="645" vertical-scroll-proportion="0.3292683">
           <folding />
         </state>
       </provider>

@@ -9,9 +9,11 @@
     <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
     <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
 
-    <script type="text/javascript" src="../Js/jquery-1.2.6.pack.js"></script>
-
-    <script type="text/javascript" src="../Js/jquery.alerts.js" charset="gb2312"></script>
+    <script src="../Js/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="../Js/jquery/jquery.json-2.4.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../Js/jquery.alerts.js"></script>
+    <script type="text/javascript" src="../Js/superTables.js"></script>
+    <script  type="text/javascript" src="../Js/config.js"></script>
 
     <script type="text/javascript" src="../Js/jquery.cluetip.js"></script>
 
@@ -37,6 +39,67 @@
             $("#GridView1").toSuperTable({ width: "1400px", height: "650px", fixedCols: 6 })
                     .find("tr:even").addClass("altRow");
         });
+        function SelectedIndexChanged1(){
+            var data = {};
+            var options=$("#TitleList option:selected");  //获取选中的项
+            if(options.val()=="请选择属性"){
+                jAlert("请选择属性！","系统提示");
+            }
+            else{
+                data.departmentSX=options.val() ;
+                $.post("../"+$.URL.department.departmentListBydepartmentLevel,data,SelectedIndexChanged1CallBack,"json");
+            }
+        }
+        function SelectedIndexChanged2(){
+            var data = {};
+            var options=$("#DepList option:selected");  //获取选中的项
+            if(options.val()=="请选择部门级别"){
+                jAlert("请选择部门级别！","系统提示");
+            }
+            else{
+                data.departmentJB=options.val() ;
+                $.post("../"+$.URL.general.depList,data,SelectedIndexChanged2CallBack,"json");
+            }
+        }
+        function SelectedIndexChanged3(){
+            var data = {};
+            var options=$("#roleList option:selected");  //获取选中的项
+            if(options.val()=="请选择角色"){
+                jAlert("请选择角色！","系统提示");
+            }
+            else{
+                data.roleName=options.val() ;
+                $.post("../"+$.URL.general.roleList,data,SelectedIndexChanged3CallBack,"json");
+            }
+        }
+        function SelectedIndexChanged3CallBack(data){
+            if(data.code==200){
+                var departmentSelect=  '<option selected>请选择...</option>';
+                for(var i=0;i<data.data.length;i++){
+                    departmentSelect= departmentSelect+'<option >'+data.data[i]+'.</option>';
+                }
+                document.getElementById('DropDownList4').innerHTML=departmentSelect;
+            }
+        }
+        function SelectedIndexChanged1CallBack(data){
+            if(data.code==200){
+                var departmentSelect=  '<option selected>请选择...</option>';
+                for(var i=0;i<data.data.length;i++){
+                    departmentSelect= departmentSelect+'<option >'+data.data[i].departmentName+'.</option>';
+                }
+                document.getElementById('DropDownList1').innerHTML=departmentSelect;
+            }
+        }
+        function SelectedIndexChanged2CallBack(data){
+
+            if(data.code==200){
+                var departmentSelect=  '<option selected>请选择...</option>';
+                for(var i=0;i<data.data.length;i++){
+                    departmentSelect= departmentSelect+'<option >'+data.data[i]+'</option>';
+                }
+                document.getElementById('DropDownList2').innerHTML=departmentSelect;
+            }
+        }
     </script>
 
 </head>
@@ -56,160 +119,108 @@
         <span style="text-align: left" ></span>
         &nbsp;&nbsp;
         1.
-        <select id="TitleList">
+        <select id="TitleList" onchange="SelectedIndexChanged1()">
+            <option selected>请选择属性</option>
             <option>一级属性</option>
             <option>二级属性</option>
             <option>三级属性</option>
         </select>
-        <!--<asp:DropDownList ID="TitleList"  OnTextChanged="SelectedIndexChanged1"    runat="server" AutoPostBack="true">-->
-        <!--<asp:ListItem>一级属性</asp:ListItem>-->
-        <!--<asp:ListItem>二级属性</asp:ListItem>-->
-        <!--<asp:ListItem>三级属性</asp:ListItem>-->
-    <!--</asp:DropDownList>-->
-
         ：
-        <select id="DropDownList1">
-            <option selected>请选择...</option>         <!--这里动态添加对应级别的列表-->
+        <select id="DropDownList1" >
+            <!--这里动态添加对应级别的列表-->
         </select>
-        <!--<asp:DropDownList ID="DropDownList1"    runat="server" >-->
-        <!--<asp:ListItem Value="-1">请选择...</asp:ListItem>-->
-    <!--</asp:DropDownList>-->
         &nbsp;&nbsp;&nbsp;
         2.
+        <select id="links">
+            <option>或者</option>
+            <option>并且</option>
+        </select>
+        <select id="DepList" onchange="SelectedIndexChanged2()">
+            <option selected >请选择部门级别</option>
+            <option>一级部门</option>
+            <option>二级部门</option>
+            <option>三级部门</option>
+            <option>四级部门</option>
+            <option>五级部门</option>
+            <option>六级部门</option>
+            <option>最小部门</option>
+        </select>
+        ：
+        <select id="DropDownList2">
+            <!--这里动态添加对应级别的列表-->
+        </select>
+        &nbsp;&nbsp;&nbsp;
+
+        3.
         <select id="link0">
             <option>或者</option>
             <option>并且</option>
         </select>
-        <!--<asp:DropDownList ID="link0" runat="server">-->
-        <!--<asp:ListItem Value="or">或者</asp:ListItem>-->
-        <!--<asp:ListItem Value="and">并且</asp:ListItem>-->
 
-    <!--</asp:DropDownList>-->
         &nbsp;&nbsp;
-        <select id="roleList">
-            <option value="Role1Name">角色1</option>
-            <option value="Role2Name">角色2</option>
+        <select id="roleList" onchange="SelectedIndexChanged3()">
+            <option selected>请选择角色</option>
+            <option >角色1</option>
+            <option >角色2</option>
         </select>
-
-        <!--<asp:DropDownList ID="roleList"   OnTextChanged="SelectedIndexChanged1" runat="server" AutoPostBack="true">-->
-            <!--<asp:ListItem Value="Role1Name">角色1</asp:ListItem>-->
-            <!--<asp:ListItem Value="Role2Name">角色2</asp:ListItem>-->
-        <!--</asp:DropDownList>-->
 
         ：
         <select id="DropDownList4">
-            <option selected>请选择...</option>         <!--这里动态添加对应级别的列表-->
+            <!--这里动态添加对应角色的列表-->
         </select>
-        <!--<asp:DropDownList ID="DropDownList4"    runat="server" >-->
-        <!--<asp:ListItem Value="-1">请选择...</asp:ListItem>-->
-    <!--</asp:DropDownList>-->
+
         &nbsp;&nbsp;&nbsp;
         3.
         <select id="link1">
-            <option>或者</option>
-            <option>并且</option>
+            <option value="or">或者</option>
+            <option value="and">并且</option>
         </select>
-        <!--<asp:DropDownList ID="link1" runat="server">-->
-        <!--<asp:ListItem Value="or">或者</asp:ListItem>-->
-        <!--<asp:ListItem Value="and">并且</asp:ListItem>-->
-    <!--</asp:DropDownList>-->
         &nbsp;&nbsp;
-
         <select id="search1">
-            <option>工号</option>
-            <option>姓名</option>
-            <option>角色1</option>
-            <option>角色2</option>
-            <option>PL工号</option>
-            <option>PL姓名</option>
-            <option>PL项目组</option>
-            <option>LM工号</option>
-            <option>PL项目组</option>
-            <option>LM工号</option>
-            <option>LM姓名</option>
-            <option>LM项目组</option>
-            <option>所属秘书工号</option>
-            <option>所属秘书姓名</option>
+            <option Value="UserNumber">工号</option>
+            <option  Value="UserName">姓名</option>
+            <option Value="Role1Name">角色1</option>
+            <option Value="Role2Name">角色2</option>
+            <option Value="BelongPLID">PL工号</option>
+            <option Value="BelongPLName">PL姓名</option>
+            <option Value="BelongPLProTeam">PL项目组</option>
+            <option Value="BelongLMID">LM工号</option>
+            <option Value="BelongLMName">LM姓名</option>
+            <option Value="BelongLMProTeam">LM项目组</option>
+            <option Value="BelongSecretaryID">所属秘书工号</option>
+            <option Value="BelongSecretaryName">所属秘书姓名</option>
         </select>
-
-        <!--<asp:DropDownList ID="search1" runat="server" >-->
-            <!--<asp:ListItem Value="UserNumber">工号</asp:ListItem>-->
-            <!--<asp:ListItem Value="UserName">姓名</asp:ListItem>-->
-            <!--<asp:ListItem Value="Role1Name">角色1</asp:ListItem>-->
-            <!--<asp:ListItem Value="Role2Name">角色2</asp:ListItem>-->
-            <!--<asp:ListItem Value="BelongPLID">PL工号</asp:ListItem>-->
-            <!--<asp:ListItem Value="BelongPLName">PL姓名</asp:ListItem>-->
-            <!--<asp:ListItem Value="BelongPLProTeam">PL项目组</asp:ListItem>-->
-            <!--<asp:ListItem Value="BelongLMID">LM工号</asp:ListItem>-->
-            <!--<asp:ListItem Value="BelongLMName">LM姓名</asp:ListItem>-->
-            <!--<asp:ListItem Value="BelongLMProTeam">LM项目组</asp:ListItem>-->
-            <!--<asp:ListItem Value="BelongSecretaryID">所属秘书工号</asp:ListItem>-->
-            <!--<asp:ListItem Value="BelongSecretaryName">所属秘书姓名</asp:ListItem>-->
-        <!--</asp:DropDownList>-->
-
         ：
         <input id="ResumeID" style="width: 100px" maxlength="1000"/>
-        <!--<asp:TextBox ID="ResumeID" runat="server" Width="100px" MaxLength="1000" ></asp:TextBox>-->
-        <!--<%--   <asp:DropDownList ID="DropDownList2"    runat="server" Visible="false" >-->
-        <!--<asp:ListItem Value="-1">请选择...</asp:ListItem>-->
-    <!--</asp:DropDownList>--%>-->
         &nbsp;&nbsp;&nbsp;
         4.
         <select id="link2">
             <option>或者</option>
             <option>并且</option>
         </select>
-        <!--<asp:DropDownList ID="link2" runat="server">-->
-        <!--<asp:ListItem Value="or">或者</asp:ListItem>-->
-        <!--<asp:ListItem Value="and">并且</asp:ListItem>-->
-    <!--</asp:DropDownList>-->
         &nbsp;&nbsp;
         <select id="search2">
-            <option>工号</option>
-            <option>姓名</option>
-            <option>角色1</option>
-            <option>角色2</option>
-            <option>PL工号</option>
-            <option>PL姓名</option>
-            <option>PL项目组</option>
-            <option>LM工号</option>
-            <option>PL项目组</option>
-            <option>LM工号</option>
-            <option>LM姓名</option>
-            <option>LM项目组</option>
-            <option>所属秘书工号</option>
-            <option>所属秘书姓名</option>
+            <option Value="UserNumber">工号</option>
+            <option  Value="UserName">姓名</option>
+            <option Value="Role1Name">角色1</option>
+            <option Value="Role2Name">角色2</option>
+            <option Value="BelongPLID">PL工号</option>
+            <option Value="BelongPLName">PL姓名</option>
+            <option Value="BelongPLProTeam">PL项目组</option>
+            <option Value="BelongLMID">LM工号</option>
+            <option Value="BelongLMName">LM姓名</option>
+            <option Value="BelongLMProTeam">LM项目组</option>
+            <option Value="BelongSecretaryID">所属秘书工号</option>
+            <option Value="BelongSecretaryName">所属秘书姓名</option>
         </select>
-
-        <!--<asp:DropDownList ID="search2" runat="server">-->
-            <!--<asp:ListItem Value="UserName">姓名</asp:ListItem>-->
-            <!--<asp:ListItem Value="UserNumber">工号</asp:ListItem>-->
-            <!--<asp:ListItem Value="Role1Name">角色1</asp:ListItem>-->
-            <!--<asp:ListItem Value="Role2Name">角色2</asp:ListItem>-->
-            <!--<asp:ListItem Value="BelongPLID">PL工号</asp:ListItem>-->
-            <!--<asp:ListItem Value="BelongPLName">PL姓名</asp:ListItem>-->
-            <!--<asp:ListItem Value="BelongPLProTeam">PL项目组</asp:ListItem>-->
-            <!--<asp:ListItem Value="BelongLMID">LM工号</asp:ListItem>-->
-            <!--<asp:ListItem Value="BelongLMName">LM姓名</asp:ListItem>-->
-            <!--<asp:ListItem Value="BelongLMProTeam">LM项目组</asp:ListItem>-->
-            <!--<asp:ListItem Value="BelongSecretaryID">所属秘书工号</asp:ListItem>-->
-            <!--<asp:ListItem Value="BelongSecretaryName">所属秘书姓名</asp:ListItem>-->
-        <!--</asp:DropDownList>-->
-
         ：
         <input id="Name" style="width: 100px" maxlength="1000"/>
         <!--<asp:TextBox ID="Name" runat="server" Width="100px" MaxLength="1000"></asp:TextBox>-->
-        &nbsp;&nbsp;&nbsp;
         <button id="btnSearch" style="width: 66px" onclick="checkTitle()">查找</button>
-        <!--<asp:Button ID="btnSearch" runat="server" Text="查找"  Width="66px" OnClientClick="return checkTitle()"-->
-                                      <!--OnClick="btnSearch_Click" />-->
-
-
+        <!--&nbsp;&nbsp;&nbsp;<asp:Button ID="btnSearch" runat="server" Text="查找"  Width="66px" OnClientClick="return checkTitle()"-->
+        <!--OnClick="btnSearch_Click" />-->
     </td>
-
     </tr>
-
-
 </table>
 <table border="1" class="table_top_search" align="center" style="display: block; overflow: auto;">
     <tr>
