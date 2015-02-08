@@ -2,18 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.huawei.smart.business.admin.mapper.GeneralinfoMapper">
-    <sql id="generalinfo_fields">
-		id,userNumber,userName,firstDepID,firstDepName,secondDepID,secondDepName,thirdDepID,thirdDepName,fourthDepID,fourthDepName,fivethDepID,
-		 fivethDepName,sixthDepID, sixthDepName,minDepID,minDepName ,sexUser,birthdayUser,ageUser,enterDate,eduBackground,degreeUser,graduatedSchool,
-		specialtyUser,graduationDate,nationalityUser,specialRemark,befCompany,bBefNumber,befEntrtDate,allocationStatus,assignedEffDate,workDaytime,
-		legalEntityID,legalEntityName,dispatchIdentity,struAppDate,stuAgreeDate,stuRecom1,stuRecom2,stuStatus,outDate,outReason,serverYear,marryStatus,
-		postBeginDate,postInfo,postName,postID,postDescription,pPostLevel,organizationCOA,payroll, workType,contractCompany,contractType,contractBeginDate,
-		 endContractDate,protocolWorkID, protocolWorkPlace,residentPlace,workTime,institutePlace,jobType,firstBusiPro, secondBusiPro,thirdBusiPro,
-		fourthBusiPro,busiProDate,qualifications,qualificationsLevel, beginQualifications,endQualifications,appraisalCycle1,annPerResults1,haAnnPerResults1,
-		quAnnPerResults1,appraisalCycle2, annPerResults2,haAnnPerResults2, quAnnPerResults2,appraisalCycle3, annPerResults3,haAnnPerResults3, quAnnPerResults3,
-	     role1Name,role1SkillNeed1,role1SkillNeed2,role1SkillEnterDate, role2Name, role2SkillNeed1,role2SkillNeed2,role2SkillEnterDate,belongPLID, belongPLName,
-	     belongPLProTeam,bBelongLMID
+<mapper namespace="com.huawei.smart.business.book.mapper.BooksMapper">
+    <sql id="bookbr_fields">
+	    BookID,BookName,Btime,Rtime,LendID,Cangku,ID
 	</sql>
     <resultMap id="generalinfoResultMap" type="Generalinfo">
         <id property="id" column="id" />

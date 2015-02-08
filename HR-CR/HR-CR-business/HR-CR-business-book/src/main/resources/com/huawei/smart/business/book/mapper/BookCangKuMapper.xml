@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huawei.smart.business.book.mapper.BookCangKuMapper">
+    <sql id="bookCangKu_fields">
+	    storageID,storageName,storageInfo,FirstDepartmentName
+	</sql>
+    <resultMap id="generalinfoResultMap" type="BookCangKu">
+        <id property="storageID" column="storageID" />
+        <result property="storageName" column="storageName" />
+        <result property="storageInfo" column="storageInfo" />
+        <result property="FirstDepartmentName" column="FirstDepartmentName" />
+    </resultMap>
+
+
+
+</mapper>

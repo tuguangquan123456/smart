@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huawei.smart.business.book.mapper.BookInHistoryMapper">
+    <sql id="bookInHistoryr_fields">
+	    ID,InGoodID,InGoodName,InGoodCount,unit,InGoodPeople,BelongCK,InGoodDate,InGoodRemark,LendToID,FirstDepartmentName
+	</sql>
+    <resultMap id="bookInHistoryResultMap" type="BookInHistory">
+        <id property="ID" column="ID" />
+        <result property="InGoodID" column="InGoodID" />
+        <result property="InGoodName" column="InGoodName" />
+        <result property="InGoodCount" column="InGoodCount" />
+        <result property="unit" column="unit" />
+        <result property="InGoodPeople" column="InGoodPeople" />
+        <result property="BelongCK" column="BelongCK" />
+        <result property="InGoodDate" column="InGoodDate" />
+        <result property="InGoodRemark" column="InGoodRemark" />
+        <result property="LendToID" column="LendToID" />
+        <result property="FirstDepartmentName" column="FirstDepartmentName" />
+
+    </resultMap>
+
+
+</mapper>

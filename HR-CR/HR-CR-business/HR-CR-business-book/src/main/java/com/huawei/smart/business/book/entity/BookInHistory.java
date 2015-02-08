@@ -4,20 +4,19 @@ package com.huawei.smart.business.book.entity;
  * Created with IntelliJ IDEA.
  * User: tgq
  * Date: 15-2-8
- * Time: 下午5:08
+ * Time: 下午6:00
  * To change this template use File | Settings | File Templates.
  */
-public class BookInInfo {
-    private long  ID;
-    private String InGoodID;
-    private String InGoodName;
-    private String  InGoodDate;
+public class BookInHistory {
+    private long ID;
+    private String  InGoodID;
+    private String  InGoodName;
     private String  InGoodCount;
-    private String  unit;
-    private String  GoodAount;
-    private String  InGoodPeople ;
-    private String  OutGoodUser ;
+    private String  unit ;
+    private String  InGoodPeople;
     private String  BelongCK ;
+    private String  InGoodDate;
+    private String  InGoodRemark;
     private String  LendToID;
     private String  FirstDepartmentName;
 
@@ -33,10 +32,6 @@ public class BookInInfo {
         InGoodName = inGoodName;
     }
 
-    public void setInGoodDate(String inGoodDate) {
-        InGoodDate = inGoodDate;
-    }
-
     public void setInGoodCount(String inGoodCount) {
         InGoodCount = inGoodCount;
     }
@@ -45,16 +40,16 @@ public class BookInInfo {
         this.unit = unit;
     }
 
-    public void setGoodAount(String goodAount) {
-        GoodAount = goodAount;
-    }
-
     public void setInGoodPeople(String inGoodPeople) {
         InGoodPeople = inGoodPeople;
     }
 
-    public void setOutGoodUser(String outGoodUser) {
-        OutGoodUser = outGoodUser;
+    public void setInGoodRemark(String inGoodRemark) {
+        InGoodRemark = inGoodRemark;
+    }
+
+    public void setInGoodDate(String inGoodDate) {
+        InGoodDate = inGoodDate;
     }
 
     public void setBelongCK(String belongCK) {
@@ -74,16 +69,12 @@ public class BookInInfo {
         return ID;
     }
 
-    public String getInGoodName() {
-        return InGoodName;
-    }
-
     public String getInGoodID() {
         return InGoodID;
     }
 
-    public String getInGoodDate() {
-        return InGoodDate;
+    public String getInGoodName() {
+        return InGoodName;
     }
 
     public String getInGoodCount() {
@@ -94,20 +85,20 @@ public class BookInInfo {
         return unit;
     }
 
-    public String getGoodAount() {
-        return GoodAount;
+    public String getBelongCK() {
+        return BelongCK;
     }
 
     public String getInGoodPeople() {
         return InGoodPeople;
     }
 
-    public String getOutGoodUser() {
-        return OutGoodUser;
+    public String getInGoodDate() {
+        return InGoodDate;
     }
 
-    public String getBelongCK() {
-        return BelongCK;
+    public String getInGoodRemark() {
+        return InGoodRemark;
     }
 
     public String getLendToID() {
