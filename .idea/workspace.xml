@@ -2,49 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b261edc9-becd-41c6-8546-bc00cca019fd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/BookBrMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/BookBrService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BookBrServiceWeb.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/BookCangKuMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BookCangKuMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/BookCangKuService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BookCangKuServiceWeb.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookDonator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/BookDonatorMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BookDonatorMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/BookDonatorService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BookDonatorServiceWeb.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookInHistory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/BookInHistoryMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BookInHistoryMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/BookInHistoryService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BookInHistoryServiceWeb.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/BookInInfoMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BookInInfoMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/BookInInfoService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BookInInfoServiceWeb.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/BookOutHistoryMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BookOutHistoryMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/BookOutHistoryService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BookOutHistoryServiceWeb.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/BookOutInfoMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BookOutInfoMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/BookOutInfoService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BookOutInfoServiceWeb.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/BooksMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BooksMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/BooksService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BooksServiceWeb.java" />
-      <change type="DELETED" beforePath="D:\java work\0129\smart\HR-CR\HR-CR-business\HR-CR-business-book\src\main\java\com\huawei\smart\business\book\entity\Bookbr.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookInInfo.java" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookInInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookBr.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="D:\java work\0129\smart\HR-CR\HR-CR-business\HR-CR-business-book\src\main\resources\com\huawei\smart\business\book\mapper\BookMapper.xml" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BookBrMapper.xml" />
     </list>
     <ignored path="smart.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/funfamental-config/pom.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422409747171" ignored="false" />
     <file path="/fragment.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423391161557" ignored="false" />
-    <file path="/Dummy.txt" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423392843660" ignored="false" />
+    <file path="/Dummy.txt" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423392898909" ignored="false" />
     <file path="/pom.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422584293961" ignored="false" />
     <file path="/web.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422428261131" ignored="false" />
     <file path="/security-applicationContext.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422419728656" ignored="false" />
@@ -261,10 +226,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookInHistoryMapper.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="BookInHistoryMapper.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BookInHistoryMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="8" selection-start="874" selection-end="874" vertical-scroll-proportion="0.5070422">
+            <state line="16" column="8" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookBr.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookBr.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -1080,11 +1054,11 @@
       <recent name="com.huawei.smart.dataSource" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\java work\0129\smart\HR-CR\HR-CR-business\HR-CR-business-book\src\main\java\com\huawei\smart\business\book\entity" />
       <recent name="D:\java work\0129\smart\HR-CR\HR-CR-business\HR-CR-business-book\src\main\resources\com\huawei\smart\business\book\mapper" />
       <recent name="D:\java work\0129\smart\HR-CR\HR-CR-business\HR-CR-business-book\src\main\resources\META-INF\spring" />
       <recent name="D:\java work\0129\smart\HR-CR\HR-CR-business\HR-CR-business-admin\src\main\resources\META-INF\spring" />
       <recent name="D:\java work\0129\smart\HR-CR\HR-CR-Web\src\main\webapp\Js\jquery" />
-      <recent name="D:\java work\0129\smart\HR-CR\HR-CR-Web\src\main\webapp\CompanySolvePlan" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.huawei.smart.business.user" />
@@ -1381,14 +1355,18 @@
       <created>1423386745024</created>
       <updated>1423386745024</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="增加图书管理模块的一些功能的后台代码">
+      <created>1423392907312</created>
+      <updated>1423392907312</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.49056605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16809605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1404,10 +1382,10 @@
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2159091" sideWeight="0.29845625" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16515152" sideWeight="0.509434" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16515152" sideWeight="0.83190393" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34318182" sideWeight="0.509434" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34318182" sideWeight="0.83190393" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36579573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1593,7 +1571,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BookInHistoryMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="8" selection-start="874" selection-end="874" vertical-scroll-proportion="0.5070422">
+        <state line="16" column="8" selection-start="874" selection-end="874" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/BookBr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
