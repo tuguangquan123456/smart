@@ -3,139 +3,24 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.huawei.smart.business.book.mapper.BookOutInfoMapper">
-    <sql id="bookbr_fields">
-	    BookID,BookName,Btime,Rtime,LendID,Cangku,ID
+    <sql id="bookOutInfo_fields">
+	    ID,OutGoodID,OutGoodDate,OutGoodName,OutGoodCount,unit,GoodAount,BelongCK,OutGoodPeople,OutGoodUser,LendToID,FirstDepartmentName
 	</sql>
-    <resultMap id="generalinfoResultMap" type="Generalinfo">
-        <id property="id" column="id" />
-        <result property="departmentName" column="DEPARTMENTNAME" />
-        <result property="userName" column="userName" />
-        <result property="firstDepID" column="firstDepID" />
-        <result property="firstDepName" column="firstDepName" />
-        <result property="secondDepID" column="secondDepID" />
-        <result property="secondDepName" column="secondDepName" />
-        <result property="thirdDepID" column="thirdDepID" />
-        <result property="thirdDepName" column="thirdDepName" />
-        <result property="fourthDepID" column="fourthDepID" />
-        <result property="fourthDepName" column="fourthDepName" />
-        <result property="fivethDepID" column="fivethDepID" />
-        <result property="fivethDepName" column="fivethDepName" />
-        <result property="sixthDepID" column="sixthDepID" />
-        <result property="sixthDepName" column="sixthDepName" />
-        <result property="minDepID" column="minDepID" />
-        <result property="minDepName" column="minDepName" />
-        <result property="sexUser" column="sexUser" />
-        <result property="birthdayUser" column="birthdayUser" />
-        <result property="ageUser" column="ageUser" />
-        <result property="enterDate" column="enterDate" />
-        <result property="eduBackground" column="eduBackground" />
-        <result property="degreeUser" column="degreeUser" />
-        <result property="graduatedSchool" column="graduatedSchool" />
-        <result property="graduationDate" column="graduationDate" />
-        <result property="nationalityUser" column="nationalityUser" />
-        <result property="specialRemark" column="specialRemark" />
-        <result property="befCompany" column="befCompany" />
-        <result property="bBefNumber" column="bBefNumber" />
-        <result property="befEntrtDate" column="befEntrtDate" />
-        <result property="allocationStatus" column="allocationStatus" />
-        <result property="assignedEffDate" column="assignedEffDate" />
-        <result property="workDaytime" column="workDaytime" />
-        <result property="legalEntityID" column="legalEntityID" />
-        <result property="legalEntityName" column="legalEntityName" />
-        <result property="dispatchIdentity" column="dispatchIdentity" />
-        <result property="stuAgreeDate" column="stuAgreeDate" />
-        <result property="stuRecom1" column="stuRecom1" />
-        <result property="stuRecom2" column="stuRecom2" />
-        <result property="stuStatus" column="stuStatus" />
-        <result property="outDate" column="outDate" />
-        <result property="outReason" column="outReason" />
-        <result property="serverYear" column="serverYear" />
-        <result property="marryStatus" column="marryStatus" />
-        <result property="postBeginDate" column="postBeginDate" />
-        <result property="postInfo" column="postInfo" />
-        <result property="postName" column="postName" />
-        <result property="postID" column="postID" />
-        <result property="postDescription" column="postDescription" />
-        <result property="pPostLevel" column="pPostLevel" />
-        <result property="organizationCOA" column="organizationCOA" />
-        <result property="payroll" column="payroll" />
-        <result property="workType" column="workType" />
-        <result property="contractCompany" column="contractCompany" />
-        <result property="contractType" column="contractType" />
-        <result property="contractBeginDate" column="contractBeginDate" />
-        <result property="endContractDate" column="endContractDate" />
-        <result property="protocolWorkID" column="protocolWorkID" />
-        <result property="protocolWorkPlace" column="protocolWorkPlace" />
-        <result property="residentPlace" column="residentPlace" />
-        <result property="workTime" column="workTime" />
-        <result property="institutePlace" column="institutePlace" />
-        <result property="jobType" column="jobType" />
-        <result property="firstBusiPro" column="firstBusiPro" />
-        <result property="secondBusiPro" column="secondBusiPro" />
-        <result property="thirdBusiPro" column="thirdBusiPro" />
-        <result property="fourthBusiPro" column="fourthBusiPro" />
-        <result property="busiProDate" column="busiProDate" />
-        <result property="qualifications" column="qualifications" />
-        <result property="qualificationsLevel" column="qualificationsLevel" />
-        <result property="beginQualifications" column="beginQualifications" />
-        <result property="endQualifications" column="endQualifications" />
-        <result property="appraisalCycle1" column="appraisalCycle1" />
-        <result property="annPerResults1" column="annPerResults1" />
-        <result property="haAnnPerResults1" column="haAnnPerResults1" />
-        <result property="quAnnPerResults1" column="quAnnPerResults1" />
-        <result property="appraisalCycle2" column="appraisalCycle2" />
-        <result property="annPerResults2" column="annPerResults2" />
-        <result property="haAnnPerResults2" column="haAnnPerResults2" />
-        <result property="quAnnPerResults2" column="quAnnPerResults2" />
-        <result property="appraisalCycle3" column="appraisalCycle3" />
-        <result property="annPerResults3" column="annPerResults3" />
-        <result property="haAnnPerResults3" column="haAnnPerResults3" />
-        <result property="quAnnPerResults3" column="quAnnPerResults3" />
-        <result property="role1Name" column="role1Name" />
-        <result property="role1SkillNeed1" column="role1SkillNeed1" />
-        <result property="role1SkillNeed2" column="role1SkillNeed2" />
-        <result property="role1SkillEnterDate" column="role1SkillEnterDate" />
-        <result property="role2Name" column="role2Name" />
-        <result property="role2SkillNeed1" column="role2SkillNeed1" />
-        <result property="role2SkillNeed2" column="role2SkillNeed2" />
-        <result property="role2SkillEnterDate" column="role2SkillEnterDate" />
-        <result property="belongPLID" column="belongPLID" />
-        <result property="belongPLName" column="belongPLName" />
-        <result property="belongPLProTeam" column="belongPLProTeam" />
-        <result property="bBelongLMID" column="bBelongLMID" />
+    <resultMap id="bookOutInfoResultMap" type="BookOutInfo">
+        <id property="ID" column="ID" />
+        <result property="OutGoodID" column="OutGoodID" />
+        <result property="OutGoodDate" column="OutGoodDate" />
+        <result property="OutGoodName" column="OutGoodName" />
+        <result property="OutGoodCount" column="OutGoodCount" />
+        <result property="unit" column="unit" />
+        <result property="GoodAount" column="GoodAount" />
+        <result property="BelongCK" column="BelongCK" />
+        <result property="OutGoodPeople" column="OutGoodPeople" />
+        <result property="OutGoodUser" column="OutGoodUser" />
+        <result property="LendToID" column="LendToID" />
+        <result property="FirstDepartmentName" column="FirstDepartmentName" />
     </resultMap>
 
 
-    <select id="depList" parameterType="map" resultType="java.lang.String">
-         <if test="FirstDepName!=null">
-             select  distinct FirstDepName from GeneralInfo where FirstDepName!='';
-         </if>
-        <if test="SecondDepName!=null">
-           select distinct SecondDepName from GeneralInfo where SecondDepName!='' ;
-        </if>
-        <if test="ThirdDepName!=null">
-           select distinct ThirdDepName from GeneralInfo where ThirdDepName!='' ;
-        </if>
-        <if test="FourthDepName!=null">
-           select distinct FourthDepName from GeneralInfo where FourthDepName!='' ;
-        </if>
-        <if test="FivethDepName!=null">
-            select distinct FivethDepName from GeneralInfo where FivethDepName!='';
-        </if>
-        <if test="SixthDepName!=null">
-            select distinct SixthDepName from GeneralInfo where SixthDepName!='';
-        </if>
-        <if test="MinDepName!=null">
-            select distinct MinDepName from GeneralInfo where MinDepName!='' ;
-        </if>
-    </select>
-    <select id="roleList" parameterType="map" resultType="java.lang.String">
-        <if test="Role1Name!=null">
-            select  distinct Role1Name from GeneralInfo where Role1Name!='';
-        </if>
-        <if test="Role2Name!=null">
-            select distinct Role2Name from GeneralInfo where Role2Name!='' ;
-        </if>
-    </select>
 
 </mapper>

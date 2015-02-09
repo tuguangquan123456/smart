@@ -6,7 +6,7 @@
     <sql id="bookCangKu_fields">
 	    storageID,storageName,storageInfo,FirstDepartmentName
 	</sql>
-    <resultMap id="generalinfoResultMap" type="BookCangKu">
+    <resultMap id="bookCangKuResultMap" type="BookCangKu">
         <id property="storageID" column="storageID" />
         <result property="storageName" column="storageName" />
         <result property="storageInfo" column="storageInfo" />
