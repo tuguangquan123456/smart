@@ -22,6 +22,11 @@
         "general":{
             "depList":"rs/general/depList" ,
             "roleList":"rs/general/roleList"
+        },
+        "library":{
+            "selectCangku":"rs/library/selectCangku",
+            "selectType":"rs/library/selectType",
+            "selectCategory":"rs/library/selectCategory"
         }
     }
 })(jQuery);

@@ -3,8 +3,14 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="roleService" class="com.huawei.smart.business.admin.service.RoleService" depends-on="mappers"/>
-    <bean id="departmentService" class="com.huawei.smart.business.admin.service.DepartmentService" depends-on="mappers"/>
-    <bean id="generalinfoService" class="com.huawei.smart.business.admin.service.GeneralinfoService" depends-on="mappers"/>
+    <bean id="bookBrService" class="com.huawei.smart.business.book.service.BookBrService" depends-on="mappers"/>
+    <bean id="libraryService" class="com.huawei.smart.business.book.service.LibraryService" depends-on="mappers"/>
+    <bean id="bookCangKuService" class="com.huawei.smart.business.book.service.BookCangKuService" depends-on="mappers"/>
+    <bean id="bookDonatorService" class="com.huawei.smart.business.book.service.BookDonatorService" depends-on="mappers"/>
+    <bean id="booksService" class="com.huawei.smart.business.book.service.BooksService" depends-on="mappers"/>
+    <bean id="bookInHistoryService" class="com.huawei.smart.business.book.service.BookInHistoryService" depends-on="mappers"/>
+    <bean id="bookInInfoService" class="com.huawei.smart.business.book.service.BookInInfoService" depends-on="mappers"/>
+    <bean id="bookOutInfoService" class="com.huawei.smart.business.book.service.BookOutInfoService" depends-on="mappers"/>
+    <bean id="bookOutHistoryService" class="com.huawei.smart.business.book.service.BookOutHistoryService" depends-on="mappers"/>
 
 </beans>

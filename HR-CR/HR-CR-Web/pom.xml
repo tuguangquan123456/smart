@@ -97,7 +97,11 @@
             <artifactId>HR-CR-business-admin</artifactId>
             <version>${project.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>smart</groupId>
+            <artifactId>HR-CR-business-book</artifactId>
+            <version>${project.version}</version>
+        </dependency>
         <dependency>
             <groupId>smart</groupId>
             <artifactId>business-user</artifactId>

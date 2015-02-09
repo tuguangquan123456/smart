@@ -14,23 +14,76 @@
     <script type="text/javascript" src="../Js/superTables.js"></script>
     <script  type="text/javascript" src="../Js/config.js"></script>
     <script type="text/javascript" src="../Js/resource_admin.js"></script>
-
     <style type="text/css">
         .style1
         {
             height: 8px;
         }
-
-
-
     </style>
+    <script>
+         function selectCangku(){
+             $.get("../"+$.URL.library.selectCangku,null,selectCangkuCallBack,"json");
+         }
+        function selectType(){
+            $.get("../"+$.URL.library.selectType,null,selectTypeCallBack,"json");
+        }
+        function selectCategory(){
+            $.get("../"+$.URL.library.selectCategory,null,sselectCategoryCallBack,"json");
+        }
+        function selectCangkuCallBack(data){
+            if(data.code==200){
+                var roleDetailTable=  '<option selected>'+'请选择书库'+'</option>';
+                for(var i=0;i<data.data.length;i++){
+                    roleDetailTable= roleDetailTable+ '<option >'+data.data[i]+'</option>';
+                                  }
+                document.getElementById('Cangku').innerHTML=roleDetailTable;
+            }
+        }
+         function selectTypeCallBack(data){
+             if(data.code==200){
+                 var roleDetailTable=  '<option selected>'+'请选择图书来源'+'</option>';
+                 for(var i=0;i<data.data.length;i++){
+                     roleDetailTable= roleDetailTable+ '<option >'+data.data[i]+'</option>';
+                 }
+                 document.getElementById('Type').innerHTML=roleDetailTable;
+             }
+         }
+         function sselectCategoryCallBack(data){
+             if(data.code==200){
+                 var roleDetailTable=  '<option selected>'+'请选择图书类别'+'</option>';
+                 for(var i=0;i<data.data.length;i++){
+                     roleDetailTable= roleDetailTable+ '<option >'+data.data[i]+'</option>';
+                 }
+                 document.getElementById('Category').innerHTML=roleDetailTable;
+             }
+         }
+         function callBack() {
+             window.location.href = window.location.href;
+         }
+         $(function(){
+             $("#Button2").click(function(){
+                 var result = false;
+                 result = window.showModalDialog('AddBook.html?rdom=' + Math.random(), callBack, "width:10cm;height:10cm");
+             });
+             $("#btnExport").click(function(){      //导出图示信息
 
+             });
+             $("#btnSearch").click(function(){      //查询图示信息
+                 var data = {};
+                 data.ResumeID=document.getElementById('ResumeID').val();
+                 data.TextBox1=document.getElementById('TextBox1').val();
+                 data.ResumeID=document.getElementById('ResumeID').val();
+                 data.TextBox1=document.getElementById('TextBox1').val();
+
+             });
+         });
+    </script>
 
 
 
 </head>
 <body style="clear: both; display: block; height:auto;" scroll="no">
-<form id="form1" runat="server">
+<form id="form1" runat="server" >
     <div class="c_name">
         <h2>
             图书查询
@@ -43,36 +96,23 @@
                     <span style="text-align: left" >&nbsp;&nbsp;
                     图书编号：
                         <input id="ResumeID" style="width: 150px" maxlength="50"/>
-                        <!--<asp:TextBox ID="ResumeID" runat="server" Width="150px" MaxLength="50"></asp:TextBox>-->
                     &nbsp;&nbsp;
 
                     <span style="text-align: left" >&nbsp;&nbsp;
                     图书名称：
                         <input id="TextBox1" style="width: 150px" maxlength="50"/>
-                        <!--<asp:TextBox ID="TextBox1" runat="server" Width="150px" MaxLength="50"></asp:TextBox>-->
                     &nbsp;&nbsp;
-                    <!--借阅者工号：-->
-                         <!--<input id="LendtoID" style="width: 90px;visibility: hidden" maxlength="20"/>-->
-                    <!--&nbsp;&nbsp;-->
-                    <!--借阅者姓名：-->
-                          <!--<input id="LendtoName" style="width: 90px;visibility: hidden" maxlength="20"/>-->
-
                     &nbsp;&nbsp;
                     所属书库：</span>
-                        <select id="Cangku"></select>
-                        <!--<asp:DropDownList ID="Cangku" runat="server"></asp:DropDownList>&nbsp;&nbsp;-->
+                        <select id="Cangku" onfocus="selectCangku()"></select>
                     图书来源：</span>
-                <select id="Type"></select>
-                <!--<asp:DropDownList ID="Type" runat="server"></asp:DropDownList>-->
+                <select id="Type" onfocus="selectType()"></select>
                 图书类别：</span>
-                <select id="Category"></select>
-                <!--<asp:DropDownList ID="Category" runat="server"></asp:DropDownList>-->
+                <select id="Category" onfocus="selectCategory()"></select>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <button id="btnSearch">查询图书</button>
-                <!--<asp:Button ID="btnSearch" runat="server" Text="查询图书"  OnClientClick="return checkTitle()"-->
-                            <!--OnClick="btnSearch_Click" />    -->
                 &nbsp;&nbsp;
-                <button id="Button2" style="width: 66px" >添加图书</button>
+                <button id="Button2">添加图书</button>
                 <!--<asp:Button ID="Button2" runat="server" Text="添加图书"  PostBackUrl="~/Hrbook/AddBook.aspx"-->
                             <!--Width="66px" /> -->
                 &nbsp;&nbsp;&nbsp;
@@ -82,9 +122,6 @@
             </td>
 
         </tr>
-
-
-    </td></tr>
 
     </table>
 

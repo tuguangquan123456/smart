@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head id="Head1" runat="server">
+    <title>新增资源</title>
+    <meta charset="utf-8">
+    <link type="text/css" rel="Stylesheet" href="../Css/base.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/tabs.css" />
+    <link type="text/css" rel="stylesheet" href="../Css/newstyle.css" />
+    <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
+
+    <script type="text/javascript">
+
+        function selectA() {
+            if (document.form1["ForeignLanguage"].value == "-1") {
+                document.form1["ForeignLanguageLevel"].options.length = 0;
+                document.form1["ForeignLanguageLevel"].options[0] = new Option('请选择...', '-1');
+                document.form1["ForeignLanguageLevel"].value = -1;
+            }
+        }
+
+        function selectJobName() {
+            if (document.form1["JobName"].value == "-1") {
+                document.form1["JobNameSecondLevel"].options.length = 0;
+                document.form1["JobNameSecondLevel"].options[0] = new Option('请选择...', '-1');
+                document.form1["JobNameSecondLevel"].value = -1;
+            }
+        }
+        function checkParam() {
+            var date = document.getElementById("InvitationTime").value;
+            var hour = document.getElementById("Hour").value;
+            var min = document.getElementById("Minute").value;
+            var degree = document.getElementById("Degree").value;
+            var school = document.getElementById("School").value;
+            var req_id = document.getElementById("ReqID").value;
+            var type = document.getElementById("type").value;
+            var container = document.getElementById("Gender"); // Gender: RadioButtonList 的 ID
+            if (type == "-1") {
+                alert("请选择招聘类型！");
+                return false;
+            }
+            if (!(container.getElementsByTagName('input')[0].checked) && !(container.getElementsByTagName('input')[1].checked)) {
+                alert("请选择性别！");
+                return false;
+            }
+            if (date == "") {
+                alert("请选择日期！");
+                return false;
+            }
+            else if (hour == "") {
+                alert("请选择小时！");
+                return false;
+            }
+            else if (min == "") {
+                alert("请选择分钟！");
+                return false;
+            }
+            if (degree == "-1") {
+                alert("请选择学位！");
+                return false;
+            }
+            if (school == "-1") {
+                alert("请选择学校！");
+                return false;
+            }
+            if (req_id == "-1") {
+                alert("请选择需求编号！");
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <script type="text/javascript" src="../Js/My97DatePicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="../Js/messages_cn.js"></script>
+    <script src="../Js/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="../Js/jquery/jquery.json-2.4.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../Js/jquery.alerts.js"></script>
+    <script type="text/javascript" src="../Js/superTables.js"></script>
+    <script  type="text/javascript" src="../Js/config.js"></script>
+    <script type="text/javascript" src="../Js/resource_admin.js"></script>
+     <script>
+         function selectCangku(){
+             $.get("../"+$.URL.library.selectCangku,null,selectCangkuCallBack,"json");
+         }
+         function selectCangkuCallBack(data){
+             if(data.code==200){
+                 var roleDetailTable=  '<option selected>'+'请选择书库'+'</option>';
+                 for(var i=0;i<data.data.length;i++){
+                     roleDetailTable= roleDetailTable+ '<option >'+data.data[i]+'</option>';
+                 }
+                 document.getElementById('Cangku').innerHTML=roleDetailTable;
+             }
+         }
+     </script>
+</head>
+<body background='/img/allbg.gif' style="margin-top: 0px" >
+<div id="form1" runat="server" method="post">
+    <div class="c_name">
+        <h2>
+            资源管理
+        </h2>
+    </div>
+    <div class="ptitle">
+        新增资源
+    </div>
+    <table border="1" bordercolor="#D7D7D7" class="table_PrjApply" align="center">
+        <tr>
+            <th colspan="2">
+                商品基本信息
+            </th>
+        </tr>
+        <tr>
+            <td class="td_style">
+                图书名称<span style="color: Red">*</span>
+            </td>
+            <td>
+                <input id="ProductsName" required=""/>
+                <!--<asp:TextBox ID="ProductsName" runat="server" CssClass="required"></asp:TextBox>-->
+            </td>
+        </tr>
+        <tr>
+            <td class="td_style">
+                图书编号<span style="color: Red">*</span></td>
+            <td>
+                <input id="ProductsID" required=""/>
+                <!--<asp:TextBox ID="ProductsID" runat="server" CssClass="required"></asp:TextBox>-->
+            </td>
+        </tr>
+
+
+        <tr>
+            <td class="td_style">
+                所属书库<span style="color: Red">*</span>
+            </td>
+            <td>
+                <select id="Cangku" onfocus="selectCangku()"></select>
+            </td>
+        </tr>
+
+        <tr style="display:none">
+            <td class="td_style">
+                安全数量
+            </td>
+            <td>
+                <input id="SafeAmount"/>
+                <!--<asp:TextBox ID="SafeAmount" runat="server" ></asp:TextBox>-->
+            </td>
+        </tr>
+        <tr >
+            <td class="td_style">
+                单价
+            </td>
+            <td>
+                <input id="Price"/>
+                <!--<asp:TextBox ID="Price" runat="server" ></asp:TextBox>-->
+            </td>
+        </tr>
+        <tr >
+            <td class="td_style">
+                数量<span style="color: Red">*</span>
+            </td>
+            <td>
+                <input id="Amount"/>
+                <!--<asp:TextBox ID="Amount" runat="server" ></asp:TextBox>-->
+            </td>
+        </tr>
+
+
+        <tr>
+            <td class="td_style">
+                图书来源<span style="color: Red">*</span>
+            </td>
+            <td>
+                <input id="addUser"/>
+                <!--<asp:TextBox ID="addUser" runat="server" ></asp:TextBox>-->
+            </td>
+        </tr>
+
+        <tr>
+            <th align="center" colspan="2">
+                <button id="btnSubmit" style="height: 21px;width: 58px">提 交</button>
+                <!--<asp:Button ID="btnSubmit" runat="server" Text="提 交" Height="21px" Width="58px"-->
+                            <!--OnClick="btnSubmit_Click" />-->
+            </th>
+        </tr>
+
+    </table>
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("form:first").validate();
+
+        //保存
+        $("#btnNext").click(function () {
+
+            var query = { type: "addMember", f1_1: "", f2_1: "", rdom: Math.random() };
+            query.f2_1 = $("#tblist tr:gt(0)").map(function () {
+                return $(this).find(":text").map(function () {
+                    return $(this).val();
+                }).get().join("<=>");
+            }).get().join('<|>');
+            document.getElementById('f2_1').value = query.f2_1;
+
+        });
+    });
+
+
+</script>
+

@@ -89,6 +89,7 @@
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-jaxrs:1.9.13" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-xc:1.9.13" level="project" />
     <orderEntry type="module" module-name="funfamental-orm" />
+    <orderEntry type="module" module-name="HR-CR-business-book" />
     <orderEntry type="module" module-name="business-user" />
   </component>
 </module>

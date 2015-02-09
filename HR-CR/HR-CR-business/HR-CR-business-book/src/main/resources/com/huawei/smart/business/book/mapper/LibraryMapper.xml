@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huawei.smart.business.book.mapper.LibraryMapper">
+    <sql id="library_fields">
+	    ID,productID,productName,Amount,unit,Safeamount,productType,BelongStorage,Addtime,Adduser,Price,totalPrice,LendToID,LastLendTime,IsLendOut,
+        UserName,FirstDepartmentName,category
+	</sql>
+    <resultMap id="libraryResultMap" type="Library">
+        <id property="ID" column="ID" />
+        <result property="productID" column="productID" />
+        <result property="productName" column="productName" />
+        <result property="Amount" column="Amount" />
+        <result property="unit" column="unit" />
+        <result property="Safeamount" column="Safeamount" />
+        <result property="productType" column="productType" />
+        <result property="BelongStorage" column="BelongStorage" />
+        <result property="Addtime" column="Addtime" />
+        <result property="Adduser" column="Adduser" />
+        <result property="Price" column="Price" />
+        <result property="totalPrice" column="totalPrice" />
+        <result property="LendToID" column="LendToID" />
+        <result property="LastLendTime" column="LastLendTime" />
+        <result property="IsLendOut" column="IsLendOut" />
+        <result property="UserName" column="UserName" />
+        <result property="FirstDepartmentName" column="FirstDepartmentName" />
+        <result property="category" column="category" />
+    </resultMap>
+
+    <select id="selectCangkuList" resultType="java.lang.String">
+        SELECT distinct  BelongStorage
+         from Library
+    </select>
+    <select id="selectTypeList" resultType="java.lang.String">
+        SELECT distinct Adduser
+        FROM Library
+    </select>
+    <select id="selectCategoryList" resultType="java.lang.String">
+        SELECT distinct category
+        from Library
+    </select>
+</mapper>

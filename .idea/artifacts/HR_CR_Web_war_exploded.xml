@@ -87,6 +87,9 @@
           <element id="archive" name="funfamental-orm-1.0-SNAPSHOT.jar">
             <element id="module-output" name="funfamental-orm" />
           </element>
+          <element id="archive" name="HR-CR-business-book-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="HR-CR-business-book" />
+          </element>
           <element id="archive" name="business-user-1.0-SNAPSHOT.jar">
             <element id="module-output" name="business-user" />
           </element>
