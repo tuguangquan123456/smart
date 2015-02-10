@@ -17,5 +17,6 @@ public interface LibraryMapper extends AbstractMapper<Library> {
     public List<Library> selectCangkuList();
     public List<Library> selectTypeList();
     public List<Library> selectCategoryList();
-    public int search(@Param("productID")String productID, @Param("productName")String productName,@Param("BelongStorage")String BelongStorage,@Param("Adduser")String Adduser,@Param("category")String category);
+    public int search(@Param("productID")String productID, @Param("productName")String productName,
+                      @Param("BelongStorage")String BelongStorage,@Param("Adduser")String Adduser,@Param("category")String category);
 }

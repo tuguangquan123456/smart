@@ -4,6 +4,8 @@ import com.huawei.smart.business.book.entity.Books;
 import com.huawei.smart.business.book.mapper.BooksMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: tgq
@@ -19,5 +21,8 @@ public class BooksService {
     }
     public void add(Books books){
         booksMapper.add(books);
+    }
+    public List<Books> searchAllBooks(String ResumeID,String TextBox1,String Cangku,String Type,String Category){
+        return booksMapper.searchAllBooks(ResumeID,TextBox1,Cangku,Type,Category);
     }
 }

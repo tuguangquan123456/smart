@@ -41,4 +41,17 @@
             LAST_INSERT_ID() as id
         </selectKey>
     </insert>
+
+    <select id="searchAllBooks" resultMap="booksResultMap" parameterType="map">
+        select
+        <include refid="books_fields" />
+        from books
+        <where>
+            <if test="productID!=''">productID=#{productID}</if>
+            <if test="productName!=''">AND productName like #{productName}</if>
+            <if test="BelongStorage!='请选择书库'||BelongStorage!=''">AND BelongStorage=#{BelongStorage}</if>
+            <if test="Adduser!='请选择图书来源'||Adduser!=''">AND Adduser=#{Adduser}</if>
+            <if test="category!='请选择图书类别'||category!=''">AND category=#{category}</if>
+        </where>
+    </select>
 </mapper>

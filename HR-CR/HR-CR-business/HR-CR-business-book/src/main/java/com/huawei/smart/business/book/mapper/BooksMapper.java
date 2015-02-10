@@ -2,6 +2,9 @@ package com.huawei.smart.business.book.mapper;
 
 import com.huawei.smart.business.book.entity.Books;
 import com.huawei.smart.orm.AbstractMapper;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,4 +15,6 @@ import com.huawei.smart.orm.AbstractMapper;
  */
 public interface BooksMapper extends AbstractMapper<Books> {
     public int findCountOfBooksByProductIDAndBelongStorage(String IDCard,String cangku);
+    public List<Books> searchAllBooks(@Param("productID")String productID, @Param("productName")String productName,
+                          @Param("BelongStorage")String BelongStorage,@Param("Adduser")String Adduser,@Param("category")String category);
 }

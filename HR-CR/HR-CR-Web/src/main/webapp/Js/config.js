@@ -32,6 +32,9 @@
         "bookCK":{
             "selectCangku":"rs/bookCK/selectCangku",
             "add":"rs/bookCK/add"
+        } ,
+        "books":{
+            "searchAllBooks":"rs/books/searchAllBooks"
         }
     }
 })(jQuery);
