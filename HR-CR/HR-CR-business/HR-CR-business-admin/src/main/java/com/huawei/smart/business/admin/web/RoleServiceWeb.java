@@ -30,7 +30,6 @@ public class RoleServiceWeb {
     @Path("/list")
     @GET
     public String list(){
-        System.out.println("hhhhhhhhh");
         List<Role> list = roleService.list();
         return JsonResultUtils.getObjectResultByStringAsDefault(list, JsonResultUtils.Code.SUCCESS);
     }
@@ -39,7 +38,6 @@ public class RoleServiceWeb {
     @Path("/add")
     @POST
     public String add(@FormParam("roleName") String roleName,@FormParam("roleDetail") String roleDetail){
-       System.out.println("111111111111111");
         long id;
         try{
             id = roleService.getIdByName(roleName);

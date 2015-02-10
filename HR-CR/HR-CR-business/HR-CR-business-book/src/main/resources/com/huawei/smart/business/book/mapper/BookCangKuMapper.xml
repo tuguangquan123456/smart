@@ -13,6 +13,9 @@
         <result property="FirstDepartmentName" column="FirstDepartmentName" />
     </resultMap>
 
-
+    <select id="selectCangkuList" resultType="java.lang.String">
+        SELECT distinct  storageName
+         from bookcangku
+    </select>
 
 </mapper>

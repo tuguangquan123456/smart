@@ -26,7 +26,12 @@
         "library":{
             "selectCangku":"rs/library/selectCangku",
             "selectType":"rs/library/selectType",
-            "selectCategory":"rs/library/selectCategory"
+            "selectCategory":"rs/library/selectCategory",
+            "search":"rs/library/search"
+        } ,
+        "bookCK":{
+            "selectCangku":"rs/bookCK/selectCangku",
+            "add":"rs/bookCK/add"
         }
     }
 })(jQuery);

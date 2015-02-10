@@ -16,4 +16,17 @@
         <result property="Damount" column="Damount" />
     </resultMap>
 
+    <insert id="add" parameterType="BookDonator"  keyProperty="id"
+            useGeneratedKeys="true">
+        INSERT INTO
+        Bookdonator(
+        <include refid="bookDonator_fields" />
+        )
+        VALUES (#{ID}, #{productID}, #{productName},#{Addtime},#{Adduser},#{Price},#{Damount});
+        <selectKey resultType="long" keyProperty="id">
+            select
+            LAST_INSERT_ID() as id
+        </selectKey>
+    </insert>
+
 </mapper>

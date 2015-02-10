@@ -1,5 +1,7 @@
 package com.huawei.smart.business.book.entity;
 
+import java.util.Date;
+
 /**
  * Created with IntelliJ IDEA.
  * User: tgq
@@ -11,7 +13,7 @@ public class BookDonator {
     private long ID;
     private String productID;
     private String productName;
-    private String  Addtime;
+    private Date Addtime;
     private String  Adduser;
     private String  Price;
     private long  Damount;
@@ -32,7 +34,7 @@ public class BookDonator {
         Adduser = adduser;
     }
 
-    public void setAddtime(String addtime) {
+    public void setAddtime(Date addtime) {
         Addtime = addtime;
     }
 
@@ -61,7 +63,7 @@ public class BookDonator {
         return Adduser;
     }
 
-    public String getAddtime() {
+    public Date getAddtime() {
         return Addtime;
     }
 

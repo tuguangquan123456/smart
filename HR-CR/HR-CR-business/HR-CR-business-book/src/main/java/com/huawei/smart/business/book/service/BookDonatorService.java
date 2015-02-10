@@ -1,5 +1,9 @@
 package com.huawei.smart.business.book.service;
 
+import com.huawei.smart.business.book.entity.BookDonator;
+import com.huawei.smart.business.book.mapper.BookDonatorMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * Created with IntelliJ IDEA.
  * User: tgq
@@ -8,4 +12,10 @@ package com.huawei.smart.business.book.service;
  * To change this template use File | Settings | File Templates.
  */
 public class BookDonatorService {
+
+    @Autowired
+    private BookDonatorMapper bookDonatorMapper;
+    public void add(BookDonator bookDonator){
+        bookDonatorMapper.add(bookDonator);
+    }
 }

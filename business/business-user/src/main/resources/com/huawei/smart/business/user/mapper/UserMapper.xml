@@ -19,17 +19,17 @@
     </resultMap>
 
     <insert id="add" parameterType="User"  keyProperty="id"
-            useGeneratedKeys="true">
-        INSERT INTO
-        user(
-        <include refid="user_fields" />
-        )
-        VALUES (#{id}, #{name}, #{password},#{sex},#{role},#{status},#{appId},#{image});
-        <selectKey resultType="long" keyProperty="id">
-            select
-            LAST_INSERT_ID() as id
-        </selectKey>
-    </insert>
+                         useGeneratedKeys="true">
+    INSERT INTO
+    user(
+    <include refid="user_fields" />
+    )
+    VALUES (#{id}, #{name}, #{password},#{sex},#{role},#{status},#{appId},#{image});
+    <selectKey resultType="long" keyProperty="id">
+        select
+        LAST_INSERT_ID() as id
+    </selectKey>
+</insert>
 
     <select id="totalCount" parameterType="map" resultType="java.lang.Long">
         SELECT count(*)

@@ -27,5 +27,18 @@
         <result property="IDandAdd" column="IDandAdd" />
         <result property="category" column="category" />
     </resultMap>
-
+    <insert id="add" parameterType="Books"  keyProperty="id"
+            useGeneratedKeys="true">
+        INSERT INTO
+        Books(
+        <include refid="books_fields" />
+        )
+        VALUES (#{ID}, #{productID}, #{productName},#{Amount},#{unit},#{Safeamount},#{productType},#{BelongStorage},#{Addtime},
+        #{Adduser},#{Price},#{totalPrice},#{LendToID},
+        #{IsLendOut}, #{Days},#{LastLendTime},#{FirstDepartmentName},#{IDandAdd},#{category});
+        <selectKey resultType="long" keyProperty="id">
+            select
+            LAST_INSERT_ID() as id
+        </selectKey>
+    </insert>
 </mapper>

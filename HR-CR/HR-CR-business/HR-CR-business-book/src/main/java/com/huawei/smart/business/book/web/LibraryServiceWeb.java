@@ -7,9 +7,7 @@ import com.huawei.smart.util.json.JsonResultUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
@@ -26,28 +24,42 @@ public class LibraryServiceWeb {
     private static SmartLogger logger = SmartLogger.getLogger(LibraryServiceWeb.class);
     @Autowired
     private LibraryService libraryService;
+
     @Produces(MediaType.APPLICATION_JSON+";charset=UTF-8")
     @Path("/selectCangku")
     @GET
     public String selectCangkuList(){
-        System.out.println("hhhhhhhhh");
         List<Library> list = libraryService.selectCangkuList();
         return JsonResultUtils.getObjectResultByStringAsDefault(list, JsonResultUtils.Code.SUCCESS);
     }
+
     @Produces(MediaType.APPLICATION_JSON+";charset=UTF-8")
     @Path("/selectType")
     @GET
     public String selectTypeList(){
-        System.out.println("hhhhhhhhh");
         List<Library> list = libraryService.selectTypeList();
         return JsonResultUtils.getObjectResultByStringAsDefault(list, JsonResultUtils.Code.SUCCESS);
     }
+
     @Produces(MediaType.APPLICATION_JSON+";charset=UTF-8")
     @Path("/selectCategory")
     @GET
     public String selectCategoryList(){
-        System.out.println("hhhhhhhhh");
         List<Library> list = libraryService.selectCategoryList();
         return JsonResultUtils.getObjectResultByStringAsDefault(list, JsonResultUtils.Code.SUCCESS);
+    }
+
+    @Produces(MediaType.APPLICATION_JSON+";charset=UTF-8")
+    @Path("/search")
+    @POST
+    public String search(@FormParam("ResumeID") String ResumeID,@FormParam("TextBox1") String TextBox1,
+                         @FormParam("Cangku") String Cangku,@FormParam("Type") String Type,@FormParam("Category") String Category){
+        System.out.println("ResumeID为"+ResumeID) ;
+        System.out.println("RTextBox1为"+TextBox1);
+        System.out.println("Cangku为"+Cangku);
+        System.out.println("Type为"+Type);
+        System.out.println("Category为"+Category);
+        int count= libraryService.search(ResumeID,TextBox1,Cangku,Type,Category);
+        return JsonResultUtils.getObjectResultByStringAsDefault(count, JsonResultUtils.Code.SUCCESS);
     }
 }

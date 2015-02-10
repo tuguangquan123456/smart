@@ -26,4 +26,7 @@ public class LibraryService {
     public List<Library> selectCategoryList(){
         return libraryMapper.selectCategoryList();
     }
+    public int search(String ResumeID, String TextBox1,String Cangku,String Type,String Category){
+        return libraryMapper.search(ResumeID,TextBox1,Cangku,Type,Category);
+    }
 }

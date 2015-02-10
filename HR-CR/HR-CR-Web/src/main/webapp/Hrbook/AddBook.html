@@ -9,7 +9,6 @@
     <link type="text/css" rel="Stylesheet" href="../Css/jquery.alerts.css" />
 
     <script type="text/javascript">
-
         function selectA() {
             if (document.form1["ForeignLanguage"].value == "-1") {
                 document.form1["ForeignLanguageLevel"].options.length = 0;
@@ -78,8 +77,26 @@
     <script  type="text/javascript" src="../Js/config.js"></script>
     <script type="text/javascript" src="../Js/resource_admin.js"></script>
      <script>
+         $(function(){
+             $("#btnSubmit").click(function(){
+                 var data={};
+                 data.ProductsName=$('#ProductsName').val();
+                 data.ProductsID=$('#ProductsID').val();
+                 data.Cangku=$('#Cangku').val();
+                 data.SafeAmount=$('#SafeAmount').val();
+                 data.Price=$('#Price').val();
+                 data.Amount=$('#Amount').val();
+                 data.addUser=$('#addUser').val();
+                 $.post("../"+ $.URL.bookCK.add,data,addBookCallBack,"json");
+             });
+         });
+         function addBookCallBack(data){
+             if(data.code==200){
+                 jAlert("添加成功！");
+             }
+         }
          function selectCangku(){
-             $.get("../"+$.URL.library.selectCangku,null,selectCangkuCallBack,"json");
+             $.get("../"+$.URL.bookCK.selectCangku,null,selectCangkuCallBack,"json");
          }
          function selectCangkuCallBack(data){
              if(data.code==200){
@@ -177,7 +194,7 @@
 
         <tr>
             <th align="center" colspan="2">
-                <button id="btnSubmit" style="height: 21px;width: 58px">提 交</button>
+                <button id="btnSubmit" style="height: 25px;width:60px">提 交</button>
                 <!--<asp:Button ID="btnSubmit" runat="server" Text="提 交" Height="21px" Width="58px"-->
                             <!--OnClick="btnSubmit_Click" />-->
             </th>

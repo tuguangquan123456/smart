@@ -70,20 +70,24 @@
              });
              $("#btnSearch").click(function(){      //查询图示信息
                  var data = {};
-                 data.ResumeID=document.getElementById('ResumeID').val();
-                 data.TextBox1=document.getElementById('TextBox1').val();
-                 data.ResumeID=document.getElementById('ResumeID').val();
-                 data.TextBox1=document.getElementById('TextBox1').val();
-
+                 data.ResumeID=$('#ResumeID').val();
+                 data.TextBox1=$('#TextBox1').val();
+                 data.Cangku=$('#Cangku').val();
+                 data.Type=$('#Type').val();
+                 data.Category=$('#Category').val();
+                 $.post("../"+$.URL.library.search,data,searchCallBack,"json");
              });
          });
+        function searchCallBack(data){
+                alert(data.data)
+        }
     </script>
 
 
 
 </head>
 <body style="clear: both; display: block; height:auto;" scroll="no">
-<form id="form1" runat="server" >
+<div id="form1" runat="server" >
     <div class="c_name">
         <h2>
             图书查询
@@ -97,7 +101,6 @@
                     图书编号：
                         <input id="ResumeID" style="width: 150px" maxlength="50"/>
                     &nbsp;&nbsp;
-
                     <span style="text-align: left" >&nbsp;&nbsp;
                     图书名称：
                         <input id="TextBox1" style="width: 150px" maxlength="50"/>
@@ -113,8 +116,6 @@
                 <button id="btnSearch">查询图书</button>
                 &nbsp;&nbsp;
                 <button id="Button2">添加图书</button>
-                <!--<asp:Button ID="Button2" runat="server" Text="添加图书"  PostBackUrl="~/Hrbook/AddBook.aspx"-->
-                            <!--Width="66px" /> -->
                 &nbsp;&nbsp;&nbsp;
                 <button id="btnExport" >导出图书信息</button>
                 <!--<asp:Button ID="btnExport" runat="server" Text="导出图书信息"  OnClick="btnExport_Click"/>-->
@@ -189,7 +190,7 @@
     <!--<asp:HiddenField ID="currentPage" runat="server" />-->
     <!--<asp:HiddenField ID="totalPage" runat="server" />-->
     <!--<asp:HiddenField ID="SearchCondition" runat="server" />-->
-</form>
+</div>
 </body>
 </html>
 
