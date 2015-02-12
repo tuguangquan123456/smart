@@ -66,7 +66,18 @@
                  result = window.showModalDialog('AddBook.html?rdom=' + Math.random(), callBack, "width:10cm;height:10cm");
              });
              $("#btnExport").click(function(){      //导出图示信息
-
+                 var ResumeID=$('#ResumeID').val();
+                 if(ResumeID==""){
+                     ResumeID=null;
+                 }
+                 var TextBox1=$('#TextBox1').val();
+                 if(TextBox1==""){
+                     TextBox1=null;
+                 }
+                 var Cangku=$('#Cangku').val();
+                 var Type=$('#Type').val();
+                 var Category=$('#Category').val();
+                 location.href="../rs/library/export/"+ResumeID+"/"+TextBox1+"/"+Cangku+"/"+Type+"/"+Category;
              });
              $("#btnSearch").click(function(){      //查询图示信息
                  var data = {};
@@ -79,53 +90,47 @@
                  $.post("../"+$.URL.books.searchAllBooks,data,searchAllBooksCallBack,"json");
              });
          });
-         function searchAllBooksCallBack(data){
-                 alert(data.data)
+        function searchAllBooksCallBack(data){
+            if(data.code==200) {
+                var roleDetailTable=  '<tr class="tr_1">' +
+                        '<th style="width: 5%;">序 号</th>' +
+                        '<th style="width: 8%;">图书编号</th>' +
+                        '<th style="width: 8%;">图书类别</th>' +
+                        '<th style="width: 8%;">图书名称</th>' +
+                        '<th style="width: 5%;">在馆数量</th>' +
+                        '<th style="width: 5%;">计量单位</th>' +
+                        '<th style="width: 5%;">安全库存</th>' +
+                        '<th style="width: 8%;">图书分类</th>' +
+                        '<th style="width: 8%;">所属书库</th>' +
+                        '<th style="width: 8%;">入库时间</th>' +
+                        '<th style="width: 5%;">图书来源</th>' +
+                        '<th style="width: 5%;">图书单价</th>' +
+                        '<th style="width: 5%;">图书总价</th>' +
+                        '<th style="width: 8%;">操 作</th></tr> ';
+                for(var i=0;i<data.data.length;i++){
+                roleDetailTable= roleDetailTable+'<tr>' +
+                        '<td>'+data.data[i].id+'</td>'+
+                        '<td>'+data.data[i].productID+'</td>'+
+                        '<td>'+data.data[i].category+'</td>'+
+                        '<td>'+data.data[i].productName+'</td>'+
+                        '<td>'+data.data[i].amount+'</td>'+
+                        '<td>'+data.data[i].unit+'</td>'+
+                        '<td>'+data.data[i].safeamount+'</td>'+
+                        '<td>'+data.data[i].productType+'</td>'+
+                        '<td>'+data.data[i].belongStorage+'</td>'+
+                        '<td>'+data.data[i].addtime+'</td>'+
+                        '<td>'+data.data[i].adduser+'</td>'+
+                        '<td>'+data.data[i].price+'</td>'+
+                        '<td>'+data.data[i].totalPrice+'</td>'+
+                        '<td><a href="javascript:editItem(' + 1+  ')">' +
+                        '<img alt="编辑" src="../Images/edit.gif" /></a> &nbsp;' +
+                        '<a href="javascript:deleteItem(' + 1+  ')"><img alt="删除" src="../Images/del.gif" /></a></td> </tr>'
+                }
+                document.getElementById('tblist').innerHTML=roleDetailTable;
+            }
          }
         function searchCallBack(data){
-                alert(data.data)
-        }
-         <!--<asp:BoundField DataField="Addtime"   HeaderText="" DataFormatString = "{0:d}"  ReadOnly="True" />-->
-         <!--<asp:BoundField DataField="Adduser" HeaderText="" Visible="false"/>-->
-         <!--<asp:BoundField DataField="Price" HeaderText=""/>-->
-         <!--<asp:BoundField DataField="totalPrice" HeaderText="" ReadOnly="True" Visible="False"/>-->
-         <!--<asp:BoundField DataField="ID" HeaderText="id" ReadOnly="True" Visible="False" />-->
-        window.onload=function show(){
-            var roleDetailTable=  '<tr class="tr_1">' +
-                    '<th style="width: 5%;">序 号</th>' +
-                    '<th style="width: 8%;">图书编号</th>' +
-                    '<th style="width: 8%;">图书类别</th>' +
-                    '<th style="width: 8%;">图书名称</th>' +
-                    '<th style="width: 5%;">在馆数量</th>' +
-                    '<th style="width: 8%;">图书编号</th>' +
-                    '<th style="width: 5%;">计量单位</th>' +
-                    '<th style="width: 5%;">安全库存</th>' +
-                    '<th style="width: 8%;">图书分类</th>' +
-                    '<th style="width: 8%;">所属书库</th>' +
-                    '<th style="width: 8%;">入库时间</th>' +
-                    '<th style="width: 5%;">图书来源</th>' +
-                    '<th style="width: 5%;">图书单价</th>' +
-                    '<th style="width: 5%;">图书总价</th>' +
-                    '<th style="width: 8%;">操 作</th></tr> ';
-            roleDetailTable= roleDetailTable+'<tr>' +
-                    '<td >'+"qwe"+'</td>'+
-                    '<td >'+"wdwe"+'</td>'+
-                    '<td>'+"dsf"+'</td>'+
-                    '<td>'+"wdwe"+'</td>'+
-                    '<td>'+"dsf"+'</td>'+
-                    '<td>'+"wdwe"+'</td>'+
-                    '<td>'+"dsf"+'</td>'+
-                    '<td >'+"wdwe"+'</td>'+
-                    '<td >'+"dsf"+'</td>'+
-                    '<td >'+"wdwe"+'</td>'+
-                    '<td >'+"dsf"+'</td>'+
-                    '<td>'+"wdwe"+'</td>'+
-                    '<td >'+"dsf"+'</td>'+
-                    '<td>'+"wdwe"+'</td>'+
-                    '<td><a href="javascript:editItem(' + 1+  ')">' +
-                    '<img alt="编辑" src="../Images/edit.gif" /></a> &nbsp;' +
-                    '<a href="javascript:deleteItem(' + 1+  ')"><img alt="删除" src="../Images/del.gif" /></a></td> </tr>'
-            document.getElementById('tblist').innerHTML=roleDetailTable;
+            document.getElementById('count').innerHTML=data.data;;
         }
     </script>
 
@@ -222,9 +227,9 @@
     <div id="tipbar0" class="tipbar0" runat="server" visible="false" >
         提示：没有符合条件的记录</div>
     <div id="tipbar1" class="tipbar1" runat="server" >
-        <span>共<%=count %>条记录，</span>
-        <span>当前第<%=ps.currentPage %>页，</span>
-        <span>共<%=ps.totalPageSize %>页</span>
+        <span id="count">共<%=count %>条记录，</span>
+        <span id="currentPage">当前第<%=ps.currentPage %>页，</span>
+        <span id="totalPage">共<%=ps.totalPageSize %>页</span>
         <button id="First" onclick="First_Click()"><img src="../Images/main_54.gif" alt="首页"></button>
         <button id="Pre" onclick="Pre_Click()"><img src="../Images/main_56.gif" alt="上一页"></button>
         <button id="Next" onclick="Next_Click()"><img src="../Images/main_58.gif" alt="下一页"></button>

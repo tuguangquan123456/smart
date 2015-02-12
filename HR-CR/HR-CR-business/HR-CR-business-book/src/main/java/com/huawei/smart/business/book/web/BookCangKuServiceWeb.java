@@ -42,6 +42,7 @@ public class BookCangKuServiceWeb {
         List<BookCangKu> list = bookCangKuService.selectCangkuList();
         return JsonResultUtils.getObjectResultByStringAsDefault(list, JsonResultUtils.Code.SUCCESS);
     }
+
     @Produces(MediaType.APPLICATION_JSON+";charset=UTF-8")
     @Path("/add")
     @POST
@@ -78,6 +79,7 @@ public class BookCangKuServiceWeb {
         booksService.add(books);
         return JsonResultUtils.getCodeAndMesByStringAsDefault(JsonResultUtils.Code.SUCCESS);
     }
+
     protected boolean CheckIDCard(String IDCard,String cangku){
       int count=booksService.findCountOfBooksByProductIDAndBelongStorage(IDCard,cangku);
       if (count>0)return true;

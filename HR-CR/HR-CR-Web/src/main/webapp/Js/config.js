@@ -27,7 +27,8 @@
             "selectCangku":"rs/library/selectCangku",
             "selectType":"rs/library/selectType",
             "selectCategory":"rs/library/selectCategory",
-            "search":"rs/library/search"
+            "search":"rs/library/search",
+            "export":"rs/library/export"
         } ,
         "bookCK":{
             "selectCangku":"rs/bookCK/selectCangku",

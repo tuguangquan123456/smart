@@ -29,4 +29,7 @@ public class LibraryService {
     public int search(String ResumeID, String TextBox1,String Cangku,String Type,String Category){
         return libraryMapper.search(ResumeID,TextBox1,Cangku,Type,Category);
     }
+    public List<Library> export(String ResumeID, String TextBox1,String Cangku,String Type,String Category){
+        return libraryMapper.export(ResumeID,TextBox1,Cangku,Type,Category);
+    }
 }
