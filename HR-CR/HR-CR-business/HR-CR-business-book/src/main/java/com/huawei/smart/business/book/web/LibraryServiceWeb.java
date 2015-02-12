@@ -1,6 +1,8 @@
 package com.huawei.smart.business.book.web;
 
+import com.huawei.smart.business.book.entity.Books;
 import com.huawei.smart.business.book.entity.Library;
+import com.huawei.smart.business.book.service.BooksService;
 import com.huawei.smart.business.book.service.LibraryService;
 import com.huawei.smart.logger.SmartLogger;
 import com.huawei.smart.util.json.JsonResultUtils;
@@ -26,6 +28,8 @@ public class LibraryServiceWeb {
     private static SmartLogger logger = SmartLogger.getLogger(LibraryServiceWeb.class);
     @Autowired
     private LibraryService libraryService;
+    @Autowired
+    private BooksService booksService;
 
     @Produces(MediaType.APPLICATION_JSON+";charset=UTF-8")
     @Path("/selectCangku")
@@ -81,21 +85,33 @@ public class LibraryServiceWeb {
     public String export(@Context HttpServletResponse response,@PathParam("ResumeID") String ResumeID,@PathParam("TextBox1") String TextBox1,
                          @PathParam("Cangku") String Cangku,@PathParam("Type") String Type,@PathParam("Category") String Category){
         if(Cangku.equals("请选择书库")){
-            Cangku=null;
+            Cangku="null";
         }
         if(Type.equals("请选择图书来源")){
-            Type=null;
+            Type="null";
         }
         if(Category.equals("请选择图书类别")){
-            Category=null;
+            Category="null";
         }
-        System.out.println(ResumeID);
-        System.out.println(TextBox1);
-        System.out.println(Cangku);
-        System.out.println(Type);
-        System.out.println(Category);
         try {
-            List<Library> list = libraryService.export(ResumeID,TextBox1,Cangku,Type,Category);
+            List<Library> list=null;
+            if(!ResumeID.equals("null")&&!TextBox1.equals("null")&&!Cangku.equals("null")&&!Type.equals("null")&&!Category.equals("null")){
+                list = libraryService.export1(ResumeID,TextBox1,Cangku,Type,Category);
+            }
+            else if(!ResumeID.equals("null")&&!TextBox1.equals("null")&&!Cangku.equals("null")&&!Type.equals("null")){
+                list = libraryService.export2(ResumeID,TextBox1,Cangku,Type);
+            }
+            else if(!ResumeID.equals("null")&&!TextBox1.equals("null")&&!Cangku.equals("null")){
+                list = libraryService.export3(ResumeID,TextBox1,Cangku);
+            }
+            else if(!ResumeID.equals("null")&&!TextBox1.equals("null")){
+                list = libraryService.export4(ResumeID,TextBox1);
+            }
+            else if(!ResumeID.equals("null")){
+                list = libraryService.export5(ResumeID);
+            }
+            else  list = libraryService.export();
+
             System.out.println(list);
             StringBuffer buffer =  new StringBuffer("");
             for(Library library:list){

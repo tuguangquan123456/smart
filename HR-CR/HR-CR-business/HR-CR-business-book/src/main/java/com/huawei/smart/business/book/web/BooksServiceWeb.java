@@ -33,23 +33,18 @@ public class BooksServiceWeb {
     public String searchAllBooks(@FormParam("ResumeID") String ResumeID,@FormParam("TextBox1") String TextBox1,
                          @FormParam("Cangku") String Cangku,@FormParam("Type") String Type,@FormParam("Category") String Category){
         if(ResumeID.equals("")){
-            System.out.println("1");
             ResumeID=null;
         }
         if(TextBox1.equals("")){
-            System.out.println("2");
             TextBox1=null;
         }
         if(Cangku.equals("")||Cangku.equals("请选择书库")){
-            System.out.println("3");
             Cangku=null;
         }
         if(Type.equals("")||Type.equals("请选择图书来源")){
-            System.out.println("4");
             Type=null;
         }
         if(Category.equals("")||Category.equals("请选择图书类别")){
-            System.out.println("5");
             Category=null;
         }
         List<Books> list= booksService.searchAllBooks(ResumeID,TextBox1,Cangku,Type,Category);

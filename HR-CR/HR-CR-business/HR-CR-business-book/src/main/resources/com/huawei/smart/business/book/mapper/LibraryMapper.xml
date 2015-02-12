@@ -56,13 +56,37 @@
         select
         <include refid="library_fields" />
         from Library
-        <where>
-            1=1
-            <if test="productID!=null">AND productID=#{productID}</if>
-            <if test="productName!=null">AND productName like #{productName}</if>
-            <if test="BelongStorage!=null">AND BelongStorage=#{BelongStorage}</if>
-            <if test="Adduser!=null">AND Adduser=#{Adduser}</if>
-            <if test="category!=null">AND category=#{category}</if>
-        </where>
+    </select>
+    <select id="export1" resultMap="libraryResultMap" parameterType="map">
+        select
+        <include refid="library_fields" />
+        from Library
+        where
+          productID=#{productID} AND productName like #{productName} AND BelongStorage=#{BelongStorage} AND Adduser=#{Adduser} AND category=#{category}
+    </select>
+    <select id="export2" resultMap="libraryResultMap" parameterType="map">
+        select
+        <include refid="library_fields" />
+        from Library
+        productID=#{productID} AND productName like #{productName} AND BelongStorage=#{BelongStorage} AND Adduser=#{Adduser}
+    </select>
+    <select id="export3" resultMap="libraryResultMap" parameterType="map">
+        select
+        <include refid="library_fields" />
+        from Library
+        where
+        productID=#{productID} AND productName like #{productName} AND BelongStorage=#{BelongStorage}
+    </select>
+    <select id="export4" resultMap="libraryResultMap" parameterType="map">
+        select
+        <include refid="library_fields" />
+        from Library
+        productID=#{productID} AND productName like #{productName}
+    </select>
+    <select id="export5" resultMap="libraryResultMap" parameterType="map">
+        select
+        <include refid="library_fields" />
+        from Library
+        productID=#{productID}
     </select>
 </mapper>

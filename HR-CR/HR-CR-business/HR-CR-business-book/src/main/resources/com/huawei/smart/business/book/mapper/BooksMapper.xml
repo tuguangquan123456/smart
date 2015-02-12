@@ -42,6 +42,15 @@
         </selectKey>
     </insert>
 
+    <select id="findCountOfBooksByProductIDAndBelongStorage" resultType="java.lang.Integer" parameterType="map">
+        select count(*)
+        from books
+        <where>
+            <if test="productID!=null">AND productID=#{productID}</if>
+            <if test="BelongStorage!=null">AND BelongStorage=#{BelongStorage}</if>
+        </where>
+
+    </select>
     <select id="searchAllBooks" resultMap="booksResultMap" parameterType="map">
         select
         <include refid="books_fields" />

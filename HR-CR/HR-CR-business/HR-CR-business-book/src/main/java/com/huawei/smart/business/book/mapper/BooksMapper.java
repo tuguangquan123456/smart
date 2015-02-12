@@ -14,7 +14,8 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 public interface BooksMapper extends AbstractMapper<Books> {
-    public int findCountOfBooksByProductIDAndBelongStorage(String IDCard,String cangku);
+    public int findCountOfBooksByProductIDAndBelongStorage(@Param("productID")String productID, @Param("BelongStorage")String BelongStorage);
     public List<Books> searchAllBooks(@Param("productID")String productID, @Param("productName")String productName,
                           @Param("BelongStorage")String BelongStorage,@Param("Adduser")String Adduser,@Param("category")String category);
+
 }

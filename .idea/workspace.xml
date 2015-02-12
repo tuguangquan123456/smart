@@ -2,23 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b261edc9-becd-41c6-8546-bc00cca019fd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/tablePage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BookCangKuServiceWeb.java" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BookCangKuServiceWeb.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/BookList.html" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/BookList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/BooksMapper.java" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/BooksMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BooksMapper.xml" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BooksMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/BooksService.java" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/BooksService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BooksServiceWeb.java" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BooksServiceWeb.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/LibraryMapper.java" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/LibraryMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/LibraryMapper.xml" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/LibraryMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/LibraryService.java" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/LibraryService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/LibraryServiceWeb.java" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/LibraryServiceWeb.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/config.js" afterPath="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="smart.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="$PROJECT_DIR$/funfamental-config/pom.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422409747171" ignored="false" />
     <file path="/fragment.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423391161557" ignored="false" />
-    <file path="/Dummy.txt" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423729069299" ignored="false" />
+    <file path="/Dummy.txt" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423732966532" ignored="false" />
     <file path="/pom.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423447213842" ignored="false" />
     <file path="/web.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422428261131" ignored="false" />
     <file path="/security-applicationContext.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1422419728656" ignored="false" />
@@ -115,11 +113,11 @@
     <file path="/BookInInfoMapper.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423446855524" ignored="false" />
     <file path="/BookOutHistoryMapper.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423446959972" ignored="false" />
     <file path="/BookOutInfoMapper.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423446924169" ignored="false" />
-    <file path="/BooksMapper.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423564120473" ignored="false" />
+    <file path="/BooksMapper.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423734022021" ignored="false" />
     <file path="/book-applicationContext.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423452342035" ignored="false" />
     <file path="/Library.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423464483985" ignored="false" />
-    <file path="/LibraryMapper.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423726929789" ignored="false" />
-    <file path="/LibraryServiceWeb.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423726370020" ignored="false" />
+    <file path="/LibraryMapper.xml" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423735308036" ignored="false" />
+    <file path="/LibraryServiceWeb.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423738263285" ignored="false" />
     <file path="/LibraryService.java" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423728196298" ignored="false" />
     <file path="/AddBook.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423537835546" ignored="false" />
     <file path="/OperatorDetail.html" changelist="b261edc9-becd-41c6-8546-bc00cca019fd" time="1423479144359" ignored="false" />
@@ -194,66 +192,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LibraryServiceWeb.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/LibraryServiceWeb.java">
+      <file leaf-file-name="LibraryMapper.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/LibraryMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="42" selection-start="3394" selection-end="3394" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddBook.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/AddBook.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="47" selection-start="3905" selection-end="3908" vertical-scroll-proportion="-3.392857">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookCangKuServiceWeb.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BookCangKuServiceWeb.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="41" selection-start="3452" selection-end="3452" vertical-scroll-proportion="0.47263682">
-              <folding>
-                <element signature="e#1551#1605#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BooksService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/BooksService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="40" selection-start="605" selection-end="605" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BooksMapper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/BooksMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="58" selection-start="438" selection-end="481" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookDonatorService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/BookDonatorService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="37" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookDonatorMapper.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BookDonatorMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="89" column="30" selection-start="4042" selection-end="4042" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -262,25 +204,52 @@
       <file leaf-file-name="BooksMapper.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BooksMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="23" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.0">
+            <state line="50" column="17" selection-start="2580" selection-end="2580" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LibraryMapper.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/LibraryMapper.xml">
+      <file leaf-file-name="BooksMapper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/BooksMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="47" selection-start="2713" selection-end="2713" vertical-scroll-proportion="0.0">
+            <state line="17" column="23" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BooksServiceWeb.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BooksServiceWeb.java">
+      <file leaf-file-name="LibraryService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/LibraryService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="35" selection-start="1822" selection-end="1822" vertical-scroll-proportion="0.0">
+            <state line="44" column="42" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LibraryMapper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/LibraryMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="40" selection-start="1673" selection-end="1673" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LibraryServiceWeb.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/LibraryServiceWeb.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="85" column="131" selection-start="3305" selection-end="3305" vertical-scroll-proportion="0.023715414">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BooksService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/BooksService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="0" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -309,19 +278,19 @@
         <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/Books.java" />
         <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BookDonatorMapper.xml" />
         <option value="$PROJECT_DIR$/business/business-user/src/main/resources/com/huawei/smart/business/user/mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/BooksMapper.java" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/BooksService.java" />
         <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Css/base.css" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BooksMapper.xml" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BooksServiceWeb.java" />
         <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/tablePage.js" />
         <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/config.js" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/LibraryMapper.java" />
         <option value="$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/BookList.html" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BooksServiceWeb.java" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BookCangKuServiceWeb.java" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/BooksMapper.java" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/BooksService.java" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BooksMapper.xml" />
         <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/LibraryMapper.xml" />
+        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/LibraryMapper.java" />
         <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/LibraryService.java" />
         <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/LibraryServiceWeb.java" />
-        <option value="$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BookCangKuServiceWeb.java" />
       </list>
     </option>
   </component>
@@ -346,6 +315,24 @@
           <option name="myItemId" value="" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smart" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="smart" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
       </PATH>
       <PATH>
         <PATH_ELEMENT>
@@ -369,6 +356,12 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="Lifecycle" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -534,6 +527,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="smart" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="HR-CR-Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1006,7 +1033,7 @@
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="vcs.Git" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../1215/platform" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../0129 - 副本/smart" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="MemberChooser.copyJavadoc" value="false" />
@@ -1190,7 +1217,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_smart" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_smart_2" />
         <option name="JNDI_PORT" value="1098" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
@@ -1201,7 +1228,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Cover" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="21711" />
+        <option name="DEBUG_PORT" value="3148" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
@@ -1353,12 +1380,16 @@
       <created>1423567310712</created>
       <updated>1423567310712</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="增加图书管理模块的一些功能的后台代码">
+      <created>1423731685437</created>
+      <updated>1423731685437</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3619211" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1376,11 +1407,11 @@
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2159091" sideWeight="0.29845625" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.68267584" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20151515" sideWeight="0.53173244" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23409091" sideWeight="0.5780446" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2780303" sideWeight="0.53173244" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4682676" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30530304" sideWeight="0.5780446" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4219554" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" x="92" y="92" width="1182" height="544" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1465,117 +1496,126 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Js/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="49" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/BookList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="34" selection-start="3335" selection-end="3335" vertical-scroll-proportion="-0.6785714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BookBrMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="24" selection-start="749" selection-end="749" vertical-scroll-proportion="0.64155847">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/LibraryMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="75" selection-start="869" selection-end="874" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/LibraryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="108" selection-start="1078" selection-end="1078" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/Hrbook/AddBook.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="47" selection-start="3905" selection-end="3908" vertical-scroll-proportion="-3.392857">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/funfamental/funfamental-orm/src/main/java/com/huawei/smart/orm/AbstractMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="9" selection-start="223" selection-end="223" vertical-scroll-proportion="0.33054394">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BooksServiceWeb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="35" selection-start="1822" selection-end="1822" vertical-scroll-proportion="0.0">
+        <state line="30" column="35" selection-start="969" selection-end="969" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/LibraryServiceWeb.java">
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/WEB-INF/web.xml">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+        <state />
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="42" selection-start="3394" selection-end="3394" vertical-scroll-proportion="0.0">
+        <state line="47" column="35" selection-start="1915" selection-end="1915" vertical-scroll-proportion="2.8899677">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/BooksService.java">
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/WEB-INF/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="40" selection-start="605" selection-end="605" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/BooksMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="58" selection-start="438" selection-end="481" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/LibraryMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="47" selection-start="2713" selection-end="2713" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BooksMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="23" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BookDonatorMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/BookDonatorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="37" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
+        <state line="39" column="41" selection-start="2224" selection-end="2224" vertical-scroll-proportion="0.2516129">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/BookCangKuServiceWeb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="41" selection-start="3452" selection-end="3452" vertical-scroll-proportion="0.47263682">
+        <state line="78" column="48" selection-start="3143" selection-end="3143" vertical-scroll-proportion="0.14845939">
           <folding>
             <element signature="e#1551#1605#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/WEB-INF/security-applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="72" selection-start="179" selection-end="179" vertical-scroll-proportion="0.11445783">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="70" selection-start="316" selection-end="316" vertical-scroll-proportion="0.27065527">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-Web/src/main/webapp/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="47" selection-start="241" selection-end="241" vertical-scroll-proportion="-3.4102564">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BookDonatorMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="25" selection-start="800" selection-end="800" vertical-scroll-proportion="0.07653061">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/entity/Library.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="211" selection-end="211" vertical-scroll-proportion="0.33163264">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/BooksService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="0" selection-start="935" selection-end="935" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/BooksMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="23" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/BooksMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="17" selection-start="2580" selection-end="2580" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/resources/com/huawei/smart/business/book/mapper/LibraryMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="89" column="30" selection-start="4042" selection-end="4042" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/mapper/LibraryMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="40" selection-start="1673" selection-end="1673" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/service/LibraryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="42" selection-start="1709" selection-end="1709" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HR-CR/HR-CR-business/HR-CR-business-book/src/main/java/com/huawei/smart/business/book/web/LibraryServiceWeb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="131" selection-start="3305" selection-end="3305" vertical-scroll-proportion="0.023715414">
+          <folding />
         </state>
       </provider>
     </entry>
